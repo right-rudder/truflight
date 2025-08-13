@@ -1,1 +1,1 @@
-# truflight
+# TruFlight Academy
