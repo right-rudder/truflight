@@ -1,0 +1,32 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+import Navbar from "../components/Navbar";
+const { pathname } = Astro.url;
+const { siteTitle, siteDescription, siteImage } = Astro.props;
+import "@fontsource-variable/mulish";
+import "@fontsource-variable/playfair-display";
+import ImageComp from "../components/ImageComp.astro";
+---
+
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <BaseHead
+      title={siteTitle || SITE_TITLE}
+      description={siteDescription || SITE_DESCRIPTION}
+      image={siteImage}
+    />
+  </head>
+  <body class="font-mulish">
+    <header>
+      <Navbar pathname={pathname} client:load />
+    </header>
+    <main>
+      <slot name="hero" />
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

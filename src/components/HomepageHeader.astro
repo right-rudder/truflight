@@ -1,0 +1,56 @@
+---
+import ImageComp from "./ImageComp.astro";
+import { FaArrowRight } from "react-icons/fa6";
+---
+
+<div class="bg-primary-50/50 text-accent-500 flex h-screen overflow-hidden">
+  <div
+    class="mx-auto flex max-w-[90rem] items-center justify-center gap-10 px-5"
+  >
+    <div class="flex-[1.5_1.5_0]">
+      <div class="flex w-full flex-col gap-3">
+        <p class="font-semibold tracking-widest uppercase italic">
+          Grow Your <span class="text-primary-500">Career</span> With TruFlight
+        </p>
+        <h1 class="font-display text-5xl font-semibold lg:text-7xl/20">
+          Take Off with the Best Helicopter Flight School in Dallas
+        </h1>
+        <p
+          class="text-accent-400 max-w-lg text-base/7 font-medium tracking-wider"
+        >
+          Looking for a helicopter flight school in Dallas, TX? Discover the
+          best training at TruFlight Academy. Start your journey to becoming a
+          skilled helicopter pilot today!
+        </p>
+        <div class="mt-2 flex flex-col gap-5 sm:flex-row">
+          <a
+            href="/enrollment-form"
+            class="hover:bg-primary-500 group hover:border-primary-500 flex items-center gap-3 rounded-full border border-black px-9 py-3 font-semibold tracking-tight text-black duration-500 hover:text-white"
+          >
+            Start Training
+            <FaArrowRight
+              className="text-primary-500 duration-500 group-hover:text-white"
+            />
+          </a>
+          <a
+            href="#trainingPrograms"
+            class="group hover:text-primary-500 flex items-center gap-3 rounded-full px-9 py-3 font-semibold tracking-tight shadow-gray-300 duration-500"
+            >Book a Discovery Flight
+            <FaArrowRight
+              className="duration-500 group-hover:translate-x-2 group-hover:scale-125"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex-1">
+      <ImageComp
+        src="/src/assets/truflight-helicopter.png"
+        alt="Vibrant image of a helicopter in flight in TruFlight Academy"
+        classes="object-cover animate-takeoff"
+        loading="eager"
+      />
+    </div>
+  </div>
+</div>
