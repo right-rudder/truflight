@@ -3,7 +3,8 @@ import { useEffect, useState } from "react";
 import { IoIosArrowForward } from "react-icons/io";
 import { FaPhone } from "react-icons/fa";
 import { FaHelicopter } from "react-icons/fa";
-import { FACEBOOK_URL, PHONE_NUMBER } from "../consts.ts";
+import { FACEBOOK_URL, INSTAGRAM_URL, PHONE_NUMBER } from "../consts.ts";
+import logo from "../assets/truflight-logo.avif";
 
 const Navbar = ({ pathname }) => {
   const [openMobile, setOpenMobile] = useState(false);
@@ -92,12 +93,12 @@ const Navbar = ({ pathname }) => {
       >
         <div className="mx-auto max-w-[98rem] px-4 lg:px-12">
           <div
-            className={`relative flex h-24 items-center justify-between gap-3 transition-all`}
+            className={`relative flex h-18 items-center justify-between gap-3 transition-all lg:h-24`}
             id="navbar"
           >
-            <a href="/" className={`${navBar ? "w-48" : "w-48"} duration-200`}>
+            <a href="/" className="w-32 duration-200 lg:w-48">
               <img
-                src="/src/assets/truflight-logo.avif"
+                src={logo.src}
                 alt="TruFlight Academy Logo"
                 loading="eager"
                 decoding="async"
@@ -264,7 +265,7 @@ const Navbar = ({ pathname }) => {
       <div
         className={`${
           openMobile ? "max-h-screen" : "max-h-0 delay-300"
-        } absolute top-0 z-50 h-screen w-full overflow-x-hidden bg-black duration-300 ease-in-out lg:hidden`}
+        } bg-accent-500 absolute top-0 z-50 h-screen w-full overflow-x-hidden duration-300 ease-in-out lg:hidden`}
         id="mobile-menu"
       >
         <div className="flex justify-end py-6 pr-[26px] pl-5">
@@ -286,9 +287,9 @@ const Navbar = ({ pathname }) => {
           </svg>
         </div>
 
-        <a href="/" className="mx-auto block size-24">
+        <a href="/" className="relative z-10 mx-auto mt-3 block h-20 w-fit">
           <img
-            src="/src/assets/truflight-logo.avif"
+            src={logo.src}
             alt="TruFlight Academy Logo"
             loading="eager"
             decoding="async"
@@ -299,13 +300,13 @@ const Navbar = ({ pathname }) => {
           ></img>
         </a>
 
-        {/* <div
-          className={`absolute w-full h-32 bg-white top-16 z-30 duration-300  ${
-            openMobile ? "translate-x-0 delay-300" : "-translate-x-full "
+        <div
+          className={`absolute top-16 z-0 h-32 w-full bg-white duration-300 ${
+            openMobile ? "translate-x-0 delay-300" : "-translate-x-full"
           }`}
-        ></div> */}
+        ></div>
 
-        <ul className="mt-5 flex flex-col px-4 pt-2 pb-3">
+        <ul className="mt-12 flex flex-col px-4 pt-2 pb-3">
           {navbarLinks.map((item, index) => (
             <li
               key={index}
@@ -315,7 +316,7 @@ const Navbar = ({ pathname }) => {
               {item.link ? (
                 <a
                   href={item.link}
-                  className="block border-blue-800 p-4 text-lg font-semibold whitespace-nowrap text-white duration-300 group-last:mx-5 group-last:mt-4 group-last:rounded-full group-last:bg-blue-800 group-last:px-8 group-last:py-4 group-last:text-center"
+                  className="group-last:bg-primary-500 block border-blue-800 p-4 text-lg font-semibold whitespace-nowrap text-white duration-300 group-last:mx-5 group-last:mt-4 group-last:rounded-full group-last:px-8 group-last:py-4 group-last:text-center"
                 >
                   {item.name}
                 </a>
@@ -326,12 +327,14 @@ const Navbar = ({ pathname }) => {
                     className={`pointer-events-none p-1 duration-300 ${
                       hoveredIndex === index
                         ? "-rotate-90 bg-white"
-                        : "rotate-90 bg-blue-500"
+                        : "bg-primary-500 rotate-90"
                     } `}
                   >
                     <IoIosArrowForward
                       className={`${
-                        hoveredIndex === index ? "text-blue-500" : "text-white"
+                        hoveredIndex === index
+                          ? "text-primary-500"
+                          : "text-white"
                       } size-5`}
                     />
                   </div>
@@ -339,7 +342,7 @@ const Navbar = ({ pathname }) => {
               )}
               {item.submenu && item.submenu.length > 0 && (
                 <ul
-                  className={`left-0 z-10 ml-5 overflow-hidden bg-black whitespace-nowrap text-white duration-500 ${
+                  className={`left-0 z-10 ml-5 overflow-hidden whitespace-nowrap text-white duration-500 ${
                     hoveredIndex === index ? "max-h-[28rem]" : "max-h-0"
                   }`}
                 >
@@ -363,13 +366,13 @@ const Navbar = ({ pathname }) => {
                             className={`pointer-events-none rounded-full p-1 duration-300 ${
                               subHoveredIndex === subIndex
                                 ? "rotate-90 bg-white"
-                                : "-rotate-90 bg-blue-500"
+                                : "bg-primary-500 -rotate-90"
                             } `}
                           >
                             <IoIosArrowForward
                               className={`${
                                 subHoveredIndex === subIndex
-                                  ? "text-blue-500"
+                                  ? "text-primary-500"
                                   : "text-white"
                               } size-5`}
                             />
@@ -403,10 +406,10 @@ const Navbar = ({ pathname }) => {
               )}
             </li>
           ))}
-          <li className="group relative">
+          <li>
             <a
-              href="/about/our-story#contactUs"
-              className="block border-blue-800 p-5 text-lg font-semibold whitespace-nowrap text-white duration-300 group-last:mx-5 group-last:mt-4 group-last:bg-blue-800 group-last:px-8 group-last:py-4 group-last:text-center"
+              href="/contact-us"
+              className="bg-primary-500 mx-5 mt-4 block rounded-full p-5 px-8 py-4 text-center text-lg font-semibold whitespace-nowrap text-white uppercase duration-300"
             >
               Contact Us
             </a>
@@ -420,7 +423,7 @@ const Navbar = ({ pathname }) => {
               className="w-fit rounded-full border border-white bg-white p-2"
               aria-label="Call TruFlight Academy"
             >
-              <FaPhone className="size-3 text-blue-500" />
+              <FaPhone className="text-primary-500 size-3" />
             </a>
             <a href={`tel:${PHONE_NUMBER}`} aria-label="Call TruFlight Academy">
               {PHONE_NUMBER}
@@ -428,10 +431,10 @@ const Navbar = ({ pathname }) => {
           </div>
 
           <div className="mt-2 flex gap-3">
-            <a href={FACEBOOK_URL} target="_blank">
+            <a href={INSTAGRAM_URL} target="_blank">
               <span className="sr-only">Instagram</span>
               <svg
-                className="size-6 text-blue-500"
+                className="text-primary-500 size-6"
                 fill="currentColor"
                 viewBox="0 0 24 24"
                 aria-hidden="true"
@@ -444,21 +447,16 @@ const Navbar = ({ pathname }) => {
               </svg>
             </a>
             <a href={FACEBOOK_URL} target="_blank">
-              <span className="sr-only">Yelp</span>
+              <span className="sr-only">Facebook</span>
               <svg
+                className="text-primary-500 size-6"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
-                className="size-6 text-blue-500"
               >
                 <path
-                  fill="none"
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="1.5"
-                  d="M4.12 12.496a8 8 0 0 0-.103 1.899c.053.801.08 1.202.47 1.467c.388.265.831.118 1.716-.176l.81-.27c1.967-.652 2.95-.979 2.986-1.639s-.905-1.093-2.788-1.96l-.777-.36c-.848-.39-1.272-.585-1.688-.365s-.486.615-.626 1.404m14.203-.178l-.472.114c-2.228.544-3.343.816-3.738.27c-.396-.545.275-1.429 1.617-3.195l.282-.37c.566-.746.85-1.119 1.337-1.136c.488-.018.755.282 1.289.882q.503.565.882 1.216c.4.685.599 1.027.405 1.451s-.663.538-1.602.768M17.94 19.1q.317-.42.581-.885c.379-.667.568-1 .438-1.444l-.017-.054c-.152-.434-.547-.579-1.336-.869c-2.057-.755-3.085-1.133-3.47-.595l-.043.065c-.344.571.287 1.553 1.549 3.517c.484.753.726 1.13 1.142 1.163l.052.002c.417.005.646-.297 1.104-.9m-5.94.977v-.298c0-2.341 0-3.512-.585-3.744c-.585-.231-1.234.683-2.53 2.51l-.167.234c-.531.75-.797 1.124-.697 1.593c.1.47.43.64 1.09.977q.556.285 1.157.458c.704.203 1.056.304 1.394.007c.338-.296.338-.776.338-1.737m0-16.195v2.682c0 2.813 0 4.22-.777 4.415c-.778.196-1.573-1.01-3.163-3.421L6.633 5.394c-.486-.738-.73-1.106-.597-1.513c.132-.406.507-.574 1.257-.908a12 12 0 0 1 2.601-.819c.88-.169 1.321-.253 1.714.037c.392.29.392.757.392 1.69"
-                  color="currentColor"
-                ></path>
+                  fill="currentColor"
+                  d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4z"
+                />
               </svg>
             </a>
           </div>
