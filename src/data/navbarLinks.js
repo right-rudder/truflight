@@ -1,11 +1,20 @@
 export const navbarLinks = [
   {
-    name: "Home",
-    link: "/",
-  },
-  {
-    name: "Start Your Career",
-    link: "/start-your-career",
+    name: "New to Flying?",
+    submenu: [
+      {
+        name: "Why Become a Pilot?",
+        link: "/why-become-a-pilot",
+      },
+      {
+        name: "Make It Your Career",
+        link: "/make-it-your-career",
+      },
+      {
+        name: "Discovery Flight",
+        link: "/discovery-flight",
+      },
+    ],
   },
   {
     name: "Pilot Training",
@@ -29,7 +38,7 @@ export const navbarLinks = [
     ],
   },
   {
-    name: "Helicopter Add-Ons",
+    name: "Add-Ons",
     submenu: [
       {
         name: "Private Helicopter Add-On",

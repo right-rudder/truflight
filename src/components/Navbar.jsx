@@ -90,9 +90,9 @@ const Navbar = ({ pathname }) => {
       <div
         className={`${navBar || openMobile ? "from-blue-700 to-blue-900" : "from-transparent to-transparent"} ${showNavbar ? "-translate-y-28" : ""} bg-gradient-to-br duration-300`}
       >
-        <div className="mx-auto max-w-[90rem] px-5">
+        <div className="mx-auto max-w-[90rem] px-4 lg:px-12">
           <div
-            className={`relative flex h-24 items-center justify-between transition-all`}
+            className={`relative flex h-24 items-center justify-between gap-3 transition-all`}
             id="navbar"
           >
             <a href="/" className={`${navBar ? "w-48" : "w-48"} duration-200`}>
@@ -136,7 +136,7 @@ const Navbar = ({ pathname }) => {
                       )}
                       {item.submenu && item.submenu.length > 0 && (
                         <ul
-                          className={`bg-accent-500 absolute top-[36px] left-0 z-10 overflow-hidden rounded whitespace-nowrap text-white duration-300 ${
+                          className={`bg-accent-500 absolute top-[40px] left-0 z-10 overflow-hidden rounded whitespace-nowrap text-white duration-300 ${
                             hoveredIndex === index
                               ? "h-auto w-auto opacity-100"
                               : "h-0 w-0 overflow-hidden opacity-0"
@@ -206,10 +206,7 @@ const Navbar = ({ pathname }) => {
               </div>
 
               <div className="hidden flex-1 justify-end lg:flex">
-                <a
-                  href="#contactUs"
-                  className="bg-primary-500 group flex items-center gap-3 rounded-full px-9 py-3 font-semibold tracking-tight text-white uppercase shadow-lg shadow-gray-300 duration-500 hover:bg-white hover:text-black"
-                >
+                <a href="#contactUs" className="btn-primary group">
                   <FaHelicopter className="duration-300 group-hover:-translate-y-1" />
                   Contact Us
                 </a>
@@ -228,10 +225,10 @@ const Navbar = ({ pathname }) => {
                 <span className="sr-only">Open main menu</span>
 
                 <svg
-                  className={`${openMobile ? "hidden" : "block"} h-6 w-6 text-white`}
+                  className={`${openMobile ? "hidden" : "block"} text-primary-500 size-8`}
                   fill="none"
                   viewBox="0 0 24 24"
-                  strokeWidth="1.5"
+                  strokeWidth="2"
                   stroke="currentColor"
                   aria-hidden="true"
                   id="x-icon"

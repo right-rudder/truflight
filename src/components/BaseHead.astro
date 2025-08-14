@@ -5,6 +5,10 @@ import "../styles/global.css";
 import type { ImageMetadata } from "astro";
 import FallbackImage from "../assets/blog-placeholder-1.jpg";
 import { SITE_TITLE } from "../consts";
+import "@fontsource-variable/mulish";
+import "@fontsource-variable/playfair-display";
+import mulishWoff2 from "@fontsource-variable/mulish/files/mulish-latin-wght-normal.woff2?url";
+import playfairNormalWoff2 from "@fontsource-variable/playfair-display/files/playfair-display-latin-wght-normal.woff2?url";
 
 interface Props {
   title: string;
@@ -29,6 +33,21 @@ const { title, description, image = FallbackImage } = Astro.props;
   href={new URL("rss.xml", Astro.site)}
 />
 <meta name="generator" content={Astro.generator} />
+
+<link
+  rel="preload"
+  as="font"
+  type="font/woff2"
+  href={mulishWoff2}
+  crossorigin="anonymous"
+/>
+<link
+  rel="preload"
+  as="font"
+  type="font/woff2"
+  href={playfairNormalWoff2}
+  crossorigin="anonymous"
+/>
 
 <!-- Canonical URL -->
 <link rel="canonical" href={canonicalURL} />
