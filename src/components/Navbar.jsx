@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { IoIosArrowForward } from "react-icons/io";
 import { FaPhone } from "react-icons/fa";
 import { FaHelicopter } from "react-icons/fa";
-import { INSTAGRAM_URL, PHONE_NUMBER, YELP_URL } from "../consts.ts";
+import { FACEBOOK_URL, PHONE_NUMBER } from "../consts.ts";
 
 const Navbar = ({ pathname }) => {
   const [openMobile, setOpenMobile] = useState(false);
@@ -90,7 +90,7 @@ const Navbar = ({ pathname }) => {
       <div
         className={`${navBar || openMobile ? "bg-white shadow" : ""} ${showNavbar ? "-translate-y-28" : ""} duration-500`}
       >
-        <div className="mx-auto max-w-[90rem] px-4 lg:px-12">
+        <div className="mx-auto max-w-[98rem] px-4 lg:px-12">
           <div
             className={`relative flex h-24 items-center justify-between gap-3 transition-all`}
             id="navbar"
@@ -428,7 +428,7 @@ const Navbar = ({ pathname }) => {
           </div>
 
           <div className="mt-2 flex gap-3">
-            <a href={INSTAGRAM_URL} target="_blank">
+            <a href={FACEBOOK_URL} target="_blank">
               <span className="sr-only">Instagram</span>
               <svg
                 className="size-6 text-blue-500"
@@ -443,7 +443,7 @@ const Navbar = ({ pathname }) => {
                 />
               </svg>
             </a>
-            <a href={YELP_URL} target="_blank">
+            <a href={FACEBOOK_URL} target="_blank">
               <span className="sr-only">Yelp</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"

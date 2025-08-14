@@ -41,7 +41,7 @@
 }
 
 .btn-primary {
-  @apply bg-primary-500 flex items-center gap-3 rounded-full px-9 py-3 font-semibold tracking-tight whitespace-nowrap text-white uppercase shadow-lg shadow-gray-300 duration-500 hover:bg-white hover:text-black;
+  @apply bg-primary-500 flex w-fit items-center gap-3 rounded-full px-9 py-3 font-semibold tracking-tight whitespace-nowrap text-white uppercase shadow-lg shadow-gray-300 duration-500 hover:bg-white hover:text-black;
 }
 
 .btn-secondary {
