@@ -1,4 +1,5 @@
 ---
+import Features from "../components/Features.astro";
 import HomepageHeader from "../components/HomepageHeader.astro";
 import ImageComp from "../components/ImageComp.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
@@ -75,89 +76,5 @@ import { FaCheck } from "react-icons/fa";
     </div>
   </section>
 
-  <section class="bg-primary-50/50">
-    <div
-      class="mx-auto flex max-w-xl flex-col items-center gap-10 px-4 py-24 lg:max-w-7xl lg:gap-10 lg:px-12"
-    >
-      <h2 class="mx-auto text-center">
-        <strong class="text-medium-blue text-primary-500 text-lg font-bold"
-          >Why Choose</strong
-        >
-        <br />
-        <span
-          class="text-dark-blue font-display mb-5 text-4xl leading-tight font-bold lg:text-5xl"
-          >TruFlight Academy</span
-        >
-      </h2>
-
-      <div class="grid grid-cols-3">
-        <div
-          class="border-primary-50/50 flex flex-col gap-3 border-2 bg-white p-8 duration-500 hover:z-40 hover:shadow-[0_0_25px_rgb(239,112,22)]"
-        >
-          <h3 class="font-display text-2xl font-semibold lg:text-3xl">
-            Professional CFIs
-          </h3>
-          <p class="text-accent-400 text-sm/6 font-medium tracking-wider">
-            Our Certified Flight Instructors (CFIs) are experienced and
-            dedicated to helping you achieve your aviation goals.
-          </p>
-        </div>
-        <div
-          class="border-primary-50/50 flex flex-col gap-3 border-2 bg-white p-8 duration-500 hover:z-40 hover:shadow-[0_0_25px_rgb(239,112,22)]"
-        >
-          <h3 class="font-display text-2xl font-semibold lg:text-3xl">
-            Modern Cabri G2 Helicopters
-          </h3>
-          <p class="text-accent-400 text-sm/6 font-medium tracking-wider">
-            We use modern Cabri G2 helicopters for training, ensuring a safe and
-            effective learning experience.
-          </p>
-        </div>
-        <div
-          class="border-primary-50/50 flex flex-col gap-3 border-2 bg-white p-8 duration-500 hover:z-40 hover:shadow-[0_0_25px_rgb(239,112,22)]"
-        >
-          <h3 class="font-display text-2xl font-semibold lg:text-3xl">
-            Flexible Training Options
-          </h3>
-          <p class="text-accent-400 text-sm/6 font-medium tracking-wider">
-            We offer flexible training options, including on-site student
-            housing and mobile training at private airports or residences.
-          </p>
-        </div>
-        <div
-          class="border-primary-50/50 flex flex-col gap-3 border-2 bg-white p-8 duration-500 hover:z-40 hover:shadow-[0_0_25px_rgb(239,112,22)]"
-        >
-          <h3 class="font-display text-2xl font-semibold lg:text-3xl">
-            Helicopter Rentals
-          </h3>
-          <p class="text-accent-400 text-sm/6 font-medium tracking-wider">
-            We offer helicopter rentals for those looking to gain more flight
-            experience or for personal use.
-          </p>
-        </div>
-        <div
-          class="border-primary-50/50 flex flex-col gap-3 border-2 bg-white p-8 duration-500 hover:z-40 hover:shadow-[0_0_25px_rgb(239,112,22)]"
-        >
-          <h3 class="font-display text-2xl font-semibold lg:text-3xl">
-            External Load Instruction
-          </h3>
-          <p class="text-accent-400 text-sm/6 font-medium tracking-wider">
-            Our external load instruction prepares you for specialized flying
-            tasks, enhancing your skill set.
-          </p>
-        </div>
-        <div
-          class="border-primary-50/50 flex flex-col gap-3 border-2 bg-white p-8 duration-500 hover:z-40 hover:shadow-[0_0_25px_rgb(239,112,22)]"
-        >
-          <h3 class="font-display text-2xl font-semibold lg:text-3xl">
-            Discovery Flights
-          </h3>
-          <p class="text-accent-400 text-sm/6 font-medium tracking-wider">
-            We offer discovery flights for those interested in experiencing the
-            thrill of flying a helicopter.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
+  <Features />
 </BaseLayout>
