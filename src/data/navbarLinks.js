@@ -11,7 +11,7 @@ export const navbarLinks = [
         link: "/make-it-your-career",
       },
       {
-        name: "Discovery Flight",
+        name: "Book a Discovery Flight",
         link: "/discovery-flight",
       },
     ],
