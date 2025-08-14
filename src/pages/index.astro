@@ -1,12 +1,77 @@
 ---
 import HomepageHeader from "../components/HomepageHeader.astro";
+import ImageComp from "../components/ImageComp.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import { FaCheck } from "react-icons/fa";
 ---
 
 <BaseLayout
   siteTitle="TruFlight Academy"
   siteDescription="Looking for a helicopter flight school in Dallas, TX? Discover the best training at TruFlight Academy. Start your journey to becoming a skilled helicopter pilot today!"
 >
-	<HomepageHeader slot="hero" />
+  <HomepageHeader slot="hero" />
 
+  <section>
+    <div
+      class="mx-auto flex max-w-xl flex-col-reverse items-center gap-10 px-4 py-24 lg:max-w-[90rem] lg:flex-row lg:gap-10 lg:px-12"
+    >
+      <div class="flex-1">
+        <ImageComp
+          src="/src/assets/helicopter-taking-off-at-truflight-academy.avif"
+          alt="A helicopter taking off at TruFlight Academy"
+          classes="aspect-square rounded-md object-cover"
+        />
+      </div>
+      <div class="flex flex-1 flex-col">
+        <strong class="text-medium-blue text-primary-500 text-lg font-bold"
+          >About Us</strong
+        >
+        <h2
+          class="text-dark-blue font-display mb-5 text-5xl leading-tight font-bold"
+        >
+          Your Journey to Becoming a Helicopter Pilot Starts Here
+        </h2>
+        <p
+          class="text-accent-400 max-w-lg text-sm font-medium tracking-wider lg:text-base/6"
+        >
+          At TruFlight Academy, we are dedicated to making your helicopter
+          flight dreams a reality. As one of the leading helicopter flight
+          schools in Dallas, our state-of-the-art aircraft and our highly
+          trained CFIs provide you with the ability to obtain the certification
+          you seek. Our commitment is to provide you with the in-depth
+          knowledge, skills and confidence you need for success.
+        </p>
+
+        <ul class="my-3 flex flex-col gap-2 font-bold">
+          <li class="flex items-center gap-3">
+            <FaCheck className="text-primary-500" />
+            Beginners looking to start their helicopter flight training
+          </li>
+          <li class="flex items-center gap-3">
+            <FaCheck className="text-primary-500" />
+            Fixed-wing pilots seeking to upgrade their skills to helicopters
+          </li>
+          <li class="flex items-center gap-3">
+            <FaCheck className="text-primary-500" />
+            Experienced helicopter pilots aiming to enhance their skills
+          </li>
+          <li class="flex items-center gap-3">
+            <FaCheck className="text-primary-500" />
+            Anyone interested in pursuing a career in aviation
+          </li>
+        </ul>
+
+        <p
+          class="text-accent-400 max-w-lg text-sm font-medium tracking-wider lg:text-base/6"
+        >
+          Join us at TruFlight Academy and take the first step towards your
+          dream of becoming a helicopter pilot!
+        </p>
+
+        <div class="mt-5 flex flex-col items-center gap-5 sm:flex-row">
+          <a href="/contact-us" class="btn-secondary"> Contact Us </a>
+        </div>
+      </div>
+    </div>
+  </section>
 </BaseLayout>

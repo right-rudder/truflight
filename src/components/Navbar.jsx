@@ -88,7 +88,7 @@ const Navbar = ({ pathname }) => {
   return (
     <nav className="fixed top-0 z-50 h-0 w-full tracking-wider">
       <div
-        className={`${navBar || openMobile ? "from-blue-700 to-blue-900" : "from-transparent to-transparent"} ${showNavbar ? "-translate-y-28" : ""} bg-gradient-to-br duration-300`}
+        className={`${navBar || openMobile ? "bg-white shadow" : ""} ${showNavbar ? "-translate-y-28" : ""} duration-500`}
       >
         <div className="mx-auto max-w-[90rem] px-4 lg:px-12">
           <div
@@ -98,7 +98,7 @@ const Navbar = ({ pathname }) => {
             <a href="/" className={`${navBar ? "w-48" : "w-48"} duration-200`}>
               <img
                 src="/src/assets/truflight-logo.avif"
-                alt="Blitz Aviation Logo"
+                alt="TruFlight Academy Logo"
                 loading="eager"
                 decoding="async"
                 fetchPriority="auto"
@@ -289,7 +289,7 @@ const Navbar = ({ pathname }) => {
         <a href="/" className="mx-auto block size-24">
           <img
             src="/src/assets/truflight-logo.avif"
-            alt="Blitz Aviation Logo"
+            alt="TruFlight Academy Logo"
             loading="eager"
             decoding="async"
             fetchPriority="auto"
@@ -418,11 +418,11 @@ const Navbar = ({ pathname }) => {
             <a
               href={`tel:${PHONE_NUMBER}`}
               className="w-fit rounded-full border border-white bg-white p-2"
-              aria-label="Call Blitz Aviation"
+              aria-label="Call TruFlight Academy"
             >
               <FaPhone className="size-3 text-blue-500" />
             </a>
-            <a href={`tel:${PHONE_NUMBER}`} aria-label="Call Blitz Aviation">
+            <a href={`tel:${PHONE_NUMBER}`} aria-label="Call TruFlight Academy">
               {PHONE_NUMBER}
             </a>
           </div>
