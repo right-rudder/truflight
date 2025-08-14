@@ -5,7 +5,7 @@ import features from "../data/features.js";
 
 <section class="bg-primary-50/50">
   <div
-    class="mx-auto flex max-w-xl flex-col items-center gap-10 px-4 py-24 lg:max-w-7xl lg:gap-10 lg:px-12"
+    class="mx-auto flex max-w-2xl flex-col items-center gap-10 px-4 py-24 lg:max-w-7xl lg:gap-10 lg:px-12"
   >
     <h2 class="mx-auto text-center">
       <strong class="text-medium-blue text-primary-500 text-lg font-bold"
@@ -18,7 +18,7 @@ import features from "../data/features.js";
       >
     </h2>
 
-    <div class="grid grid-cols-3">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3">
       {features.map((feature) => <FeatureCard {...feature} />)}
     </div>
   </div>

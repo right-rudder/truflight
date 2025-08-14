@@ -1,4 +1,5 @@
 ---
+import { FaArrowRight } from "react-icons/fa6";
 import Features from "../components/Features.astro";
 import HomepageHeader from "../components/HomepageHeader.astro";
 import ImageComp from "../components/ImageComp.astro";
@@ -77,4 +78,50 @@ import { FaCheck } from "react-icons/fa";
   </section>
 
   <Features />
+
+  <section>
+    <div
+      class="mx-auto flex max-w-xl flex-col px-4 py-24 lg:max-w-7xl lg:flex-row lg:px-12"
+    >
+      <div class="flex-1">
+        <ImageComp
+          src="/src/assets/helicopter-in-dallas-truflight-academy.avif"
+          alt="A helicopter in Dallas at TruFlight Academy"
+          classes="lg:rounded-l-lg object-cover h-full w-full rounded-t-lg lg:rounded-tr-none"
+        />
+      </div>
+      <div
+        class="bg-accent-500 flex-1 rounded-b-lg text-white lg:rounded-r-lg lg:rounded-bl-none"
+      >
+        <div class="flex flex-col px-12 py-12 lg:py-20">
+          <strong class="text-medium-blue text-primary-500 text-lg font-bold"
+            >We Come To You</strong
+          >
+          <h2
+            class="text-dark-blue font-display my-5 text-3xl leading-tight font-bold lg:text-4xl"
+          >
+            We Bring the Best Helicopter Flight Training to Your Location
+          </h2>
+          <p
+            class="text-accent-100 text-sm font-medium tracking-wider lg:text-base/6"
+          >
+            You contact us and we fly out to you to give you your flight lesson.
+            If lessons are at an airport where more than one student is flying
+            with us that day, convenience fee can be split equally between
+            students. Convenience fee is simply a there and back ferry flight
+            cost. We are located just north of McKinney.
+          </p>
+
+          <div class="mt-5 flex flex-col gap-5 sm:flex-row">
+            <a
+              href="/contact-us"
+              class="btn-secondary hover:border-primary-500! border-white! text-white!"
+              >Contact Us
+              <FaArrowRight />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </BaseLayout>
