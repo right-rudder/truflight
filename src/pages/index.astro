@@ -5,6 +5,7 @@ import HomepageHeader from "../components/HomepageHeader.astro";
 import ImageComp from "../components/ImageComp.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { FaCheck } from "react-icons/fa";
+import TrainingCoursesCarrousel from "../components/TrainingCoursesCarrousel";
 ---
 
 <BaseLayout
@@ -95,8 +96,8 @@ import { FaCheck } from "react-icons/fa";
       >
         <div class="flex flex-col px-12 py-12 lg:py-20">
           <strong class="text-medium-blue text-primary-500 text-lg font-bold"
-            >We Come To You</strong
-          >
+            >We Come To You
+          </strong>
           <h2
             class="text-dark-blue font-display my-5 text-3xl leading-tight font-bold lg:text-4xl"
           >
@@ -122,6 +123,20 @@ import { FaCheck } from "react-icons/fa";
           </div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="mx-auto max-w-7xl px-4 py-24 lg:px-12">
+      <div class="mb-10 flex flex-col gap-5">
+        <strong class="text-medium-blue text-primary-500 text-lg font-bold"
+          >Choose Training Program
+        </strong>
+        <h2 class="font-display text-3xl font-bold lg:text-5xl">
+          Find the right program for you
+        </h2>
+      </div>
+      <TrainingCoursesCarrousel client:visible />
     </div>
   </section>
 </BaseLayout>
