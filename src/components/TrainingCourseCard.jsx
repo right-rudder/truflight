@@ -26,7 +26,7 @@ const TrainingCourseCard = ({
             <span>{duration}</span>
           </p>
           <hr className="text-gray-300" />
-          <p className="paragraph text-accent-400 text-base font-medium">
+          <p className="paragraph text-accent-400 text-base font-medium tracking-wide">
             {description}
           </p>
         </div>
