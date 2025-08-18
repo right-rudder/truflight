@@ -16,6 +16,7 @@ const TrainingCourseCard = ({
           src={image.src}
           alt={name}
           className="h-full w-full object-cover"
+          loading="lazy"
         />
       </div>
       <div className="flex h-full flex-col justify-between gap-5 p-6">
