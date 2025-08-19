@@ -26,7 +26,8 @@
   --color-accent-950: #040506;
 
   --font-mulish: "Mulish", sans-serif;
-  --font-display: "Playfair Display Variable", serif;
+  /* --font-display: "Playfair Display Variable", serif; */
+  --font-display: "Roboto Variable", sans-serif;
 
   --animate-takeoff: takeoff 1.8s ease-out;
 
