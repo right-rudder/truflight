@@ -21,25 +21,9 @@ const Navbar = ({ pathname }) => {
   };
 
   useEffect(() => {
-    setNavbar(window.scrollY >= 60);
-    let lastScrollY = window.scrollY;
-
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-
-      if (currentScrollY > lastScrollY && currentScrollY > 60) {
-        setShowNavbar(true);
-      } else {
-        setShowNavbar(false);
-      }
-
-      lastScrollY = currentScrollY;
-    };
     window.addEventListener("scroll", changeBackground);
-    window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", changeBackground);
-      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
@@ -89,7 +73,7 @@ const Navbar = ({ pathname }) => {
   return (
     <nav className="fixed top-0 z-50 h-0 w-full tracking-wider">
       <div
-        className={`${navBar || openMobile ? "bg-white shadow" : ""} ${showNavbar ? "-translate-y-28" : ""} duration-500`}
+        className={`${navBar || openMobile ? "bg-white shadow" : ""} ${showNavbar ? "-translate-y-28" : ""} duration-300`}
       >
         <div className="mx-auto max-w-[98rem] px-4 lg:px-12">
           <div
