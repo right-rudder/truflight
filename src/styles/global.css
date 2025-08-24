@@ -24,6 +24,9 @@
   --color-accent-800: #0b1014;
   --color-accent-900: #070a0c;
   --color-accent-950: #040506;
+  --color-dark-gray: #43536a;
+  --color-medium-gray: #818b9c;
+  --color-light-gray: #afb5c0;
 
   --font-mulish: "Mulish", sans-serif;
   /* --font-display: "Playfair Display Variable", serif; */

@@ -101,7 +101,7 @@ const Navbar = ({ pathname }) => {
                       key={index}
                       className={`${
                         isActive(item, pathname)
-                          ? "underline decoration-blue-800 decoration-2 underline-offset-[10px]"
+                          ? "decoration-primary-500 underline decoration-2 underline-offset-[10px]"
                           : ""
                       } group relative last:no-underline`}
                       onMouseEnter={() => setHoveredIndex(index)}
