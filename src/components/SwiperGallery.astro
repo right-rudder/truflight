@@ -1,86 +1,62 @@
 ---
 import ImageComp from "./ImageComp.astro";
+import swiperData from "../data/swiperData";
+import { FaArrowRight } from "react-icons/fa6";
 ---
 
-<div class="swiper-container">
-  <div class="swiper main">
+<div class="swiper-container h-[60rem] lg:h-[80vh]">
+  <div class="swiper">
     <div class="swiper-wrapper">
-      <ImageComp
-        classes="swiper-slide object-cover"
-        src="/src/assets/commercial-pilot-at-truflight-academy-dallas.avif"
-        alt="Girlfriend taking a tour at High Tide"
-      />
-      <ImageComp
-        classes="swiper-slide object-cover"
-        src="/src/assets/helicopter-in-dallas-truflight-academy.avif"
-        alt="Couple in Helitour at High Tide Southport"
-      />
-      <ImageComp
-        classes="swiper-slide object-cover"
-        src="/src/assets/commercial-pilot-at-truflight-academy-dallas.avif"
-        alt="Family after helitour in Southport"
-      />
-      <ImageComp
-        classes="swiper-slide object-cover"
-        src="/src/assets/helicopter-in-dallas-truflight-academy.avif"
-        alt="Helitour Southport High Tide Aviation"
-      />
-      <ImageComp
-        classes="swiper-slide object-cover"
-        src="/src/assets/commercial-pilot-at-truflight-academy-dallas.avif"
-        alt="Happy Customers after helitour in Southport NC, High Tide Aviation"
-      />
-      <ImageComp
-        classes="swiper-slide object-cover"
-        src="/src/assets/helicopter-in-dallas-truflight-academy.avif"
-        alt="Happy family at High Tide tours"
-      />
+      {
+        swiperData.map((item) => (
+          <div class="swiper-slide relative flex flex-col overflow-hidden lg:!w-[80%] lg:flex-row lg:rounded-3xl">
+            <div class="absolute inset-0 z-10 flex flex-col gap-3 bg-gradient-to-b from-[#44546b] from-40% via-transparent via-50% p-10 lg:justify-center lg:bg-gradient-to-r lg:p-20">
+              <h1 class="font-display text-4xl font-black text-pretty text-white italic sm:text-4xl/14 lg:max-w-md lg:text-5xl">
+                {item.title}
+              </h1>
+              <p class="text-sm font-medium tracking-wider text-gray-100 lg:max-w-md lg:text-base/7">
+                {item.subtitle}
+              </p>
+              <div class="mt-2 flex flex-col gap-5 sm:flex-row">
+                <a
+                  href={item.btnLink}
+                  class="group btn-secondary hover:border-primary-500! !border-white !text-white"
+                >
+                  {item.btnText}
+                  <FaArrowRight className="text-primary-500 duration-500 group-hover:text-white" />
+                </a>
+              </div>
+            </div>
+            <div class="w-full flex-1" />
+            <div class="h-full w-full flex-[1.5_1.5_0]">
+              <ImageComp
+                classes="w-full h-full object-cover block"
+                src={item.imagePath}
+                alt="Pending alt text"
+              />
+            </div>
+          </div>
+        ))
+      }
     </div>
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-prev !text-primary-500"></div>
+    <div class="swiper-button-next !text-primary-500"></div>
   </div>
 </div>
 
 <style>
-  .swiper-container {
-    position: relative;
-    height: 600px;
-  }
-  .swiper.main {
+  .swiper {
     width: 100%;
-    height: 80%;
+    height: 100%;
   }
-  .swiper.thumbs {
-    width: 100%;
-    height: 20%;
-    box-sizing: border-box;
-    padding: 10px 0;
-  }
+
   .swiper-slide {
-    text-align: center;
     font-size: 18px;
-    background: #fff;
+    background: #44546b;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-size: cover;
-    background-position: center;
-  }
-  .thumbs .swiper-slide {
-    width: 25%;
-    height: 100%;
-    opacity: 0.4;
-  }
-
-  .thumbs .swiper-slide-thumb-active {
-    opacity: 1;
-  }
-
-  .swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
   }
 </style>
 
