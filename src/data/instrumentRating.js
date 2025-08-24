@@ -25,9 +25,10 @@ const instrumentRating = {
     secondaryImage: "/src/assets/images/cessna-172xp-control-panel.webp",
     secondaryAlt: "Cessna 172XP control panel",
     prerequisites: [
-      "Hold a current private pilot certificate or apply for one alongside the instrument rating.",
-      "Accumulate a specific amount of flight time, including: 50 hours of cross-country PIC (Pilot in Command) time. 40 hours of instrument training",
-      "Hold a valid FAA 3rd Class Medical Certificate or a higher class",
+      "Hold a current private pilot certificate",
+      "Be able to read, speak, write, and understand the English language.",
+      "Be at least 17 years old.",
+      "Be a U.S. citizen or legal resident.",
     ],
     duration: "2 months, 3-5 times/week",
     steps: [

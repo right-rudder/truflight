@@ -28,8 +28,9 @@ const commercialPilot = {
       "Student pulling Cessna out of the hangar at Blitz Aviation in Ogden, Utah",
     prerequisites: [
       "Hold a current private pilot certificate",
-      "Have a minimum of 250 hours of flight time, including 100 hours of pilot-in-command time",
-      "Obtain a valid FAA 2nd Class Medical Certificate or a higher class",
+      "Be able to read, speak, write, and understand the English language.",
+      "Be at least 18 years old.",
+      "Be a U.S. citizen or legal resident.",
     ],
     duration: "3 months, 3-5 times/week",
     steps: [

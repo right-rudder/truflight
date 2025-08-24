@@ -132,7 +132,7 @@ const Navbar = ({ pathname }) => {
                               key={subIndex}
                               className={`${
                                 isActive(subitem, pathname)
-                                  ? "bg-blue-800 text-white"
+                                  ? "bg-primary-500 text-white"
                                   : ""
                               } hover:bg-primary-500 relative duration-300 hover:text-white`}
                               onMouseEnter={() => setSubHoveredIndex(subIndex)}
