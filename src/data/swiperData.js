@@ -1,6 +1,6 @@
 const swiperData = [
   {
-    imagePath: "/src/assets/discovery-flight-at-truflight-academy-dallas.avif",
+    imagePath: "/src/assets/discovery-flight-at-truflight-academy-dallas.jpg",
     imageAlt: "Helicopter flying over Dallas skyline",
     title: "Take Off with the Best Helicopter Flight School in Dallas",
     subtitle:
@@ -18,7 +18,8 @@ const swiperData = [
     btnLink: "#",
   },
   {
-    imagePath: "/src/assets/helicopter-at-truflight-academy.avif",
+    imagePath:
+      "/src/assets/customer-taking-a-discovery-flight-at-truflight-academy.jpg",
     imageAlt: "Helicopter at TruFlight Academy",
     title: "Book a Discovery Flight at TruFlight Academy",
     subtitle:
