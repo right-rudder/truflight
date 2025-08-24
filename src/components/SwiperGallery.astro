@@ -14,7 +14,7 @@ import { FaArrowRight } from "react-icons/fa6";
               <h1 class="font-display text-4xl font-black text-pretty text-white italic sm:text-4xl/14 lg:max-w-md lg:text-5xl">
                 {item.title}
               </h1>
-              <p class="text-sm font-medium tracking-wider text-gray-100 lg:max-w-md lg:text-base/7">
+              <p class="text-sm font-medium tracking-wider text-pretty text-gray-100 lg:max-w-md lg:text-base/7">
                 {item.subtitle}
               </p>
               <div class="mt-2 flex flex-col gap-5 sm:flex-row">
@@ -32,7 +32,7 @@ import { FaArrowRight } from "react-icons/fa6";
               <ImageComp
                 classes="w-full h-full object-cover block"
                 src={item.imagePath}
-                alt="Pending alt text"
+                alt={item.imageAlt}
               />
             </div>
           </div>
