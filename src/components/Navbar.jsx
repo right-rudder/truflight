@@ -191,6 +191,15 @@ const Navbar = ({ pathname }) => {
               </div>
 
               <div className="hidden flex-1 justify-end lg:flex">
+                <a
+                  href="https://truflight.azurewebsites.net/identity/account/login"
+                  target="_blank"
+                  className="btn-secondary whitespace-nowrap"
+                >
+                  Log In
+                </a>
+              </div>
+              <div className="hidden flex-1 justify-end lg:flex">
                 <a href="#contactUs" className="btn-primary group">
                   <FaHelicopter className="duration-300 group-hover:-translate-y-1" />
                   Contact Us
@@ -396,6 +405,15 @@ const Navbar = ({ pathname }) => {
               className="bg-primary-500 mx-5 mt-4 block rounded-full p-5 px-8 py-4 text-center text-lg font-semibold whitespace-nowrap text-white uppercase duration-300"
             >
               Contact Us
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://truflight.azurewebsites.net/identity/account/login"
+              target="_blank"
+              className="border-primary-500 text-primary-500 mx-5 mt-4 block rounded-full border p-5 px-8 py-4 text-center text-lg font-semibold whitespace-nowrap uppercase duration-300"
+            >
+              Log In
             </a>
           </li>
         </ul>

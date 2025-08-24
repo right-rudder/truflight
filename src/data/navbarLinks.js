@@ -35,6 +35,10 @@ export const navbarLinks = [
         name: "Sling Load Training",
         link: "/programs/sling-load-training",
       },
+      {
+        name: "External Load Training",
+        link: "/programs/external-load-training",
+      },
     ],
   },
   {

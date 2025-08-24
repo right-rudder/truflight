@@ -10,7 +10,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 document.addEventListener("DOMContentLoaded", function () {
-  const swiper = new Swiper(".swiper", {
+  const swiper = new Swiper(".hero-swiper", {
     modules: [Navigation, Pagination, EffectCoverflow, Autoplay],
     effect: "coverflow",
     grabCursor: true,
