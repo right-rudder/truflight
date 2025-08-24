@@ -30,6 +30,7 @@
   --font-display: "Roboto Variable", sans-serif;
 
   --animate-takeoff: takeoff 1.8s ease-out;
+  --animate-slow-zoom: slow-zoom 30s ease-in-out infinite;
 
   @keyframes takeoff {
     from {
@@ -37,6 +38,16 @@
     }
     to {
       transform: translateY(0);
+    }
+  }
+
+  @keyframes slow-zoom {
+    0%,
+    100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
     }
   }
 }
