@@ -46,15 +46,15 @@ export const navbarLinks = [
     submenu: [
       {
         name: "Private Helicopter Add-On",
-        link: "/add-ons/private-helicopter-add-on",
+        link: "/add-on/private-helicopter-add-on",
       },
       {
         name: "Instrument Helicopter Add-On",
-        link: "/add-ons/instrument-helicopter-add-on",
+        link: "/add-on/instrument-helicopter-add-on",
       },
       {
         name: "Commercial Helicopter Add-On",
-        link: "/add-ons/commercial-helicopter-add-on",
+        link: "/add-on/commercial-helicopter-add-on",
       },
     ],
   },

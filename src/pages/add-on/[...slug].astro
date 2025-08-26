@@ -1,0 +1,23 @@
+---
+import Header from "../../components/Header.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import addOns from "../../data/addOns";
+import AddOnLayout from "../../layouts/AddOnLayout.astro";
+export function getStaticPaths() {
+  return addOns.map(({ data }) => {
+    return {
+      params: { slug: data.slug },
+      props: {
+        data,
+      },
+    };
+  });
+}
+
+const { data } = Astro.props;
+---
+
+<BaseLayout siteTitle={data.siteTitle} siteDescription={data.siteDescription}>
+  <Header slot="hero" data={data} />
+  <AddOnLayout data={data} />
+</BaseLayout>

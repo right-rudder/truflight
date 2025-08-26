@@ -10,9 +10,9 @@ const privatePilot = {
     siteTitle:
       "Private Pilot License Training in Dallas, Texas | TruFlight Academy",
     siteDescription:
-      "Earn your Private Pilot License in as little as 3 months at TruFlight Academy in Ogden, UT. Learn to fly with expert CFIs in a structured, affordable program with Cessna aircraft and personalized instruction.",
+      "Earn your Private Pilot License in as little as 3 months at TruFlight Academy in Dallas, TX. Learn to fly with expert CFIs in a structured, affordable program with Cessna aircraft and personalized instruction.",
     siteKeywords:
-      "private pilot license Utah, PPL training Salt Lake City, student pilot course Ogden, beginner flight training Utah, recreational pilot license, private pilot certification Utah, learn to fly private pilot, flight training for beginners Utah, private pilot ground school, Utah private pilot course, flight training Ogden, pilot school Salt Lake City, aviation training Northern Utah, discovery flight Utah",
+      "private pilot license Texas, PPL training Dallas, student pilot course Dallas, beginner flight training Texas, recreational pilot license, private pilot certification Texas, learn to fly private pilot, flight training for beginners Texas, private pilot ground school, Texas private pilot course, flight training Dallas, pilot school Salt Lake City, aviation training Northern Texas, discovery flight Texas",
     primaryImage: "/src/assets/private-pilot-training-at-truflight.jpg",
     primaryAlt:
       "Student of the Private Pilot Flight Training Program at TruFlight Academy",
