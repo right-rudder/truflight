@@ -8,7 +8,7 @@ const privatePilot = {
     url: "/programs/private-pilot",
     slug: "private-pilot",
     siteTitle:
-      "Private Pilot License Training in Ogden, Utah | TruFlight Academy",
+      "Private Pilot License Training in Dallas, Texas | TruFlight Academy",
     siteDescription:
       "Earn your Private Pilot License in as little as 3 months at TruFlight Academy in Ogden, UT. Learn to fly with expert CFIs in a structured, affordable program with Cessna aircraft and personalized instruction.",
     siteKeywords:
@@ -17,12 +17,12 @@ const privatePilot = {
     primaryAlt:
       "Student of the Private Pilot Flight Training Program at TruFlight Academy",
     secondaryImage: "/src/assets/trulflight-helicopter-in-dallas-airport.jpg",
-    secondaryAlt: "Ground school at TruFlight Academy in Ogden, Utah",
+    secondaryAlt: "TruFlight Academy Helicopter at Dallas Airport",
     intro:
       "The Private Pilot License (PPL) is your first step toward professional training and qualifies you to fly for personal or recreational purposes. At TruFlight Academy, our Private Pilot course integrates flight training and ground instruction through a structured syllabus, accelerating your learning and laying the foundation for future advanced ratings and certifications.",
     description: [
-      "The Private Pilot License (PPL) is the first step in your journey to becoming a pilot. Whether you're looking to fly for personal enjoyment or pursue a career in aviation, the PPL is the foundation of your training. At TruFlight Academy, our comprehensive program is designed to provide you with the knowledge and skills needed to become a safe and proficient pilot.",
-      "Our PPL program combines ground instruction with flight training to give you a well-rounded education in aviation. With a focus on safety, professionalism, and individual attention, our program prepares you to pass the FAA written and practical exams and earn your pilot's license. Whether you're a beginner or an experienced pilot looking to advance your skills, our program is tailored to meet your needs and help you achieve your goals.",
+      "The Private Pilot License (PPL) is your all-access pass to the skies. Whether you dream of flying for the sheer thrill of it or as the first step toward a professional aviation career, the PPL lays the foundation for everything that comes next. At TruFlight Academy, we’ll equip you with the knowledge, skills, and confidence to take command of a helicopter safely and skillfully.",
+      "Our PPL program blends engaging ground school with hands-on flight training in our modern Cabri G2 helicopters. You’ll learn the fundamentals of aviation, master flight maneuvers, and prepare to ace the FAA written and practical exams. And don’t worry, we keep the atmosphere professional but fun (because who said safety and good humor can’t share the cockpit?). Whether you’re starting fresh or leveling up your flying skills, our instructors are here to guide your journey from student to licensed pilot.",
     ],
     prerequisites: [
       "Be able to read, speak, write, and understand the English language.",

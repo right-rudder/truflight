@@ -1,29 +1,27 @@
-import { FaFileMedical } from "react-icons/fa";
 import { FaRegEdit } from "react-icons/fa";
 import { FaRegPaperPlane } from "react-icons/fa";
 
 const instrumentRating = {
   data: {
-    title: "Instrument Rating",
-    url: "/programs/instrument-rating",
-    slug: "instrument-rating",
+    title: "Instrument Pilot",
+    url: "/programs/instrument-pilot",
+    slug: "instrument-pilot",
     siteTitle:
-      "Instrument Rating Course in Utah | IFR Flight Training at Blitz Aviation",
+      "Instrument Rating Course in Dallas | IFR Flight Training at TruFlight Academy",
     siteDescription:
-      "Master instrument flying with Blitz Aviation's 2-month IFR training program in Ogden, Utah. Learn to navigate in all weather conditions with advanced avionics and gain the skills needed for a professional flying career.",
+      "Master instrument flying with TruFlight Academy's 2-month IFR training program in Dallas, Texas. Learn to navigate in all weather conditions with advanced avionics and gain the skills needed for a professional flying career.",
     siteKeywords:
-      "instrument rating Utah, IFR training Salt Lake City, instrument flight training Ogden, weather flying training Utah, precision approach training, instrument pilot certification, IFR checkride preparation Utah, instrument rating course Utah, advanced pilot training, instrument flight rules training, flight training Ogden, pilot school Utah, aviation training Northern Utah",
+      "instrument rating Dallas, IFR training Texas, instrument flight training Dallas, weather flying training Dallas, precision approach training, instrument pilot certification, IFR checkride preparation Dallas, instrument rating course Dallas, advanced pilot training, instrument flight rules training, flight training Dallas, pilot school Dallas, aviation training Northern Dallas",
     intro:
-      "Earning an Instrument Rating (IR) enables you to fly in low visibility and adverse weather conditions using instruments. At Blitz Aviation, our IR training emphasizes precision in IFR operations, preparing you for commercial aviation and airline operations.",
+      "Earning an Instrument Rating (IR) enables you to fly in low visibility and adverse weather conditions using instruments. At TruFlight Academy, our IR training emphasizes precision in IFR operations, preparing you for commercial aviation and airline operations.",
     description: [
-      "The Instrument Rating (IR) is a critical qualification that allows you to fly in low visibility and adverse weather conditions using instruments. Whether you're looking to enhance your private pilot skills or pursue a career in commercial aviation, the IR is an essential step in your journey. At Blitz Aviation, our IR program provides you with the knowledge and skills needed to excel as an instrument-rated pilot.",
-      "Our IR program is designed to deepen your understanding of instrument flight and enhance your proficiency in IFR operations. With a focus on precision and safety, our program prepares you to navigate and operate aircraft using instrument references alone. By combining expert instruction with hands-on experience, we'll help you become a skilled and confident instrument-rated pilot.",
+      "Flying in clear blue skies is fun, but real pilots know the weather doesn’t always cooperate. That’s where your Instrument Rating comes in. With this certification, you’ll learn how to fly confidently using only the helicopter’s instruments, giving you the skills to handle low visibility, clouds, and those less-than-perfect days. At TruFlight Academy, we make sure you’re not just checking a box, you’re becoming a sharper, more capable aviator.",
+      "Our Instrument program combines in-depth ground instruction with practical training in our modern Cabri G2 helicopters, equipped with advanced avionics. You’ll gain the ability to navigate safely without visual references, fine-tune your precision flying, and prepare to pass the FAA knowledge and checkride exams. Plus, you’ll earn serious bragging rights, after all, anyone can fly on a sunny day, but it takes a true pro to dance through the clouds.",
     ],
-    primaryImage:
-      "/src/assets/images/student-in-a-flight-lesson-at-blitz-aviation.webp",
-    primaryAlt: "Pilot flying on IFR flight",
-    secondaryImage: "/src/assets/images/cessna-172xp-control-panel.webp",
-    secondaryAlt: "Cessna 172XP control panel",
+    primaryImage: "/src/assets/truflight-helicopter-interior.avif",
+    primaryAlt: "Instrument panel of a Cabri G2 helicopter",
+    secondaryImage: "/src/assets/trulflight-cabri-helicopter-in-the-sunset.jpg",
+    secondaryAlt: "TruFlight Academy Cabri G2 Helicopter in the Sunset",
     prerequisites: [
       "Hold a current private pilot certificate",
       "Be able to read, speak, write, and understand the English language.",
@@ -33,28 +31,17 @@ const instrumentRating = {
     duration: "2 months, 3-5 times/week",
     steps: [
       {
-        title: "Start Flight Training",
-        icon: FaFileMedical,
-        description:
-          "Start your Instrument Rating by pairing up with a CFII. Accumulate a minimum of 50 hours of cross country flight time as PIC, including 40 hours of dedicated instrument training. Through guided practice in navigating approaches and holds, you'll gain the confidence to fly solely by reference to instruments, enabling safe and effective flight in diverse conditions.",
-      },
-      {
-        title: "Pass the Written Exam",
+        title: "50 hours of cross-country flight time as pilot in command",
         icon: FaRegEdit,
         description:
-          "Prepare to succeed by learning the topics covered in the Instrument Rating written exam. Study regulations, navigation, meteorology, and instrument systems, demonstrating a comprehensive understanding of instrument flight principles. Passing this exam not only signifies your theoretical expertise but also solidifies your ability to make informed decisions in real world instrument flying situations.",
+          "To earn your Instrument Rating, you need to have at least 50 hours of cross-country flight time as the pilot in command (PIC). Of those hours, at least 10 must be in helicopters for an instrument-helicopter rating.",
       },
       {
-        title: "Complete Long Cross Country",
+        title:
+          "Have a total of 40 hours of actual or simulated instrument time",
         icon: FaRegPaperPlane,
         description:
-          "A pivotal step in your journey is completing an instrument cross-country flight, covering a minimum of 250 nautical miles along airways or ATC-directed routes. This experience equips you with the ability to navigate under IFR conditions, exposing you to diverse weather and navigation challenges. Successfully completing this flight showcases your proficiency in real-world instrument navigation.",
-      },
-      {
-        title: "Complete the Instrument Checkride",
-        icon: FaRegPaperPlane,
-        description:
-          "The checkride marks the culmination of your efforts, assessing both your theoretical knowledge and practical instrument flying skills. Pass the oral portion of the exam which covers regulations, procedures, and decision making. Then, complete a flight test where you'll demonstrate precise instrument maneuvers, approaches, and communications. Upon passing, you'll emerge as a confident instrument rated pilot, ready to safely navigate the skies in challenging weather conditions.",
+          "This time should include at least 15 hours of instrument flight training from an authorized instructor in the aircraft type for your rating and instrument training specific to helicopters on cross-country flight procedures that includes at least one cross-country.",
       },
     ],
   },

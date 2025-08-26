@@ -25,7 +25,7 @@ export const navbarLinks = [
       },
       {
         name: "Instrument Pilot",
-        link: "/pilot-training/instrument-rating",
+        link: "/pilot-training/instrument-pilot",
       },
       {
         name: "Commercial Pilot",

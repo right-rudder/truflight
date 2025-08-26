@@ -1,6 +1,9 @@
-import { FaFileMedical } from "react-icons/fa";
 import { FaRegEdit } from "react-icons/fa";
 import { FaRegPaperPlane } from "react-icons/fa";
+import { FaListUl } from "react-icons/fa";
+import { MdChecklist } from "react-icons/md";
+import { FaUserCheck } from "react-icons/fa";
+import { MdNightsStay } from "react-icons/md";
 
 const commercialPilot = {
   data: {
@@ -8,24 +11,24 @@ const commercialPilot = {
     url: "/programs/commercial-pilot",
     slug: "commercial-pilot",
     siteTitle:
-      "Commercial Pilot Training in Utah | Professional Aviation Career at Blitz Aviation",
+      "Commercial Pilot Training in Dallas | Professional Aviation Career at Truflight Academy",
     siteDescription:
-      "Train to become a commercial pilot in just 3 months at Blitz Aviation in Ogden, Utah. Master advanced maneuvers and complex aircraft operations while preparing for a professional aviation career with our experienced instructors.",
+      "Train to become a commercial pilot in just 3 months at Truflight Academy in Dallas, Dallas. Master advanced maneuvers and complex aircraft operations while preparing for a professional aviation career with our experienced instructors.",
     siteKeywords:
-      "commercial pilot license Utah, CPL training Salt Lake City, professional pilot training Ogden, career pilot course Utah, airline pilot preparation, commercial aviation training Utah, professional pilot certification, aviation career training Utah, commercial pilot course, airline pilot training Utah, flight training Ogden, pilot school Salt Lake City, aviation training Northern Utah",
+      "commercial pilot license Dallas, CPL training Texas, professional pilot training Dallas, career pilot course Dallas, pilot preparation, commercial aviation training Dallas, professional pilot certification, aviation career training Dallas, commercial pilot course, pilot training Dallas, flight training Dallas, pilot school Texas, aviation training Northern Dallas",
     intro:
-      "The Commercial Pilot Certificate (CPL) elevates your skills to professional standards, enabling you to receive compensation for flying services. Our CPL program at Blitz Aviation focuses on advanced maneuvers, complex aircraft operations, and aviation professionalism, unlocking opportunities in passenger transport, cargo, and specialized aviation fields.",
+      "The Commercial Pilot Certificate (CPL) elevates your skills to professional standards, enabling you to receive compensation for flying services. Our CPL program at Truflight Academy focuses on advanced maneuvers, complex aircraft operations, and aviation professionalism, unlocking opportunities in passenger transport, cargo, and specialized aviation fields.",
     description: [
-      "The Commercial Pilot Certificate (CPL) is the gateway to a career in aviation, allowing you to fly for hire or compensation. Whether you're looking to become a flight instructor, fly for a charter company, or pursue a career with the airlines, the CPL is a critical step in your journey. At Blitz Aviation, our comprehensive program prepares you for the challenges and opportunities of professional flying.",
-      "Our CPL program is designed to build on your existing skills and experience, taking you to the next level of proficiency and professionalism. With a focus on advanced flight maneuvers, complex aircraft operations, and aviation regulations, our program equips you with the knowledge and skills needed to succeed in the competitive world of commercial aviation.",
+      "Ready to turn your passion into a paycheck? The Commercial Pilot License (CPL) is your ticket to start flying for hire. Whether you’re dreaming of tours, utility work, or building hours toward bigger opportunities, this certification unlocks the professional side of aviation. At TruFlight Academy, our Commercial program is designed to sharpen your skills, expand your knowledge, and prepare you for the responsibilities that come with being a pro pilot.",
+      "Through advanced ground and flight training in our Cabri G2 helicopters, you’ll refine your maneuvers, master complex procedures, and gain the confidence to operate at a higher standard. From precision hovering to smooth-as-butter landings, we’ll help you polish every detail. By the time you finish, you won’t just be flying, you’ll be flying like someone who actually gets paid to do it (because you will).",
     ],
     primaryImage:
-      "/src/assets/images/cfi-and-student-at-blitz-accelerated-training-program.webp",
-    primaryAlt: "Commercial Pilot Training at Blitz Aviation",
+      "/src/assets/truflight-at-dallas-airport-commercial-pilot.jpg",
+    primaryAlt: "Commercial pilot student flying a Cabri G2 helicopter",
     secondaryImage:
-      "/src/assets/images/student-pulling-cessna-out-of-the-hangar-at-blitz-aviation.webp",
+      "/src/assets/commercial-pilot-student-at-truflight-academy.jpg",
     secondaryAlt:
-      "Student pulling Cessna out of the hangar at Blitz Aviation in Ogden, Utah",
+      "Commercial pilot student at TruFlight Academy in Dallas, Texas",
     prerequisites: [
       "Hold a current private pilot certificate",
       "Be able to read, speak, write, and understand the English language.",
@@ -35,28 +38,41 @@ const commercialPilot = {
     duration: "3 months, 3-5 times/week",
     steps: [
       {
-        title: "Build the Flight Hours",
-        icon: FaFileMedical,
+        title: "Must log at least 150 hours of flight time as a pilot",
+        icon: FaListUl,
         description:
-          "Our program guides you towards amassing the required 250 flight hours, including 100 hours as PIC. With a structured blend of flight training, cross country missions, and solo experiences, you'll gain the necessary hands on exposure to diverse flying conditions, enhancing your skills and building the confidence that defines a seasoned commercial pilot.",
+          "This includes 100 hours in powered aircraft, of which 50 hours must be in helicopters.",
       },
       {
-        title: "Pass the Written Exam",
+        title: "100 hours of pilot-in-command flight time",
         icon: FaRegEdit,
         description:
-          "Our comprehensive curriculum covers a wide spectrum of subjects, from aviation regulations and meteorology to navigation and aerodynamics. Our experienced instructors ensure that you are well equipped to succeed in the written examination. We provide targeted guidance to help you not only pass the test but also acquire a good understanding of necessary aeronautical knowledge.",
+          "This includes 35 hours in helicopters and 10 hours of cross-country flight time.",
       },
       {
-        title: "Complete Requirements",
+        title:
+          "20 hours of training on the areas of operation listed in § 61.127(b)(3)",
         icon: FaRegPaperPlane,
         description:
-          "Achieving your Commercial Pilot Certificate involves fulfilling specific flight requirements, including demanding long cross country flights and other critical experiences. At Blitz Aviation, our commercial program ensures that you master advanced flight maneuvers and precise navigation techniques. With your long cross country flight, you'll demonstrate your ability to plan and execute complex missions, showcasing your aptitude for real world challenges.",
+          "This includes at least 5 hours IFR training including, partial panel skills, recovery from unusual flight attitudes, and intercepting and tracking navigational systems. One 2-hour daytime cross country flight of more than 50 nautical miles. One 2-hour nighttime cross country flight of more than 50 nautical miles.",
       },
       {
-        title: "Pass the Commercial Checkride",
-        icon: FaRegPaperPlane,
+        title: "3 hours in a helicopter with an authorized instructor",
+        icon: MdChecklist,
         description:
-          "With a focus on safety and precision, our instructors ensure that you are thoroughly ready for the check ride. As you confidently take to the skies with the examiner, you'll showcase the culmination of your training and the expertise you've gained throughout your journey with Blitz Aviation.",
+          "This must be within 2 months before the date of your practical test.",
+      },
+      {
+        title: "10 hours of solo flight time in a helicopter",
+        icon: FaUserCheck,
+        description:
+          "One cross-country flight with landings at a minimum of three points, with one segment consisting of a straight-line distance of at least 50 nautical miles from the original point of departure",
+      },
+      {
+        title: "5 hours of night VFR flight time",
+        icon: MdNightsStay,
+        description:
+          "This includes 10 takeoffs and landings at an airport, with each landing involving a flight in the traffic pattern.",
       },
     ],
   },
