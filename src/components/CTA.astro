@@ -1,0 +1,25 @@
+---
+import ImageComp from "./ImageComp.astro";
+const { text } = Astro.props;
+---
+
+<div
+  class="relative mx-5 mt-20 flex h-[30rem] flex-col items-center justify-center overflow-hidden rounded-xl px-5 text-white"
+>
+  <div class="bg-accent-500/80 absolute inset-0 z-10"></div>
+  <ImageComp
+    src="/src/assets/private-pilot-training-at-truflight.jpg"
+    alt="Student of the Private Pilot Flight Training Program at TruFlight Academy"
+    classes="absolute object-cover w-full h-full inset-0"
+  />
+  <h2 class="z-20 text-xl font-bold italic lg:text-2xl">
+    <span class="text-primary-500">TruFlight</span> Academy
+  </h2>
+  <p
+    class="font-display z-20 mt-3 max-w-2xl text-center text-3xl font-medium text-pretty sm:text-4xl lg:text-5xl/14"
+    set:html={text}
+  />
+  <a href="/enrollment-form" class="btn-primary z-20 mt-5 !shadow-none"
+    >Enroll Now</a
+  >
+</div>
