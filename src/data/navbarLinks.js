@@ -66,8 +66,8 @@ export const navbarLinks = [
         link: "/about/our-story",
       },
       {
-        name: "Our Team",
-        link: "/about/our-team",
+        name: "Our Chief Pilot",
+        link: "/about/our-chief-pilot",
       },
       {
         name: "Our Fleet",

@@ -1,0 +1,167 @@
+---
+import MarqueeRight from "../../components/MarqueeRight.jsx";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ImageComp from "../../components/ImageComp.astro";
+import MarqueeLeft from "../../components/MarqueeLeft.jsx";
+import CTA from "../../components/CTA.astro";
+import imagesChiefPilot from "../../data/imagesChiefPilot";
+import { FaArrowRight } from "react-icons/fa6";
+import { FaDotCircle } from "react-icons/fa";
+
+const aircraftsFlown = [
+  "Schweizer (300C)",
+  "Blackhawk (UH60A&M)",
+  "Lakota (LUH72)",
+  "Kiowa (OH58)",
+  "Robinsons (R44)",
+  "Jet Ranger (B206)",
+  "Rotorway",
+  "Airplanes",
+  "Gyrocopter",
+  "Guimbal's Cabri G2 (of course)",
+];
+
+const certificates = [
+  "Bachelors in Aeronautical Science",
+  "Certified Flight Instructor - Instrument (CFII)",
+  "Type rating S70",
+  "Part 133 (External Loads)",
+  "Army Aviator Badge",
+  "Army HAMETS Training",
+  "Army Safe Flying Award",
+];
+---
+
+<BaseLayout
+  siteTitle="About TruFlight"
+  siteDescription="Learn more about TruFlight Academy, our mission, and our team of experienced instructors dedicated to providing top-notch helicopter flight training."
+>
+  <section class="mt-18 flex flex-col gap-10 py-10 lg:mt-24" slot="hero">
+    <MarqueeRight client:only="react">
+      <div class="flex gap-10 px-5">
+        {
+          imagesChiefPilot.map((image) => (
+            <ImageComp
+              src={image.src}
+              alt={image.alt}
+              classes="h-48 w-72 lg:h-72 lg:w-96 rounded-lg object-cover"
+            />
+          ))
+        }
+      </div>
+    </MarqueeRight>
+  </section>
+
+  <section class="mx-auto my-12 max-w-2xl lg:my-20 lg:max-w-6xl">
+    <div
+      class="mx-auto flex max-w-xl flex-col gap-10 px-4 lg:max-w-7xl lg:flex-row lg:px-12"
+    >
+      <div class="overflow-hidden rounded-xl lg:flex-1">
+        <ImageComp
+          src="/src/assets/chief-pilot-todd-guison.jpg"
+          alt="Todd Guison, Chief Pilot at TruFlight Academy"
+          classes="object-cover h-full w-full aspect-square"
+        />
+      </div>
+      <div
+        class="bg-primary-100/50 overflow-hidden rounded-xl lg:flex-[1.5_1.5_0]"
+      >
+        <div class="flex flex-col justify-between px-12 py-12 lg:h-full">
+          <strong class="text-medium-blue text-primary-500 text-lg font-bold"
+            >Why I Fly
+          </strong>
+          <h2
+            class="text-dark-blue font-display my-5 text-3xl leading-tight font-bold lg:text-4xl"
+          >
+            Todd Guison, Chief Pilot
+          </h2>
+          <p
+            class="text-sm font-medium tracking-wider text-pretty text-gray-800 lg:text-base/6"
+          >
+            "My passion in life has always been flying. My earliest memory, at
+            the age of four, is sitting in a helicopter at my uncle’s change of
+            command (a formal military ceremony) thinking, "This is the coolest
+            thing I have ever seen!" However, my obsession truly started while I
+            listened to my Grandpa’s riveting stories of flying in the Pacific
+            Theater during World War II."
+          </p>
+
+          <div class="mt-5 flex flex-col gap-5 sm:flex-row">
+            <a href="/contact-us" class="btn-primary"
+              >Contact Us
+              <FaArrowRight />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="mx-auto mb-12 max-w-2xl lg:mb-20 lg:max-w-6xl">
+    <div class="mx-auto flex max-w-7xl flex-col gap-20 px-4 lg:px-12">
+      <div class="flex flex-1 flex-col gap-5">
+        <h1
+          class="font-display max-w-lg text-4xl font-black tracking-wide text-pretty italic sm:text-5xl"
+        >
+          About Me
+        </h1>
+        <p class="tracking-wider text-gray-700 lg:text-lg">
+          I received my private license as a teenager. Starting as early as
+          2010, I have had extensive, hands-on, experience as a Certified Rotor
+          Flight Instructor (CFI). Initially, I taught helicopter students with
+          Canyon State Aero. In 2014, I commissioned in the Army as an
+          active-duty Aviation officer. During my first four years in the Army,
+          I was directly responsible for 5 Blackhawk helicopters and their
+          crews. I was also in charge of coordinating maintenance efforts, as
+          well as, conducting Flight trainings, ensuring Soldier welfare, and
+          the HR requirements of the crews. I’ve spent the last four years
+          working with national agencies, international agencies, and militaries
+          to coordinate aviation efforts domestically and across 3 continents.
+        </p>
+        <p class="tracking-wider text-gray-700 lg:text-lg">
+          After an honorable discharge from active Army Aviation service, I’ve
+          decided to pursue my dream of teaching others, so that they can share
+          in my passion. I look forward to sharing the joy I have felt since I
+          was a toddler and the skills I've learned while flying military
+          helicopters.
+        </p>
+      </div>
+    </div>
+
+    <div class="mx-auto flex max-w-7xl flex-col gap-5 px-4 py-12 pb-0 lg:px-12">
+      <h2 class="font-display text-2xl font-bold">Credentials</h2>
+      <div class="grid grid-cols-1 gap-10 md:grid-cols-2">
+        <div class="flex flex-col gap-2">
+          <h3 class="font-semibold lg:text-xl">Aircrafts Flown</h3>
+          <ul class="flex flex-col gap-1">
+            {
+              aircraftsFlown.map((aircraft) => (
+                <li class="flex gap-2 tracking-wider text-gray-700 lg:text-lg">
+                  <FaDotCircle className="text-primary-500 mt-[6px] size-3 shrink-0" />
+                  {aircraft}
+                </li>
+              ))
+            }
+          </ul>
+        </div>
+        <div class="flex flex-col gap-2">
+          <h3 class="font-semibold lg:text-xl">Certificates</h3>
+          <ul class="flex flex-col gap-1">
+            {
+              certificates.map((certificate) => (
+                <li class="flex gap-2 tracking-wider text-gray-700 lg:text-lg">
+                  <FaDotCircle className="text-primary-500 mt-[6px] size-3 shrink-0" />
+                  {certificate}
+                </li>
+              ))
+            }
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <CTA
+      text="Ready to take the next step and make your pilot dreams a reality?"
+    />
+  </section>
+</BaseLayout>
