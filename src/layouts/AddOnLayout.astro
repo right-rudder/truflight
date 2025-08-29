@@ -8,14 +8,14 @@ const { data } = Astro.props;
 ---
 
 <section class="mx-auto my-24 max-w-2xl lg:max-w-6xl">
-  <div class="mb-10 px-5">
+  <div class="mb-10 px-4 lg:px-12">
     <ImageComp
       src={data.secondaryImage}
       alt={data.secondaryAlt}
       classes="aspect-video h-[30rem] object-cover w-full rounded-xl"
     />
   </div>
-  <div class="mx-auto flex max-w-7xl flex-col gap-20 px-5">
+  <div class="mx-auto flex max-w-7xl flex-col gap-20 px-4 lg:px-12">
     <aside class="flex flex-1 flex-col gap-10 lg:flex-row">
       <div
         class="bg-dark-gray flex flex-1 flex-col gap-5 rounded-lg p-10 text-white"

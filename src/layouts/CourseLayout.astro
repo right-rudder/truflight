@@ -8,18 +8,20 @@ const { data } = Astro.props;
 ---
 
 <section class="mx-auto my-24 max-w-2xl lg:max-w-6xl">
-  <div class="mb-10 px-5">
+  <div class="mb-10 px-4 lg:px-12">
     <ImageComp
       src={data.secondaryImage}
       alt={data.secondaryAlt}
       classes="aspect-video h-[25rem] object-cover w-full rounded-xl"
     />
   </div>
-  <div class="mx-auto flex max-w-7xl flex-col-reverse gap-20 px-5 lg:flex-row">
+  <div
+    class="mx-auto flex max-w-7xl flex-col-reverse gap-20 px-4 lg:flex-row lg:px-12"
+  >
     <div class="flex flex-[2_2_0] flex-col gap-5">
       <div class="flex flex-col gap-5">
         <h2
-          class="font-display max-w-lg text-4xl font-black tracking-wide text-pretty italic sm:text-5xl"
+          class="font-display text-4xl font-black tracking-wide text-pretty italic sm:text-5xl"
         >
           {data.title}
         </h2>
@@ -47,8 +49,43 @@ const { data } = Astro.props;
       </div>
 
       {
+        data.usefulFor && (
+          <div class="mt-8">
+            <h3 class="font-display text-3xl font-bold">Why is this useful?</h3>
+            <ul class="mt-5 flex flex-col gap-7">
+              {data.usefulFor.map(
+                (application: {
+                  icon: any;
+                  title: string;
+                  description: string;
+                }) => (
+                  <li class="flex gap-5">
+                    <div class="bg-primary-500 h-fit w-fit p-2 text-white">
+                      <application.icon />
+                    </div>
+                    <div class="flex-flex-col">
+                      <div>
+                        <p
+                          class="max-w-lg text-2xl font-semibold tracking-tight text-pretty"
+                          set:html={application.title}
+                        />
+                        <p
+                          class="text-sm tracking-wider text-gray-700 lg:text-base"
+                          set:html={application.description}
+                        />
+                      </div>
+                    </div>
+                  </li>
+                ),
+              )}
+            </ul>
+          </div>
+        )
+      }
+
+      {
         data.steps && (
-          <div>
+          <div class="mt-8">
             <h3 class="font-display text-3xl font-bold">
               Course Completion Requirements
             </h3>

@@ -32,10 +32,6 @@ export const navbarLinks = [
         link: "/pilot-training/commercial-pilot",
       },
       {
-        name: "Sling Load Training",
-        link: "/pilot-training/sling-load-training",
-      },
-      {
         name: "External Load Training",
         link: "/pilot-training/external-load-training",
       },
