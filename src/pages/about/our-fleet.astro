@@ -1,0 +1,103 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/Header.astro";
+import { FaCheck } from "react-icons/fa6";
+import ImageComp from "../../components/ImageComp.astro";
+import MarqueeLeft from "../../components/MarqueeLeft.jsx";
+import imagesGuimbal from "../../data/imagesGuimbal";
+
+const headerData = {
+  title: "Our Fleet",
+  primaryImage: "/src/assets/guimbal-cabri-g2-in-dallas-texas.jpg",
+  primaryAlt: "Guimbal Cabri G2 in Dallas, Texas",
+};
+---
+
+<BaseLayout
+  siteTitle="Our Fleet"
+  siteDescription="Our fleet of helicopters at TruFlight Academy is meticulously maintained and equipped with the latest technology to ensure a safe and effective training environment."
+>
+  <Header slot="hero" data={headerData} />
+
+  <section>
+    <div
+      class="mx-auto flex max-w-xl flex-col-reverse items-center gap-10 px-4 py-24 lg:max-w-7xl lg:flex-row lg:gap-10 lg:px-12"
+    >
+      <div class="flex-1">
+        <ImageComp
+          src="/src/assets/guimbal-cabri-g2-truflight-academy.jpg"
+          alt="Guimbal Cabri G2 at TruFlight Academy"
+          classes="aspect-square rounded-md object-cover"
+        />
+      </div>
+      <div class="flex flex-1 flex-col">
+        <strong class="text-medium-blue text-primary-500 text-lg font-bold"
+          >Our Fleet</strong
+        >
+        <h2
+          class="text-dark-blue font-display mb-5 text-5xl leading-tight font-bold"
+        >
+          Guimbal Cabri G2
+        </h2>
+        <p
+          class="text-accent-400 max-w-lg text-sm font-medium tracking-wider lg:text-base/6"
+        >
+          At TruFlight Academy, we take pride in our state-of-the-art fleet of
+          helicopters, designed to provide our students with the best possible
+          training experience. Our primary training aircraft is the Guimbal
+          Cabri G2, a modern and versatile helicopter known for its safety,
+          reliability, and advanced technology.
+        </p>
+
+        <ul class="my-3 flex flex-col gap-2 font-bold">
+          <li class="flex items-center gap-3">
+            <FaCheck className="text-primary-500" />
+            AC
+          </li>
+          <li class="flex items-center gap-3">
+            <FaCheck className="text-primary-500" />
+            Full glass panel
+          </li>
+          <li class="flex items-center gap-3">
+            <FaCheck className="text-primary-500" />
+            Garmin 750TXI and 500HTXI as PFD
+          </li>
+          <li class="flex items-center gap-3">
+            <FaCheck className="text-primary-500" />
+            Proprietary engine and system monitoring
+          </li>
+          <li class="flex items-center gap-3">
+            <FaCheck className="text-primary-500" />
+            Cargo hook
+          </li>
+        </ul>
+
+        <p
+          class="text-accent-400 max-w-lg text-sm font-medium tracking-wider lg:text-base/6"
+        >
+          Rental price: $455/hr
+        </p>
+
+        <div class="mt-5 flex flex-col items-center gap-5 sm:flex-row">
+          <a href="/contact-us" class="btn-secondary">Rent Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="flex flex-col gap-10 py-10">
+    <MarqueeLeft client:only="react">
+      <div class="flex gap-10 px-5">
+        {
+          imagesGuimbal.map((image) => (
+            <ImageComp
+              src={image.src}
+              alt={image.alt}
+              classes="h-48 w-72 lg:h-72 lg:w-96 rounded-lg object-cover"
+            />
+          ))
+        }
+      </div>
+    </MarqueeLeft>
+  </section>
+</BaseLayout>
