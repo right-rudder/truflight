@@ -1,0 +1,66 @@
+---
+import { FaCheck } from "react-icons/fa6";
+import Header from "../components/Header.astro";
+import ImageComp from "../components/ImageComp.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const headerData = {
+  title: "Why Become a Helicopter Pilot?",
+  primaryImage: "/src/assets/guimbal-cabri-g2-in-dallas-texas.jpg",
+  primaryAlt: "Guimbal Cabri G2 in Dallas, Texas",
+};
+---
+
+<BaseLayout
+  siteTitle="Our Fleet"
+  siteDescription="Our fleet of helicopters at TruFlight Academy is meticulously maintained and equipped with the latest technology to ensure a safe and effective training environment."
+>
+  <Header slot="hero" data={headerData} />
+
+  <section>
+    <div
+      class="mx-auto flex max-w-xl flex-col-reverse items-center gap-10 px-4 py-24 lg:max-w-7xl lg:flex-row lg:gap-10 lg:px-12"
+    >
+      <div class="flex-1">
+        <ImageComp
+          src="/src/assets/student-pilot-at-truflight-academy-dallas.jpg"
+          alt="Student Pilot at TruFlight Academy Dallas"
+          classes="aspect-square rounded-md object-cover"
+        />
+      </div>
+      <div class="flex flex-1 flex-col">
+        <strong class="text-medium-blue text-primary-500 text-lg font-bold"
+          >Make It a Career</strong
+        >
+        <h2
+          class="text-dark-blue font-display mb-5 text-5xl leading-tight font-bold"
+        >
+          Start Your Commercial Helicopter Career
+        </h2>
+        <p
+          class="text-accent-400 max-w-lg text-sm font-medium tracking-wider lg:text-base/6"
+        >
+          Becoming a helicopter pilot can easily lead to a very rewarding and
+          lucrative career. (Not to mention you sound cool at parties) One big
+          positive about working in the aviation field, is that when applying
+          for jobs hours in the aircraft are what they look at most. If you're a
+          high schooler looking to work something other than retail when you
+          graduate, this is the job for you! Additionally, if college isn't your
+          thing, this is definitely a career for you.
+        </p>
+
+        <p
+          class="text-accent-400 mt-5 max-w-lg text-sm font-medium tracking-wider lg:text-base/6"
+        >
+          You can start logging hours as soon as you hit high school. You have
+          to be 16 to solo, 17 to take your private check-ride, and 18 to take
+          your commercial check-ride.
+        </p>
+
+        <div class="mt-5 flex flex-col items-center gap-5 sm:flex-row">
+          <a href="/contact-us" class="btn-secondary">Enroll Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
