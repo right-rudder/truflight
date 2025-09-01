@@ -1,0 +1,108 @@
+---
+import Header from "../components/Header.astro";
+import ImageComp from "../components/ImageComp.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Features from "../components/Features.astro";
+import Features2 from "../components/Features2.astro";
+import CTA from "../components/CTA.astro";
+import { IoLocationSharp } from "react-icons/io5";
+import { FaPhoneAlt } from "react-icons/fa";
+import { PHONE_NUMBER, ADDRESS_LINE_1, ADDRESS_LINE_2 } from "../consts";
+import { IoIosMail } from "react-icons/io";
+
+const headerData = {
+  title: "Contact Us",
+  primaryImage: "/src/assets/helicopter-taking-off-at-truflight.jpg",
+  primaryAlt: "Helicopter Taking Off at TruFlight",
+};
+---
+
+<BaseLayout
+  siteTitle="Contact TruFlight Academy - Your Path to a Helicopter Pilot Career"
+  siteDescription="Get in touch with TruFlight Academy to start your journey towards becoming a skilled helicopter pilot. Contact us today!"
+>
+  <Header slot="hero" data={headerData} />
+
+  <section>
+    <div
+      class="mx-auto flex max-w-xl flex-col-reverse gap-10 px-4 py-24 lg:max-w-7xl lg:flex-row lg:gap-10 lg:px-12"
+    >
+      <div class="flex-1">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3789.0946817764498!2d-96.64998279999999!3d33.5340791!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864c637f6e480445%3A0x733dcd3f2f095140!2sTruFlight%20Academy!5e1!3m2!1sen!2sca!4v1756754098202!5m2!1sen!2sca"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          class="h-full min-h-[300px] w-full rounded-lg"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <div class="flex flex-1 flex-col">
+        <strong class="text-medium-blue text-primary-500 text-lg font-bold"
+          >TruFlight Academy</strong
+        >
+        <h2
+          class="text-dark-blue font-display mb-5 text-5xl leading-tight font-bold"
+        >
+          How to Contact with Us?
+        </h2>
+        <p
+          class="text-accent-400 max-w-lg text-sm font-medium tracking-wider lg:text-base/6"
+        >
+          We're here to help you achieve your dreams of becoming a skilled
+          helicopter pilot.
+        </p>
+        <ul class="my-5 flex flex-col gap-5">
+          <li>
+            <a
+              href="https://maps.app.goo.gl/aYfF3mLMoD8xWu1B8"
+              target="_blank"
+              class="group flex items-center gap-5"
+            >
+              <div class="bg-primary-50 rounded-full p-4">
+                <IoLocationSharp className="text-primary-500 size-6" />
+              </div>
+              <div class="flex flex-col gap-1">
+                <h3 class="text-display text-2xl font-bold">Our Location</h3>
+                <p class="text-accent-400">
+                  {ADDRESS_LINE_1}, {ADDRESS_LINE_2}
+                </p>
+                <p
+                  class="text-primary-300 group-hover:text-primary-500 font-semibold duration-300"
+                >
+                  Find Us on Google Maps
+                </p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href=`tel:${PHONE_NUMBER}` class="flex items-center gap-5">
+              <div class="bg-primary-50 rounded-full p-4">
+                <FaPhoneAlt className="text-primary-500 size-6" />
+              </div>
+              <div class="flex flex-col gap-1">
+                <h3 class="text-display text-2xl font-bold">Our Phone</h3>
+                <p class="text-accent-400">
+                  {PHONE_NUMBER}
+                </p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="flex items-center gap-5">
+              <div class="bg-primary-50 rounded-full p-4">
+                <IoIosMail className="text-primary-500 size-6" />
+              </div>
+              <div class="flex flex-col gap-1">
+                <h3 class="text-display text-2xl font-bold">Write Us</h3>
+                <p class="text-accent-400">
+                  Fill out our contact form and we'll get back to you as soon as
+                  possible.
+                </p>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
