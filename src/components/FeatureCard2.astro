@@ -1,0 +1,34 @@
+---
+import ImageComp from "./ImageComp.astro";
+
+const { index, title, description, image, imageAlt } = Astro.props;
+---
+
+<div
+  class="border-primary-50/50 bg-primary-50 group relative flex flex-col gap-3 overflow-hidden rounded-2xl border-2 p-8 duration-500"
+>
+  <div
+    class="absolute inset-0 bg-black opacity-0 brightness-[40%] duration-500 group-hover:opacity-100"
+  >
+    <ImageComp
+      src={image}
+      alt={imageAlt}
+      classes="h-full w-full object-cover"
+    />
+  </div>
+  <p
+    class="group-hover:text-primary-500 text-display z-10 mb-4 text-6xl font-black text-gray-400 duration-500"
+  >
+    {index}
+  </p>
+  <h3
+    class="font-display z-10 text-2xl font-semibold duration-500 group-hover:text-white lg:text-3xl"
+  >
+    {title}
+  </h3>
+  <p
+    class="text-accent-400 z-10 text-sm/6 font-medium tracking-wider duration-500 group-hover:text-gray-200"
+  >
+    {description}
+  </p>
+</div>

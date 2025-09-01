@@ -7,10 +7,6 @@ export const navbarLinks = [
         link: "/why-become-a-pilot",
       },
       {
-        name: "Make It Your Career",
-        link: "/make-it-your-career",
-      },
-      {
         name: "Book a Discovery Flight",
         link: "/discovery-flight",
       },

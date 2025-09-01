@@ -3,6 +3,9 @@ import { FaCheck } from "react-icons/fa6";
 import Header from "../components/Header.astro";
 import ImageComp from "../components/ImageComp.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import Features from "../components/Features.astro";
+import Features2 from "../components/Features2.astro";
+import CTA from "../components/CTA.astro";
 
 const headerData = {
   title: "Why Become a Helicopter Pilot?",
@@ -62,5 +65,38 @@ const headerData = {
         </div>
       </div>
     </div>
+  </section>
+
+  <section class="mx-auto mb-12 flex max-w-7xl flex-col gap-5 px-4 lg:px-12">
+    <h2
+      class="font-display text-4xl font-black tracking-wide text-pretty italic sm:text-5xl"
+    >
+      Cost of getting your CFI vs College
+    </h2>
+
+    <p class="tracking-wider text-gray-700 lg:text-lg">
+      The average cost of getting a college degree in the United States,
+      including books and supplies, is $35, 551 A YEAR. This means a 4-year
+      degree costs about $142,000. Most careers that require a college degree
+      can take years to pay for itself. At TruFlight we chose our helicopter
+      (Guimbal's Cabri G2) specifically to save our students as much money as
+      possible in the safest, easiest to transition, training helicopter
+      available.
+    </p>
+    <p class="tracking-wider text-gray-700 lg:text-lg">
+      Bottom line, including the cost of your FAA Exams (3), check rides (3),
+      flight hours (150hrs), and ground school time (about 100hrs) TruFlight
+      Academy can get you to your CFI for approximately half the cost of a
+      college degree. Helicopter pilots are in high demand, once you have your
+      commercial certificate, finding a job is easy.
+    </p>
+  </section>
+
+  <Features />
+  <Features2 />
+  <section class="mx-auto mb-12 flex max-w-7xl flex-col gap-5">
+    <CTA
+      text="Ready to take the next step and make your pilot dreams a reality?"
+    />
   </section>
 </BaseLayout>
