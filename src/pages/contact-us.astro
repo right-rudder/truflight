@@ -1,14 +1,11 @@
 ---
 import Header from "../components/Header.astro";
-import ImageComp from "../components/ImageComp.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import Features from "../components/Features.astro";
-import Features2 from "../components/Features2.astro";
-import CTA from "../components/CTA.astro";
 import { IoLocationSharp } from "react-icons/io5";
 import { FaPhoneAlt } from "react-icons/fa";
 import { PHONE_NUMBER, ADDRESS_LINE_1, ADDRESS_LINE_2 } from "../consts";
 import { IoIosMail } from "react-icons/io";
+import ContactUsForm from "../components/ContactUsForm.astro";
 
 const headerData = {
   title: "Contact Us",
@@ -88,7 +85,7 @@ const headerData = {
             </a>
           </li>
           <li>
-            <a href="#" class="flex items-center gap-5">
+            <a href="#contactUs" class="flex items-center gap-5">
               <div class="bg-primary-50 rounded-full p-4">
                 <IoIosMail className="text-primary-500 size-6" />
               </div>
@@ -105,4 +102,6 @@ const headerData = {
       </div>
     </div>
   </section>
+
+  <ContactUsForm />
 </BaseLayout>
