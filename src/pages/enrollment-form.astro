@@ -1,0 +1,228 @@
+---
+import Header from "../components/Header.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+const CONTACT_US_FORM_WEBHOOK_URL = import.meta.env.CONTACT_US_FORM_WEBHOOK_URL;
+const PORTAL_API_KEY = import.meta.env.PORTAL_API_KEY;
+
+const headerData = {
+  title: "Enrollment Form",
+  primaryImage: "/src/assets/discovery-flight-helicopter-truflight-academy.jpg",
+  primaryAlt: "Discovery Flight Helicopter at TruFlight Academy",
+};
+---
+
+<BaseLayout
+  siteTitle="Enroll in Helicopter Flight Training at TruFlight Academy"
+  siteDescription="Join TruFlight Academy and take the first step towards becoming a skilled helicopter pilot. Enroll in our comprehensive flight training programs today!"
+>
+  <Header slot="hero" data={headerData} />
+
+  <section class="mx-auto max-w-xl px-4 py-20 lg:max-w-6xl lg:px-12">
+    <strong
+      class="text-primary-500 mx-auto block w-fit text-center text-lg font-bold"
+      >Enrollment Form</strong
+    >
+    <h2 class="font-display mt-3 mb-5 text-center text-5xl font-bold">
+      Ready to Take Off? Enroll Today!
+    </h2>
+    <form id="contact_form">
+      <div class="grid grid-cols-1 gap-x-8 gap-y-2 sm:grid-cols-2">
+        <div>
+          <div class="mt-2.5">
+            <input
+              type="text"
+              name="first-name"
+              id="first-name"
+              autocomplete="given-name"
+              placeholder="First Name"
+              required
+              class="border-primary-400 focus:border-primary-500 outline-primary-500 w-full rounded border bg-white p-3 placeholder:text-sm placeholder:font-semibold"
+            />
+          </div>
+        </div>
+        <div>
+          <div class="mt-2.5">
+            <input
+              type="text"
+              name="last-name"
+              id="last-name"
+              autocomplete="family-name"
+              placeholder="Last Name"
+              required
+              class="border-primary-400 focus:border-primary-500 outline-primary-500 w-full rounded border bg-white p-3 placeholder:text-sm placeholder:font-semibold"
+            />
+          </div>
+        </div>
+        <div>
+          <div class="mt-2.5">
+            <input
+              type="email"
+              name="email"
+              id="email"
+              autocomplete="email"
+              placeholder="Email"
+              required
+              class="border-primary-400 focus:border-primary-500 outline-primary-500 w-full rounded border bg-white p-3 placeholder:text-sm placeholder:font-semibold"
+            />
+          </div>
+        </div>
+        <p class="hidden">
+          <label>
+            Don't fill this out if you're human: <input name="confirm-email" />
+          </label>
+        </p>
+        <div>
+          <div class="relative mt-2.5">
+            <input
+              type="tel"
+              name="phone"
+              id="phone"
+              autocomplete="tel"
+              placeholder="Phone"
+              required
+              class="border-primary-400 focus:border-primary-500 outline-primary-500 w-full rounded border bg-white p-3 placeholder:text-sm placeholder:font-semibold"
+            />
+          </div>
+        </div>
+        <div class="sm:col-span-2">
+          <div class="mt-2.5">
+            <select
+              name="program-interest"
+              id="program-interest"
+              required
+              class="border-primary-400 focus:border-primary-500 outline-primary-500 w-full rounded border bg-white p-3 text-sm placeholder:text-sm placeholder:font-semibold"
+            >
+              <option value="" disabled selected>
+                Select Program of Interest
+              </option>
+              <option value="Private Pilot">Private Pilot</option>
+              <option value="Instrument Pilot">Instrument Pilot </option>
+              <option value="Commercial Pilot">Commercial Pilot</option>
+              <option value="External Load Training"
+                >External Load Training</option
+              >
+              <option value="Private Helicopter Add-On"
+                >Private Helicopter Add-On</option
+              >
+              <option value="Instrument Helicopter Add-On"
+                >Instrument Helicopter Add-On</option
+              >
+              <option value="Commercial Helicopter Add-On"
+                >Commercial Helicopter Add-On</option
+              >
+              <option value="Commercial Helicopter Add-On">Other</option>
+            </select>
+          </div>
+        </div>
+        <div class="sm:col-span-2">
+          <div class="mt-2.5">
+            <textarea
+              name="message"
+              id="message"
+              rows="4"
+              placeholder="Any additional information you'd like to provide?"
+              class="border-primary-400 focus:border-primary-500 outline-primary-500 w-full rounded border bg-white p-3 placeholder:text-sm placeholder:font-semibold"
+            ></textarea>
+          </div>
+        </div>
+        <div class="mt-5 flex gap-x-4 sm:col-span-2">
+          <div class="flex items-center gap-2">
+            <input
+              type="checkbox"
+              id="agree-terms"
+              name="agree-terms"
+              class="h-4 w-4 cursor-pointer rounded border-gray-300 bg-white text-gray-900 focus:ring-2 focus:ring-gray-900"
+              required
+            />
+            <label
+              for="agree-terms"
+              class="text-accent-400 ml-2 text-sm font-medium tracking-wider lg:text-base/6"
+            >
+              I agree to <a
+                href="/privacy-policy-and-terms-of-service"
+                target="_blank"
+                class="underline">terms & conditions</a
+              > provided by the company. By providing my phone number, I agree to
+              receive text messages from the business.
+            </label>
+          </div>
+        </div>
+        <div class="mt-5">
+          <button
+            id="submit-button"
+            type="submit"
+            class="btn-primary cursor-pointer">Submit</button
+          >
+        </div>
+      </div>
+    </form>
+  </section>
+
+  <script define:vars={{ CONTACT_US_FORM_WEBHOOK_URL, PORTAL_API_KEY }}>
+    document.addEventListener("DOMContentLoaded", () => {
+      const form = document.getElementById("contact_form");
+      if (!form) {
+        console.error("Form element not found.");
+        return;
+      }
+
+      form.addEventListener("submit", async (event) => {
+        event.preventDefault();
+
+        const formData = new FormData(form);
+        const confirmEmail = formData.get("confirm-email")?.trim();
+
+        if (confirmEmail) return;
+
+        const webhookURL = CONTACT_US_FORM_WEBHOOK_URL;
+        const apiKey = PORTAL_API_KEY;
+
+        const urlEncodedBody = new URLSearchParams(formData).toString();
+
+        const jsonBody = {
+          first_name: formData.get("first-name")?.trim() || "",
+          last_name: formData.get("last-name")?.trim() || "",
+          email: formData.get("email")?.trim() || "",
+          phone: formData.get("phone")?.trim() || "",
+          campaign: "contact_us_form",
+          account_random_id: "ac_ly7kki3x",
+          metadata: {
+            message: formData.get("message")?.trim() || "",
+          },
+        };
+
+        try {
+          const [ghlRes, portalRes] = await Promise.all([
+            fetch(webhookURL, {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/x-www-form-urlencoded",
+              },
+              body: urlEncodedBody,
+            }),
+            fetch("https://portal.rightruddermarketing.com/api/leads", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json",
+                "x-api-key": apiKey,
+              },
+              body: JSON.stringify(jsonBody),
+            }),
+          ]);
+
+          if (ghlRes.ok && portalRes.ok) {
+            window.location.href = "/contact-confirmation";
+          } else {
+            console.error("Submission failed", {
+              ghlStatus: ghlRes.status,
+              portalStatus: portalRes.status,
+            });
+          }
+        } catch (err) {
+          console.error("Submission error:", err);
+        }
+      });
+    });
+  </script>
+</BaseLayout>

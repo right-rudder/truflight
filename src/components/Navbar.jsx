@@ -200,7 +200,7 @@ const Navbar = ({ pathname }) => {
                 </a>
               </div>
               <div className="hidden flex-1 justify-end lg:flex">
-                <a href="#contactUs" className="btn-primary group">
+                <a href="enrollment-form" className="btn-primary group">
                   <FaHelicopter className="duration-300 group-hover:-translate-y-1" />
                   Enroll Now
                 </a>
@@ -401,7 +401,7 @@ const Navbar = ({ pathname }) => {
           ))}
           <li>
             <a
-              href="/contact-us"
+              href="/enrollment-form"
               className="bg-primary-500 mx-5 mt-4 block rounded-full p-5 px-8 py-4 text-center text-lg font-semibold whitespace-nowrap text-white uppercase duration-300"
             >
               Enroll Now

@@ -1,0 +1,46 @@
+---
+import ImageComp from "../components/ImageComp.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  siteTitle="Enroll in Helicopter Flight Training at TruFlight Academy"
+  siteDescription="Join TruFlight Academy and take the first step towards becoming a skilled helicopter pilot. Enroll in our comprehensive flight training programs today!"
+>
+  <section class="bg-primary-50/50 mt-18 flex flex-col lg:mt-24 lg:flex-row">
+    <div
+      class="mx-auto flex max-w-screen-sm flex-col gap-3 px-5 py-10 lg:mx-0 lg:min-w-[640px] lg:px-28 lg:py-28"
+    >
+      <h2 class="text-primary-500 block text-lg font-bold">
+        Book a Discovery Flight
+      </h2>
+      <p
+        class="text-dark-blue font-display mb-5 text-5xl leading-tight font-bold"
+      >
+        Experience the Thrill of Flight with a Discovery Flight
+      </p>
+      <p class="my-2 text-lg text-pretty text-gray-700">
+        You can take the controls of our brand new Cabri G2 helicopter. Feel the
+        joy and excitement of a "Tru" Flight!
+      </p>
+      <p class="text-sm tracking-wide text-gray-600 italic">
+        <strong class="text-primary-500 font-semibold">Disclaimer!</strong> TruFlight
+        is not responsible for any lingering desire to fly helicopters....but we
+        can certainly get you more flight time.
+      </p>
+      <a
+        href="https://truflight.azurewebsites.net/flight/discovery"
+        target="_blank"
+        class="btn-secondary mt-5">Schedule</a
+      >
+    </div>
+    <div class="h-screen w-full">
+      <ImageComp
+        alt="Discovery Flight Helicopter at TruFlight Academy"
+        src="/src/assets/discovery-flight-at-truflight-academy-dallas.jpg"
+        classes="w-full h-full object-cover"
+        quality={100}
+      />
+    </div>
+  </section>
+</BaseLayout>
