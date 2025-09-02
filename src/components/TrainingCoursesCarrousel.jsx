@@ -17,7 +17,7 @@ const TrainingCoursesCarrousel = () => {
       description:
         "The private pilot certificate is the first certification you will receive as a pilot.  You will be granted the privileges of flying a helicopter as the pilot in command and can fly passengers.",
       button: "Become a private pilot",
-      href: "/flight-training/private-pilot",
+      href: "/enrollment-form",
       image: privatePilotImage,
     },
     {
@@ -26,7 +26,7 @@ const TrainingCoursesCarrousel = () => {
       description:
         "Being an instrument rated pilot means that you've received training to fly a helicopter with sole reference to the flight instruments.  This allows you to safely navigate more challenging weather and makes you a sharper pilot.",
       button: "Become instrument rated",
-      href: "/flight-training/instrument-rating",
+      href: "/enrollment-form",
       image: instrumentRatingImage,
     },
     {
@@ -35,7 +35,7 @@ const TrainingCoursesCarrousel = () => {
       description:
         "Obtaining a commercial pilot certificate allows you to fly for compensation or hire. Start your pilot career and gain flight experience while getting paid to fly.",
       button: "Start your pilot career",
-      href: "/flight-training/commercial-pilot",
+      href: "/enrollment-form",
       image: commercialPilotImage,
     },
     {
@@ -44,7 +44,7 @@ const TrainingCoursesCarrousel = () => {
       description:
         "Learn how to safely and effectively transport cargo using a helicopter.  Sling load training is essential for pilots who want to work in utility, firefighting, or search and rescue operations.",
       button: "Become a CFI",
-      href: "/flight-training/flight-instructor",
+      href: "/enrollment-form",
       image: slingLoadImage,
     },
   ];

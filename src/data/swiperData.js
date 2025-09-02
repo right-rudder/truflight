@@ -6,7 +6,7 @@ const swiperData = [
     subtitle:
       "Looking for a helicopter flight school in Dallas, TX? Discover the best training at TruFlight Academy. Start your journey to becoming a skilled helicopter pilot today!",
     btnText: "Start Training",
-    btnLink: "#",
+    btnLink: "/pilot-training/private-pilot",
   },
   {
     imagePath: "/src/assets/truflight-academy-chief-pilot.avif",
@@ -14,8 +14,8 @@ const swiperData = [
     title: "Our Chief Pilot at TruFlight Academy",
     subtitle:
       "Learn more about our expierienced Chief Pilot Todd Guison and his dedication to providing top-notch helicopter flight training at TruFlight Academy.",
-    btnText: "Out Team",
-    btnLink: "#",
+    btnText: "Out Chief Pilot",
+    btnLink: "/about/our-chief-pilot",
   },
   {
     imagePath:
@@ -25,7 +25,7 @@ const swiperData = [
     subtitle:
       "Do you live in Dallas, TX and want to experience the thrill of flying a helicopter? Book a Discovery Flight and take the first step towards becoming a skilled helicopter pilot!",
     btnText: "Book Now",
-    btnLink: "#",
+    btnLink: "/discovery-flight",
   },
   {
     imagePath: "/src/assets/helicopter-controls.avif",
@@ -33,8 +33,8 @@ const swiperData = [
     title: "First Training Helicopter Cabri G2 with AC to Hit US Soil!",
     subtitle:
       "TruFlight Academy is proud to be the first helicopter flight school in the US to offer training on the Cabri G2 with the latest in avionics technology.",
-    btnText: "Rent Now",
-    btnLink: "#",
+    btnText: "Our Fleet",
+    btnLink: "/about/our-fleet",
   },
   {
     imagePath:
@@ -44,7 +44,7 @@ const swiperData = [
     subtitle:
       "Ready to take your helicopter training to the next level? Enroll in our External Load Training program at TruFlight Academy and learn how to safely and effectively operate helicopters with external loads.",
     btnText: "External Load Training",
-    btnLink: "#",
+    btnLink: "/pilot-training/external-load-training",
   },
   {
     imagePath: "/src/assets/sling-load-training-at-truflight-academy.avif",
@@ -53,7 +53,7 @@ const swiperData = [
     subtitle:
       "TruFlight Academy offers top-notch Sling Load Training for aspiring helicopter pilots. Our experienced instructors will teach you the skills and techniques needed to safely and effectively operate helicopters with sling loads.",
     btnText: "Sling Load Training",
-    btnLink: "#",
+    btnLink: "/pilot-training/external-load-training",
   },
 ];
 

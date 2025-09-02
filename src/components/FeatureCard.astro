@@ -1,9 +1,10 @@
 ---
 import type { IconType } from "react-icons";
-const { icon, title, description } = Astro.props as {
+const { icon, title, description, link } = Astro.props as {
   icon: keyof typeof icons;
   title: string;
   description: string;
+  link: string;
 };
 import {
   FiAward,
@@ -27,7 +28,7 @@ const Icon = icons[icon] as IconType;
 ---
 
 <a
-  href="#"
+  href={link}
   class="border-primary-50/50 group flex flex-col gap-3 border-2 bg-white p-8 duration-500 hover:z-40 hover:shadow-[0_0_25px_rgb(239,112,22)]"
 >
   <Icon className="group-hover:text-primary-500 mb-4 size-12 duration-500" />
