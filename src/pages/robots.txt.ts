@@ -14,9 +14,9 @@ Sitemap: ${site}rss.xml
 # Disallow: /private/
 
 # Block specific file types that shouldn't be indexed
-Disallow: /*.json$
-Disallow: /*.xml$
-Disallow: /*.txt$
+Disallow: /*.json
+Disallow: /*.xml
+Disallow: /*.txt
 
 # Allow important files
 Allow: /sitemap-index.xml
