@@ -1,0 +1,99 @@
+---
+import { generateEnhancedBreadcrumbs } from "../data/breadcrumbs.js";
+
+interface BreadcrumbItem {
+  label: string;
+  href?: string;
+}
+
+interface Props {
+  items?: BreadcrumbItem[];
+  currentPage?: string;
+  className?: string;
+}
+
+const { items = [], currentPage, className = "" } = Astro.props;
+
+// Use enhanced breadcrumb generation or provided items
+const finalBreadcrumbs =
+  items.length > 0
+    ? items
+    : generateEnhancedBreadcrumbs(Astro.url, currentPage);
+
+// Don't render if only home breadcrumb
+const shouldRender = finalBreadcrumbs.length > 1;
+---
+
+{
+  shouldRender && (
+    <nav aria-label="Breadcrumb" class={`px-4 py-4 lg:px-12 ${className}`}>
+      <ol class="flex items-center space-x-2 text-sm text-gray-600">
+        {finalBreadcrumbs.map((item: BreadcrumbItem, index: number) => (
+          <li class="flex items-center">
+            {index > 0 && (
+              <svg
+                class="mx-2 h-4 w-4 text-gray-400"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+            )}
+
+            {item.href ? (
+              <a
+                href={item.href}
+                class="hover:text-primary-500 font-medium transition-colors duration-200"
+                aria-label={index === 0 ? "Go to homepage" : undefined}
+              >
+                {item.label}
+              </a>
+            ) : (
+              <span class="font-semibold text-gray-900" aria-current="page">
+                {item.label}
+              </span>
+            )}
+          </li>
+        ))}
+      </ol>
+    </nav>
+  )
+}
+
+<style>
+  @media (max-width: 768px) {
+    nav ol {
+      font-size: 0.75rem;
+    }
+
+    nav svg {
+      height: 0.75rem;
+      width: 0.75rem;
+      margin-left: 0.25rem;
+      margin-right: 0.25rem;
+    }
+  }
+</style>
+
+<script
+  type="application/ld+json"
+  set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: finalBreadcrumbs.map(
+      (item: BreadcrumbItem, index: number) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        name: item.label,
+        ...(item.href && { item: new URL(item.href, Astro.site).toString() }),
+      })
+    ),
+  })}
+/>

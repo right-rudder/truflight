@@ -22,6 +22,7 @@ const { data } = Astro.props;
   siteDescription={data.siteDescription}
   schemaType="course"
   schemaData={data}
+  currentPage={data.title || data.siteTitle}
 >
   <Header slot="hero" data={data} />
   <AddOnLayout data={data} />
