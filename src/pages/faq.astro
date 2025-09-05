@@ -1,0 +1,109 @@
+---
+import Header from "../components/Header.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import SimpleFAQ from "../components/SimpleFAQ.astro";
+import FAQSchema from "../components/FAQSchema.astro";
+
+const headerData = {
+  title: "Frequently Asked Questions",
+  primaryImage: "/src/assets/helicopter-controls.avif",
+  primaryAlt: "Helicopter Controls at TruFlight Academy",
+};
+---
+
+<BaseLayout
+  siteTitle="Helicopter Pilot Training FAQs - Dallas Flight School | TruFlight Academy"
+  siteDescription="Get answers to your helicopter pilot training questions! Learn about costs, requirements, licensing, safety, and career opportunities at Dallas premier helicopter flight school."
+  currentPage="FAQs"
+>
+  <FAQSchema />
+  <Header slot="hero" data={headerData} />
+
+  <section class="mx-auto max-w-4xl px-4 py-16 lg:px-12 lg:py-24">
+    <div class="mb-12 text-center">
+      <strong class="text-primary-500 text-lg font-bold"> Get Answers </strong>
+      <h2
+        class="font-display mt-3 mb-6 text-4xl font-bold text-gray-900 lg:text-5xl"
+      >
+        Everything You Need to Know About Helicopter Training
+      </h2>
+      <p class="mx-auto max-w-2xl text-lg text-gray-600">
+        Have questions about becoming a helicopter pilot? We've compiled answers
+        to the most common questions from prospective students to help you make
+        informed decisions about your aviation journey.
+      </p>
+    </div>
+
+    <!-- Featured FAQs -->
+    <div class="mb-16">
+      <h3 class="mb-8 text-2xl font-semibold text-gray-900">
+        Most Asked Questions
+      </h3>
+      <SimpleFAQ
+        categories={["general", "training", "costs", "safety"]}
+        featuredOnly={true}
+      />
+    </div>
+
+    <!-- All FAQs by Category -->
+    <div class="space-y-12">
+      <div>
+        <h3 class="mb-6 text-xl font-semibold text-gray-900">
+          General Questions
+        </h3>
+        <SimpleFAQ categories={["general"]} featuredOnly={false} />
+      </div>
+
+      <div>
+        <h3 class="mb-6 text-xl font-semibold text-gray-900">
+          Training & Licensing
+        </h3>
+        <SimpleFAQ
+          categories={["training", "licensing"]}
+          featuredOnly={false}
+        />
+      </div>
+
+      <div>
+        <h3 class="mb-6 text-xl font-semibold text-gray-900">
+          Costs & Financing
+        </h3>
+        <SimpleFAQ categories={["costs"]} featuredOnly={false} />
+      </div>
+
+      <div>
+        <h3 class="mb-6 text-xl font-semibold text-gray-900">
+          Safety & Aircraft
+        </h3>
+        <SimpleFAQ categories={["safety", "aircraft"]} featuredOnly={false} />
+      </div>
+
+      <div>
+        <h3 class="mb-6 text-xl font-semibold text-gray-900">
+          Careers & Scheduling
+        </h3>
+        <SimpleFAQ
+          categories={["careers", "scheduling"]}
+          featuredOnly={false}
+        />
+      </div>
+    </div>
+
+    <!-- Contact CTA -->
+    <div class="mt-16 rounded-lg bg-blue-50 p-8 text-center">
+      <h3 class="mb-4 text-xl font-semibold text-gray-900">
+        Still Have Questions?
+      </h3>
+      <p class="mb-6 text-gray-600">
+        Our experienced flight instructors are here to help. Get personalized
+        answers about your specific situation and goals.
+      </p>
+      <div class="flex flex-col justify-center gap-4 sm:flex-row">
+        <a href="/contact-us" class="btn-primary"> Contact Our Team </a>
+        <a href="/discovery-flight" class="btn-secondary">
+          Book Discovery Flight
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
