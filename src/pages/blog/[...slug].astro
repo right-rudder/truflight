@@ -22,7 +22,12 @@ const headerData = {
 };
 ---
 
-<BaseLayout siteTitle={title} siteDescription={description}>
+<BaseLayout
+  siteTitle={title}
+  siteDescription={description}
+  schemaType="blog"
+  schemaData={post.data}
+>
   <Header slot="hero" data={headerData} />
   <BlogPost {...post.data}>
     <Content />

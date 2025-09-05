@@ -4,7 +4,8 @@ import Footer from "../components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 import Navbar from "../components/Navbar";
 const { pathname } = Astro.url;
-const { siteTitle, siteDescription, siteImage } = Astro.props;
+const { siteTitle, siteDescription, siteImage, schemaType, schemaData } =
+  Astro.props;
 import ImageComp from "../components/ImageComp.astro";
 ---
 
@@ -15,6 +16,8 @@ import ImageComp from "../components/ImageComp.astro";
       title={siteTitle || SITE_TITLE}
       description={siteDescription || SITE_DESCRIPTION}
       image={siteImage}
+      schemaType={schemaType}
+      schemaData={schemaData}
     />
   </head>
   <body class="font-mulish">

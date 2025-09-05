@@ -7,16 +7,33 @@ import FallbackImage from "../assets/truflight-helicopter-in-dallas.avif";
 import { SITE_TITLE } from "../consts";
 import "@fontsource-variable/mulish";
 import mulishWoff2 from "@fontsource-variable/mulish/files/mulish-latin-wght-normal.woff2?url";
+import Schema from "./Schema.astro";
 
 interface Props {
   title: string;
   description: string;
   image?: ImageMetadata;
+  schemaType?:
+    | "homepage"
+    | "course"
+    | "blog"
+    | "about"
+    | "contact"
+    | "fleet"
+    | "pricing"
+    | "discovery";
+  schemaData?: any;
 }
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
-const { title, description, image = FallbackImage } = Astro.props;
+const {
+  title,
+  description,
+  image = FallbackImage,
+  schemaType = "homepage",
+  schemaData,
+} = Astro.props;
 ---
 
 <!-- Global Metadata -->
@@ -63,54 +80,11 @@ const { title, description, image = FallbackImage } = Astro.props;
 <meta property="twitter:image" content={new URL(image.src, Astro.url)} />
 
 <!-- Add to BaseHead.astro or footer -->
-<script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "@id": "https://truflightacademy.com/#business",
-    "name": "TruFlight Academy",
-    "description": "Professional helicopter flight training school in Dallas, Texas",
-    "url": "https://truflightacademy.com",
-    "telephone": "+1 (918) 770-1201",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "9007 FM 902",
-      "addressLocality": "Howe",
-      "addressRegion": "TX",
-      "postalCode": "75459",
-      "addressCountry": "US"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": "33.5340791",
-      "longitude": "-96.6499827"
-    },
-    "openingHours": "Mo-Su 08:00-18:00",
-    "sameAs": [
-      "https://www.facebook.com/truflightacademy",
-      "https://www.instagram.com/truflight.academy/"
-    ],
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Helicopter Training Services",
-      "itemListElement": [
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Private Pilot Helicopter Training",
-            "description": "Complete private pilot helicopter certification training"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Commercial Pilot Training",
-            "description": "Professional commercial helicopter pilot certification"
-          }
-        }
-      ]
-    }
-  }
-</script>
+<Schema
+  type={schemaType}
+  data={schemaData}
+  title={title}
+  description={description}
+  image={image.src}
+  url={Astro.url.toString()}
+/>

@@ -1,0 +1,457 @@
+---
+export interface Props {
+  type:
+    | "homepage"
+    | "course"
+    | "blog"
+    | "about"
+    | "contact"
+    | "fleet"
+    | "pricing"
+    | "discovery"
+    | "person"
+    | "faq";
+  data?: any;
+  title?: string;
+  description?: string;
+  image?: string;
+  url?: string;
+}
+
+const { type, data, title, description, image, url } = Astro.props;
+const currentUrl = url || Astro.url.toString();
+const currentImage = image || "/src/assets/truflight-helicopter-in-dallas.avif";
+
+// Base organization schema
+const baseOrganization = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://truflightacademy.com/#organization",
+  name: "TruFlight Academy",
+  description:
+    "Professional helicopter flight training school in Dallas, Texas",
+  url: "https://truflightacademy.com",
+  telephone: "+1 (918) 770-1201",
+  email: "info@truflightacademy.com",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "9007 FM 902",
+    addressLocality: "Howe",
+    addressRegion: "TX",
+    postalCode: "75459",
+    addressCountry: "US",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: "33.5340791",
+    longitude: "-96.6499827",
+  },
+  openingHours: "Mo-Su 08:00-18:00",
+  sameAs: [
+    "https://www.facebook.com/truflightacademy",
+    "https://www.instagram.com/truflight.academy/",
+  ],
+  logo: {
+    "@type": "ImageObject",
+    url: "https://truflightacademy.com/truflight-logo.png",
+  },
+  image: {
+    "@type": "ImageObject",
+    url: `https://truflightacademy.com${currentImage}`,
+  },
+};
+
+// Generate schema based on page type
+let schema: any[] = [];
+
+switch (type) {
+  case "homepage":
+    schema = [
+      {
+        ...baseOrganization,
+        "@type": [
+          "LocalBusiness",
+          "EducationalOrganization",
+          "FlightTrainingSchool",
+        ],
+        hasOfferCatalog: {
+          "@type": "OfferCatalog",
+          name: "Helicopter Training Services",
+          itemListElement: [
+            {
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "Service",
+                name: "Private Pilot Helicopter Training",
+                description:
+                  "Complete private pilot helicopter certification training",
+                provider: {
+                  "@id": "https://truflightacademy.com/#organization",
+                },
+              },
+            },
+            {
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "Service",
+                name: "Commercial Pilot Training",
+                description:
+                  "Professional commercial helicopter pilot certification",
+                provider: {
+                  "@id": "https://truflightacademy.com/#organization",
+                },
+              },
+            },
+            {
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "Service",
+                name: "Instrument Rating Training",
+                description: "Helicopter instrument rating certification",
+                provider: {
+                  "@id": "https://truflightacademy.com/#organization",
+                },
+              },
+            },
+            {
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "Service",
+                name: "External Load Training",
+                description: "Specialized external load operations training",
+                provider: {
+                  "@id": "https://truflightacademy.com/#organization",
+                },
+              },
+            },
+            {
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "Service",
+                name: "Discovery Flights",
+                description: "Introductory helicopter flight experience",
+                provider: {
+                  "@id": "https://truflightacademy.com/#organization",
+                },
+              },
+            },
+          ],
+        },
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "@id": "https://truflightacademy.com/#website",
+        url: "https://truflightacademy.com",
+        name: "TruFlight Academy",
+        description: "Professional helicopter flight training in Dallas, Texas",
+        publisher: {
+          "@id": "https://truflightacademy.com/#organization",
+        },
+        potentialAction: [
+          {
+            "@type": "SearchAction",
+            target: {
+              "@type": "EntryPoint",
+              urlTemplate:
+                "https://truflightacademy.com/search?q={search_term_string}",
+            },
+            "query-input": "required name=search_term_string",
+          },
+        ],
+      },
+    ];
+    break;
+
+  case "course":
+    if (data) {
+      schema = [
+        baseOrganization,
+        {
+          "@context": "https://schema.org",
+          "@type": "Course",
+          "@id": `${currentUrl}#course`,
+          name: data.title,
+          description: data.siteDescription || description,
+          url: currentUrl,
+          image: {
+            "@type": "ImageObject",
+            url: `https://truflightacademy.com${data.primaryImage || currentImage}`,
+          },
+          provider: {
+            "@id": "https://truflightacademy.com/#organization",
+          },
+          courseMode: "in-person",
+          educationalLevel: "Professional",
+          teaches: data.title,
+          about: {
+            "@type": "Thing",
+            name: "Helicopter Pilot Training",
+          },
+          timeRequired: data.duration || "3-6 months",
+          coursePrerequisites: data.prerequisites || [],
+          educationalCredentialAwarded: `${data.title} Certificate`,
+          hasCourseInstance: {
+            "@type": "CourseInstance",
+            courseMode: "in-person",
+            location: {
+              "@type": "Place",
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: "9007 FM 902",
+                addressLocality: "Howe",
+                addressRegion: "TX",
+                postalCode: "75459",
+                addressCountry: "US",
+              },
+            },
+            instructor: {
+              "@type": "Person",
+              name: "Todd Guison",
+              jobTitle: "Chief Flight Instructor",
+              worksFor: {
+                "@id": "https://truflightacademy.com/#organization",
+              },
+            },
+          },
+          offers: {
+            "@type": "Offer",
+            category: "Education",
+            priceCurrency: "USD",
+            seller: {
+              "@id": "https://truflightacademy.com/#organization",
+            },
+          },
+        },
+      ];
+    }
+    break;
+
+  case "blog":
+    if (data) {
+      schema = [
+        baseOrganization,
+        {
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+          "@id": `${currentUrl}#article`,
+          headline: title || data.title,
+          description: description || data.description,
+          url: currentUrl,
+          image: {
+            "@type": "ImageObject",
+            url: `https://truflightacademy.com${image || data.heroImage?.src || currentImage}`,
+            width: 1200,
+            height: 630,
+          },
+          datePublished: data.pubDate?.toISOString(),
+          dateModified:
+            data.updatedDate?.toISOString() || data.pubDate?.toISOString(),
+          author: {
+            "@type": "Organization",
+            "@id": "https://truflightacademy.com/#organization",
+          },
+          publisher: {
+            "@id": "https://truflightacademy.com/#organization",
+          },
+          mainEntityOfPage: {
+            "@type": "WebPage",
+            "@id": currentUrl,
+          },
+          isPartOf: {
+            "@type": "Blog",
+            "@id": "https://truflightacademy.com/blog#blog",
+          },
+          about: {
+            "@type": "Thing",
+            name: "Helicopter Training",
+          },
+          keywords:
+            data.tags?.join(", ") ||
+            "helicopter training, aviation, pilot education",
+        },
+      ];
+    }
+    break;
+
+  case "about":
+    schema = [
+      baseOrganization,
+      {
+        "@context": "https://schema.org",
+        "@type": "AboutPage",
+        "@id": `${currentUrl}#aboutpage`,
+        url: currentUrl,
+        name: title,
+        description: description,
+        mainEntity: {
+          "@id": "https://truflightacademy.com/#organization",
+        },
+      },
+    ];
+    break;
+
+  case "contact":
+    schema = [
+      baseOrganization,
+      {
+        "@context": "https://schema.org",
+        "@type": "ContactPage",
+        "@id": `${currentUrl}#contactpage`,
+        url: currentUrl,
+        name: title,
+        description: description,
+        mainEntity: {
+          "@id": "https://truflightacademy.com/#organization",
+        },
+      },
+    ];
+    break;
+
+  case "fleet":
+    schema = [
+      baseOrganization,
+      {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "@id": `${currentUrl}#fleet`,
+        name: "Guimbal Cabri G2 Helicopter Fleet",
+        description:
+          "Modern Cabri G2 helicopters used for professional flight training",
+        brand: {
+          "@type": "Brand",
+          name: "Guimbal",
+        },
+        model: "Cabri G2",
+        category: "Training Aircraft",
+        manufacturer: {
+          "@type": "Organization",
+          name: "Hélicoptères Guimbal",
+        },
+        owner: {
+          "@id": "https://truflightacademy.com/#organization",
+        },
+      },
+    ];
+    break;
+
+  case "pricing":
+    schema = [
+      baseOrganization,
+      {
+        "@context": "https://schema.org",
+        "@type": "PriceSpecification",
+        "@id": `${currentUrl}#pricing`,
+        name: "Helicopter Training Pricing",
+        description:
+          "Competitive pricing for professional helicopter flight training",
+        priceCurrency: "USD",
+        eligibleRegion: {
+          "@type": "State",
+          name: "Texas",
+          containedInPlace: {
+            "@type": "Country",
+            name: "United States",
+          },
+        },
+      },
+    ];
+    break;
+
+  case "discovery":
+    schema = [
+      baseOrganization,
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "@id": `${currentUrl}#discoveryservice`,
+        name: "Discovery Flight",
+        description:
+          "Introductory helicopter flight experience for prospective pilots",
+        provider: {
+          "@id": "https://truflightacademy.com/#organization",
+        },
+        serviceType: "Aviation Training",
+        areaServed: {
+          "@type": "State",
+          name: "Texas",
+        },
+        offers: {
+          "@type": "Offer",
+          description:
+            "Experience flying a helicopter with a certified instructor",
+          seller: {
+            "@id": "https://truflightacademy.com/#organization",
+          },
+        },
+      },
+    ];
+    break;
+
+  case "person":
+    schema = [
+      baseOrganization,
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "@id": `${currentUrl}#person`,
+        name: "Todd Guison",
+        jobTitle: "Chief Flight Instructor",
+        worksFor: {
+          "@id": "https://truflightacademy.com/#organization",
+        },
+        description:
+          "Experienced helicopter pilot and Chief Flight Instructor at TruFlight Academy",
+        knowsAbout: [
+          "Helicopter Pilot Training",
+          "Flight Instruction",
+          "Aviation Safety",
+          "Military Aviation",
+          "Commercial Helicopter Operations",
+        ],
+        hasCredential: [
+          "Certified Flight Instructor (CFI)",
+          "Commercial Helicopter Pilot License",
+          "Instrument Rating",
+          "Military Aviation Experience",
+        ],
+      },
+    ];
+    break;
+
+  case "faq":
+    if (data && data.faqs) {
+      const faqSchema = data.faqs.map((faq: any, index: number) => ({
+        "@type": "Question",
+        name: faq.question,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: faq.answer,
+        },
+      }));
+
+      schema = [
+        baseOrganization,
+        {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "@id": `${currentUrl}#faqpage`,
+          mainEntity: faqSchema,
+        },
+      ];
+    }
+    break;
+
+  default:
+    schema = [baseOrganization];
+}
+
+// Convert schema to JSON string
+const schemaString = JSON.stringify(
+  schema.length === 1 ? schema[0] : schema,
+  null,
+  2
+);
+---
+
+<script type="application/ld+json" set:html={schemaString} />

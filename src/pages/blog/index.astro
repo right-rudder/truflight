@@ -10,7 +10,7 @@ import Header from "../../components/Header.astro";
 import BlogPostCard from "../../components/BlogPostCard.astro";
 
 const posts = (await getCollection("blog")).sort(
-  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
 
 const headerData = {
@@ -20,7 +20,11 @@ const headerData = {
 };
 ---
 
-<BaseLayout>
+<BaseLayout
+  siteTitle="Our Blog"
+  siteDescription="Stay updated with the latest news, tips, and insights from TruFlight Academy's helicopter training experts."
+  schemaType="about"
+>
   <Header slot="hero" data={headerData} />
   <section class="bg-primary-50/50">
     <div class="mx-auto flex max-w-7xl flex-col gap-5 px-4 lg:px-12">
