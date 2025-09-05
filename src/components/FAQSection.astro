@@ -1,0 +1,184 @@
+---
+import { getCollection } from "astro:content";
+import FAQItem from "./FAQItem.astro";
+
+const { 
+  categories = ["general", "training", "costs", "safety"], 
+  featuredOnly = false, 
+  limit = 0,
+  showCategoryTabs = false 
+} = Astro.props;
+
+// Get FAQ entries
+const allFAQs = await getCollection("faq");
+
+// Filter and sort FAQs
+let filteredFAQs = allFAQs
+  .filter(faq => categories.includes(faq.data.category))
+  .filter(faq => featuredOnly ? faq.data.featured : true)
+  .sort((a, b) => {
+    // Sort by category order, then by order within category
+    const categoryOrder = categories.indexOf(a.data.category) - categories.indexOf(b.data.category);
+    if (categoryOrder !== 0) return categoryOrder;
+    return a.data.order - b.data.order;
+  });
+
+if (limit > 0) {
+  filteredFAQs = filteredFAQs.slice(0, limit);
+}
+
+// Group FAQs by category if showing tabs
+const groupedFAQs = showCategoryTabs 
+  ? categories.reduce((acc, category) => {
+      acc[category] = filteredFAQs.filter(faq => faq.data.category === category);
+      return acc;
+    }, {} as Record<string, typeof filteredFAQs>)
+  : { all: filteredFAQs };
+
+const categoryLabels = {
+  general: "General",
+  training: "Training",
+  costs: "Costs & Financing",
+  safety: "Safety",
+  licensing: "Licensing",
+  careers: "Careers",
+  aircraft: "Aircraft",
+  scheduling: "Scheduling"
+};
+---
+
+<div class="faq-section" data-show-tabs={showCategoryTabs}>
+  {showCategoryTabs && (
+    <div class="mb-8">
+      <div class="border-b border-gray-200">
+        <nav class="-mb-px flex space-x-8" role="tablist">
+          {categories.map((category, index) => (
+            <button
+              class={`whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm transition-colors ${
+                index === 0 
+                  ? 'border-blue-500 text-blue-600' 
+                  : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
+              }`}
+              data-category={category}
+              role="tab"
+            >
+              {categoryLabels[category]} ({groupedFAQs[category]?.length || 0})
+            </button>
+          ))}
+        </nav>
+      </div>
+    </div>
+  )}
+
+  {Object.entries(groupedFAQs).map(([category, faqs]) => (
+    <div 
+      class={`faq-category ${showCategoryTabs && category !== 'all' ? 'hidden' : ''}`}
+      data-category={category}
+    >
+      {!showCategoryTabs && category !== 'all' && (
+        <h3 class="text-xl font-semibold text-gray-900 mb-4 mt-8 first:mt-0">
+          {categoryLabels[category]}
+        </h3>
+      )}
+      
+      <div class="space-y-0 border border-gray-200 rounded-lg bg-white shadow-sm">
+        {faqs.map(async (faq) => {
+          const { Content } = await faq.render();
+          
+          return (
+            <div class="border-b border-gray-200 last:border-b-0">
+              <button
+                class="flex w-full items-center justify-between py-6 text-left transition-colors hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-inset rounded-lg px-4"
+                data-question={faq.data.question}
+              >
+                <h3 class="text-lg font-semibold text-gray-900 pr-4">
+                  {faq.data.question}
+                </h3>
+                <svg class="h-5 w-5 text-gray-500 transition-transform duration-200 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              
+              <div class="overflow-hidden transition-all duration-300 max-h-0">
+                <div class="px-4 text-gray-700 prose prose-sm max-w-none">
+                  <Content />
+                </div>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  ))}
+</div>
+
+{showCategoryTabs && (
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const faqSection = document.querySelector('.faq-section[data-show-tabs="true"]');
+      if (!faqSection) return;
+
+      const tabs = faqSection.querySelectorAll('[role="tab"]');
+      const categories = faqSection.querySelectorAll('.faq-category');
+
+      tabs.forEach((tab) => {
+        tab.addEventListener('click', () => {
+          // Update tab styles
+          tabs.forEach(t => {
+            t.classList.remove('border-blue-500', 'text-blue-600');
+            t.classList.add('border-transparent', 'text-gray-500');
+          });
+          tab.classList.remove('border-transparent', 'text-gray-500');
+          tab.classList.add('border-blue-500', 'text-blue-600');
+
+          // Show/hide categories
+          const targetCategory = tab.getAttribute('data-category');
+          categories.forEach(cat => {
+            if (cat.getAttribute('data-category') === targetCategory) {
+              cat.classList.remove('hidden');
+            } else {
+              cat.classList.add('hidden');
+            }
+          });
+        });
+      });
+    });
+  </script>
+)}
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const faqItems = document.querySelectorAll('[data-question]');
+    
+    faqItems.forEach(item => {
+      const button = item;
+      const content = button.nextElementSibling;
+      let isOpen = false;
+
+      button.addEventListener('click', () => {
+        isOpen = !isOpen;
+        
+        // Update button icon
+        const icon = button.querySelector('svg');
+        if (icon) {
+          if (isOpen) {
+            icon.classList.add('rotate-180');
+          } else {
+            icon.classList.remove('rotate-180');
+          }
+        }
+
+        // Update content visibility
+        if (content) {
+          if (isOpen) {
+            content.classList.remove('max-h-0');
+            content.classList.add('max-h-96', 'pb-6');
+          } else {
+            content.classList.remove('max-h-96', 'pb-6');
+            content.classList.add('max-h-0');
+          }
+        }
+      });
+    });
+  });
+</script>

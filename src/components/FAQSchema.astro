@@ -1,0 +1,32 @@
+---
+import { getCollection } from "astro:content";
+
+const { featured = false } = Astro.props;
+
+// Get FAQ entries for schema
+const allFAQs = await getCollection("faq");
+const schemaFAQs = allFAQs
+  .filter((faq) => (featured ? faq.data.featured : true))
+  .sort((a, b) => a.data.order - b.data.order)
+  .slice(0, featured ? 8 : 20); // Limit for performance
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: schemaFAQs.map((faq) => {
+    // Use the body content directly for schema
+    const answerText = faq.body || "";
+
+    return {
+      "@type": "Question",
+      name: faq.data.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: answerText.replace(/<[^>]*>/g, ""), // Strip any potential HTML tags
+      },
+    };
+  }),
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />

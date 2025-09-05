@@ -1,0 +1,103 @@
+---
+import { getCollection, render } from "astro:content";
+
+const {
+  categories = ["general", "training", "costs", "safety"],
+  featuredOnly = false,
+  limit = 0,
+} = Astro.props;
+
+// Get FAQ entries
+const allFAQs = await getCollection("faq");
+
+// Filter and sort FAQs
+let filteredFAQs = allFAQs
+  .filter((faq) => categories.includes(faq.data.category))
+  .filter((faq) => (featuredOnly ? faq.data.featured : true))
+  .sort((a, b) => {
+    const categoryOrder =
+      categories.indexOf(a.data.category) - categories.indexOf(b.data.category);
+    if (categoryOrder !== 0) return categoryOrder;
+    return a.data.order - b.data.order;
+  });
+
+if (limit > 0) {
+  filteredFAQs = filteredFAQs.slice(0, limit);
+}
+---
+
+<div class="space-y-4">
+  {
+    filteredFAQs.map(async (faq) => {
+      const { Content } = await render(faq);
+
+      return (
+        <div class="rounded-lg border border-gray-200 bg-white shadow-sm">
+          <button
+            class="flex w-full items-center justify-between rounded-lg p-6 text-left transition-colors hover:bg-gray-50 focus:ring-2 focus:ring-blue-500 focus:outline-none focus:ring-inset"
+            data-faq-toggle
+          >
+            <h3 class="pr-4 text-lg font-semibold text-gray-900">
+              {faq.data.question}
+            </h3>
+            <svg
+              class="h-5 w-5 flex-shrink-0 text-gray-500 transition-transform duration-200"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width={2}
+                d="M19 9l-7 7-7-7"
+              />
+            </svg>
+          </button>
+
+          <div class="faq-content max-h-0 overflow-hidden transition-all duration-300">
+            <div class="prose prose-sm max-w-none px-6 pb-6 text-gray-700">
+              {Content && <Content />}
+            </div>
+          </div>
+        </div>
+      );
+    })
+  }
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const faqToggles = document.querySelectorAll("[data-faq-toggle]");
+
+    faqToggles.forEach((toggle) => {
+      const content = toggle.nextElementSibling;
+      let isOpen = false;
+
+      toggle.addEventListener("click", () => {
+        isOpen = !isOpen;
+
+        // Update icon
+        const icon = toggle.querySelector("svg");
+        if (icon) {
+          if (isOpen) {
+            icon.classList.add("rotate-180");
+          } else {
+            icon.classList.remove("rotate-180");
+          }
+        }
+
+        // Update content
+        if (content && content.classList.contains("faq-content")) {
+          if (isOpen) {
+            content.classList.remove("max-h-0");
+            content.classList.add("max-h-96");
+          } else {
+            content.classList.remove("max-h-96");
+            content.classList.add("max-h-0");
+          }
+        }
+      });
+    });
+  });
+</script>

@@ -14,4 +14,26 @@ const blog = defineCollection({
     }),
 });
 
-export const collections = { blog };
+const faq = defineCollection({
+  // Load Markdown and MDX files in the `src/content/faq/` directory.
+  loader: glob({ base: "./src/content/faq", pattern: "**/*.{md,mdx}" }),
+  // Type-check frontmatter using a schema
+  schema: () =>
+    z.object({
+      question: z.string(),
+      category: z.enum([
+        "general",
+        "training",
+        "licensing",
+        "costs",
+        "safety",
+        "careers",
+        "aircraft",
+        "scheduling",
+      ]),
+      order: z.number(),
+      featured: z.boolean().default(false),
+    }),
+});
+
+export const collections = { blog, faq };
