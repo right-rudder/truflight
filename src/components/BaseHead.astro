@@ -61,3 +61,56 @@ const { title, description, image = FallbackImage } = Astro.props;
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={new URL(image.src, Astro.url)} />
+
+<!-- Add to BaseHead.astro or footer -->
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://truflightacademy.com/#business",
+    "name": "TruFlight Academy",
+    "description": "Professional helicopter flight training school in Dallas, Texas",
+    "url": "https://truflightacademy.com",
+    "telephone": "+1 (918) 770-1201",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "9007 FM 902",
+      "addressLocality": "Howe",
+      "addressRegion": "TX",
+      "postalCode": "75459",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "33.5340791",
+      "longitude": "-96.6499827"
+    },
+    "openingHours": "Mo-Su 08:00-18:00",
+    "sameAs": [
+      "https://www.facebook.com/truflightacademy",
+      "https://www.instagram.com/truflight.academy/"
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Helicopter Training Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Private Pilot Helicopter Training",
+            "description": "Complete private pilot helicopter certification training"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Commercial Pilot Training",
+            "description": "Professional commercial helicopter pilot certification"
+          }
+        }
+      ]
+    }
+  }
+</script>
