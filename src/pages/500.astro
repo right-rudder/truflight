@@ -1,0 +1,96 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { IoWarning } from "react-icons/io5";
+---
+
+<BaseLayout
+  siteTitle="Server Error - TruFlight Academy"
+  siteDescription="We're experiencing technical difficulties. Our team is working to resolve the issue. Please try again later."
+  showBreadcrumbs={false}
+>
+  <section class="bg-gradient-to-b from-red-50 to-white">
+    <div class="mx-auto max-w-4xl px-4 py-24 text-center lg:px-12 lg:py-32">
+      <!-- Error Icon/Visual -->
+      <div class="mb-8 flex justify-center">
+        <div class="rounded-full bg-red-100 p-6">
+          <IoWarning className="h-16 w-16 text-red-600" />
+        </div>
+      </div>
+
+      <!-- Error Code -->
+      <h1 class="mb-4 text-6xl font-bold text-gray-900 lg:text-8xl">500</h1>
+
+      <!-- Error Message -->
+      <h2 class="mb-6 text-2xl font-semibold text-gray-700 lg:text-3xl">
+        Emergency Landing Required
+      </h2>
+
+      <p class="mb-8 text-lg text-gray-600 lg:text-xl">
+        Our systems are experiencing technical turbulence. Our flight crew is
+        working to get everything back online as quickly as possible.
+      </p>
+
+      <!-- Action Buttons -->
+      <div
+        class="flex flex-col items-center gap-4 sm:flex-row sm:justify-center"
+      >
+        <button
+          onclick="window.location.reload()"
+          class="inline-flex items-center rounded-lg bg-red-600 px-6 py-3 font-semibold text-white transition-colors hover:bg-red-700 focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:outline-none"
+        >
+          Try Again
+        </button>
+
+        <a
+          href="/"
+          class="inline-flex items-center rounded-lg border border-gray-300 bg-white px-6 py-3 font-semibold text-gray-700 transition-colors hover:bg-gray-50 focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:outline-none"
+        >
+          Return to Safety
+        </a>
+      </div>
+
+      <!-- Additional Help -->
+      <div class="mt-12 text-center">
+        <p class="text-gray-600">
+          If the problem persists, please
+          <a
+            href="/contact-us"
+            class="text-red-600 underline hover:text-red-800"
+          >
+            contact our ground crew
+          </a>
+          for assistance.
+        </p>
+      </div>
+
+      <!-- Status Information -->
+      <div class="mt-16 rounded-lg bg-red-50 p-6 text-left">
+        <h3 class="mb-3 text-lg font-semibold text-gray-800">
+          What's happening?
+        </h3>
+        <ul class="space-y-2 text-gray-600">
+          <li>• Our technical team has been automatically notified</li>
+          <li>• We're working to resolve this issue as quickly as possible</li>
+          <li>• Your data and information remain secure</li>
+          <li>• Please try refreshing the page in a few minutes</li>
+        </ul>
+      </div>
+
+      <!-- Emergency Contact Info -->
+      <div class="mt-8 rounded-lg bg-gray-50 p-6">
+        <h3 class="mb-3 text-lg font-semibold text-gray-800">
+          Need Immediate Assistance?
+        </h3>
+        <p class="text-gray-600">
+          For urgent flight training inquiries, call us directly at
+          <a
+            href="tel:+1234567890"
+            class="font-semibold text-red-600 hover:text-red-800"
+          >
+            (123) 456-7890
+          </a>
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
