@@ -7,6 +7,7 @@ Allow: /
 
 # Sitemaps
 Sitemap: ${site}sitemap-index.xml
+Sitemap: ${site}rss.xml
 
 # Block admin/private areas (if any in the future)
 # Disallow: /admin/
@@ -19,10 +20,22 @@ Disallow: /*.txt$
 
 # Allow important files
 Allow: /sitemap-index.xml
+Allow: /sitemap-0.xml
 Allow: /rss.xml
 
-# Crawl-delay (optional - adjust based on server capacity)
+# Crawl-delay for respectful crawling
 # Crawl-delay: 1
+
+# Additional SEO optimizations
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Prevent crawling of duplicate parameters
+Disallow: /*?*
+Disallow: /*#*
 `.trim();
 
   return new Response(robotsTxt, {
