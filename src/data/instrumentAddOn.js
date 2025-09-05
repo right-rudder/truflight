@@ -4,6 +4,7 @@ import { FaRegPaperPlane } from "react-icons/fa";
 const instrumentRating = {
   data: {
     title: "Instrument Helicopter Add-On",
+    subtitle: "NO FAA WRITTEN exam required",
     url: "/add-on/instrument-helicopter-add-on",
     slug: "instrument-helicopter-add-on",
     siteTitle: "Instrument Helicopter Add-On | TruFlight Academy - Dallas, TX",

@@ -28,8 +28,7 @@
   --color-medium-gray: #818b9c;
   --color-light-gray: #afb5c0;
 
-  --font-mulish: "Mulish", sans-serif;
-  /* --font-display: "Playfair Display Variable", serif; */
+  --font-mulish: "MulishLocal", sans-serif;
   --font-display: "Roboto Variable", sans-serif;
 
   --animate-takeoff: takeoff 1.8s ease-out;
@@ -53,6 +52,15 @@
       transform: scale(1.1);
     }
   }
+}
+
+@font-face {
+  font-family: "MulishLocal";
+  src: url("/node_modules/@fontsource-variable/mulish/files/mulish-latin-wght-normal.woff2")
+    format("woff2-variations");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
 }
 
 .btn-primary {

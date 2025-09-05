@@ -21,14 +21,14 @@ const features = [
     link: "/#weComeToYou",
   },
   {
-    icon: "FiMap",
+    icon: "LiaHelicopterSolid",
     title: "Helicopter Rentals",
     description:
       "We offer helicopter rentals for those looking to gain more flight experience or for personal use.",
     link: "/contact-us",
   },
   {
-    icon: "FiLoader",
+    icon: "LiaWeightHangingSolid",
     title: "External Load Instruction",
     description:
       "Our external load instruction prepares you for specialized flying tasks, enhancing your skill set.",

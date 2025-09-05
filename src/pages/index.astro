@@ -10,6 +10,8 @@ import ExternalLoadIcon from "../assets/external-load.svg";
 import PilotTrainingIcon from "../assets/pilot-training.svg";
 import DiscoveryFlightIcon from "../assets/discovery-flight.svg";
 import AirplaneIcon from "../assets/airplane.svg";
+import { TbStatusChange } from "react-icons/tb";
+import { FaHelicopterSymbol } from "react-icons/fa6";
 ---
 
 <BaseLayout
@@ -20,7 +22,7 @@ import AirplaneIcon from "../assets/airplane.svg";
 
   <section>
     <div
-      class="mx-auto grid max-w-7xl place-content-center place-items-center gap-5 px-4 py-16 sm:grid-cols-2 sm:gap-10 lg:grid-cols-4 lg:px-12"
+      class="mx-auto grid max-w-7xl place-content-center place-items-center gap-5 px-4 py-16 sm:grid-cols-3 sm:gap-10 lg:grid-cols-6 lg:px-12"
     >
       <a
         href="/pilot-training/private-pilot"
@@ -72,6 +74,32 @@ import AirplaneIcon from "../assets/airplane.svg";
           class="text-dark-blue font-display group-hover:text-primary-500 text-xl font-bold duration-100 group-hover:scale-125"
         >
           External Load Training
+        </h3>
+      </a>
+      <a
+        href="#weComeToYou"
+        class="group flex flex-col items-center gap-2 text-center"
+      >
+        <TbStatusChange
+          className="size-20 duration-100 group-hover:scale-110 group-hover:rotate-[35deg] sm:size-28"
+        />
+        <h3
+          class="text-dark-blue font-display group-hover:text-primary-500 text-xl font-bold duration-100 group-hover:scale-125"
+        >
+          We Come To You
+        </h3>
+      </a>
+      <a
+        href="/about/pricing"
+        class="group flex flex-col items-center gap-2 text-center"
+      >
+        <FaHelicopterSymbol
+          className="size-20 duration-100 group-hover:scale-110 group-hover:rotate-[35deg] sm:size-28"
+        />
+        <h3
+          class="text-dark-blue font-display group-hover:text-primary-500 text-xl font-bold duration-100 group-hover:scale-125"
+        >
+          Book Now
         </h3>
       </a>
     </div>

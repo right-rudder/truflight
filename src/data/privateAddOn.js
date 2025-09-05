@@ -5,6 +5,7 @@ import { FaRegPaperPlane } from "react-icons/fa";
 const privatePilot = {
   data: {
     title: "Private Helicopter Add-On",
+    subtitle: "NO FAA WRITTEN exam required",
     url: "/add-on/private-helicopter-add-on",
     slug: "private-helicopter-add-on",
     siteTitle: "Private Helicopter Add-On | TruFlight Academy - Dallas, TX",

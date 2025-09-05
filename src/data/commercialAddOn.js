@@ -8,6 +8,7 @@ import { MdNightsStay } from "react-icons/md";
 const commercialPilot = {
   data: {
     title: "Commercial Helicopter Add-On",
+    subtitle: "NO FAA WRITTEN exam required",
     url: "/add-on/commercial-helicopter-add-on",
     slug: "commercial-helicopter-add-on",
     siteTitle: "Commercial Helicopter Add-On | TruFlight Academy - Dallas, TX",

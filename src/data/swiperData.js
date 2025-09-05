@@ -14,7 +14,7 @@ const swiperData = [
     title: "Our Chief Pilot at TruFlight Academy",
     subtitle:
       "Learn more about our expierienced Chief Pilot Todd Guison and his dedication to providing top-notch helicopter flight training at TruFlight Academy.",
-    btnText: "Out Chief Pilot",
+    btnText: "Our Chief Pilot",
     btnLink: "/about/our-chief-pilot",
   },
   {
