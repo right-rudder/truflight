@@ -77,6 +77,10 @@ export const navbarLinks = [
         name: "Pricing",
         link: "/about/pricing",
       },
+      {
+        name: "FAQs",
+        link: "/faq",
+      },
     ],
   },
 ];

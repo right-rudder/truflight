@@ -12,11 +12,14 @@ import DiscoveryFlightIcon from "../assets/discovery-flight.svg";
 import AirplaneIcon from "../assets/airplane.svg";
 import { TbStatusChange } from "react-icons/tb";
 import { FaHelicopterSymbol } from "react-icons/fa6";
+import MiniFAQ from "../components/MiniFAQ.astro";
 ---
 
 <BaseLayout
   siteTitle="TruFlight Academy"
   siteDescription="Looking for a helicopter flight school in Dallas, TX? Discover the best training at TruFlight Academy. Start your journey to becoming a skilled helicopter pilot today!"
+  schemaType="homepage"
+  showBreadcrumbs={false}
 >
   <HomepageHeader slot="hero" />
 
@@ -196,6 +199,8 @@ import { FaHelicopterSymbol } from "react-icons/fa6";
   </section>
 
   <Features />
+
+  <MiniFAQ />
 
   <section id="weComeToYou" class="scroll-mt-20">
     <div

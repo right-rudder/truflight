@@ -7,22 +7,39 @@ import FallbackImage from "../assets/truflight-helicopter-in-dallas.avif";
 import { SITE_TITLE } from "../consts";
 import "@fontsource-variable/mulish";
 import mulishWoff2 from "@fontsource-variable/mulish/files/mulish-latin-wght-normal.woff2?url";
+import Schema from "./Schema.astro";
 
 interface Props {
   title: string;
   description: string;
   image?: ImageMetadata;
+  schemaType?:
+    | "homepage"
+    | "course"
+    | "blog"
+    | "about"
+    | "contact"
+    | "fleet"
+    | "pricing"
+    | "discovery";
+  schemaData?: any;
 }
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
-const { title, description, image = FallbackImage } = Astro.props;
+const {
+  title,
+  description,
+  image = FallbackImage,
+  schemaType = "homepage",
+  schemaData,
+} = Astro.props;
 ---
 
 <!-- Global Metadata -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="icon" type="image/png" href="/TruFlight-Favicon.png" />
 <link rel="sitemap" href="/sitemap-index.xml" />
 <link
   rel="alternate"
@@ -61,3 +78,13 @@ const { title, description, image = FallbackImage } = Astro.props;
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={new URL(image.src, Astro.url)} />
+
+<!-- Add to BaseHead.astro or footer -->
+<Schema
+  type={schemaType}
+  data={schemaData}
+  title={title}
+  description={description}
+  image={image.src}
+  url={Astro.url.toString()}
+/>
