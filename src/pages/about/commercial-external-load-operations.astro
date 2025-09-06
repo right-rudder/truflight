@@ -1,0 +1,80 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/Header.astro";
+import { FaCheck } from "react-icons/fa6";
+import ImageComp from "../../components/ImageComp.astro";
+
+const headerData = {
+  title: "Commercial External Load Operations",
+  subtitle: "Rotorcraft External-Load Operations – TFYL558S​",
+  primaryImage: "/src/assets/helicopter-commercial-external-load-truflight.jpg",
+  primaryAlt: "Helicopter Commercial External Load at TruFlight Academy",
+};
+---
+
+<BaseLayout
+  siteTitle="Commercial External Load Helicopter Services | TruFlight Dallas"
+  siteDescription="TruFlight Academy offers FAA-certified commercial external load helicopter services in Dallas. Hire high-hour pilots for reliable sling load operations."
+>
+  <Header slot="hero" data={headerData} />
+
+  <section>
+    <div
+      class="mx-auto flex max-w-xl flex-col-reverse items-center gap-10 px-4 py-24 lg:max-w-7xl lg:flex-row lg:gap-10 lg:px-12"
+    >
+      <div class="flex-1">
+        <ImageComp
+          src="/src/assets/external-load-operations-truflight-dallas.jpg"
+          alt="External Load Operations at TruFlight Academy"
+          classes="aspect-square rounded-md object-cover"
+        />
+      </div>
+      <div class="flex flex-1 flex-col">
+        <strong class="text-medium-blue text-primary-500 text-lg font-bold">
+          Commercial External Load Operations
+        </strong>
+        <h2
+          class="text-dark-blue font-display mb-5 text-5xl leading-tight font-bold"
+        >
+          Reliable Sling & External Load Services
+        </h2>
+        <p
+          class="text-accent-400 max-w-lg text-sm font-medium tracking-wider lg:text-base/6"
+        >
+          TruFlight Academy provides professional external load services for a
+          variety of commercial operations. Our high-hour pilots specialize in
+          safe, efficient, and reliable sling load and cargo transport
+          operations. Whether it’s utility work, firefighting support, or
+          specialized lifting tasks, we deliver experienced personnel and
+          trusted service every time.
+        </p>
+
+        <ul class="my-3 flex flex-col gap-2 font-bold">
+          <li class="flex items-center gap-3">
+            <FaCheck className="text-primary-500" />
+            FAA-certified commercial operations
+          </li>
+          <li class="flex items-center gap-3">
+            <FaCheck className="text-primary-500" />
+            High-hour professional pilots
+          </li>
+          <li class="flex items-center gap-3">
+            <FaCheck className="text-primary-500" />
+            Safe and efficient cargo handling
+          </li>
+          <li class="flex items-center gap-3">
+            <FaCheck className="text-primary-500" />
+            Flexible scheduling for commercial clients
+          </li>
+          <li class="flex items-center gap-3">
+            <FaCheck className="text-primary-500" />
+            Comprehensive risk and operations management
+          </li>
+        </ul>
+        <div class="mt-5 flex flex-col items-center gap-5 sm:flex-row">
+          <a href="/contact-us" class="btn-secondary">Request Service</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

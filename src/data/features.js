@@ -3,7 +3,7 @@ const features = [
     icon: "FiAward",
     title: "Professional CFIs",
     description:
-      "Our Certified Flight Instructors (CFIs) are experienced and dedicated to helping you achieve your aviation goals.",
+      "High hour pilots define our team, with 700+ hours and many over 1,000, ensuring you train with consistent, experienced instructors who love to teach.",
     link: "/about/our-chief-pilot",
   },
   {

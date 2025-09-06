@@ -13,7 +13,7 @@ const TrainingCoursesCarrousel = () => {
   const courses = [
     {
       name: "Private Pilot",
-      duration: "6 months to 1 year",
+      duration: "3 to 6 months",
       description:
         "The private pilot certificate is the first certification you will receive as a pilot.  You will be granted the privileges of flying a helicopter as the pilot in command and can fly passengers.",
       button: "Become a private pilot",
@@ -22,7 +22,7 @@ const TrainingCoursesCarrousel = () => {
     },
     {
       name: "Instrument Pilot",
-      duration: "6 months to 1 year",
+      duration: "3 to 6 months",
       description:
         "Being an instrument rated pilot means that you've received training to fly a helicopter with sole reference to the flight instruments.  This allows you to safely navigate more challenging weather and makes you a sharper pilot.",
       button: "Become instrument rated",
@@ -39,10 +39,10 @@ const TrainingCoursesCarrousel = () => {
       image: commercialPilotImage,
     },
     {
-      name: "Sling Load Training",
+      name: "External Load Training",
       duration: "2 weeks",
       description:
-        "Learn how to safely and effectively transport cargo using a helicopter.  Sling load training is essential for pilots who want to work in utility, firefighting, or search and rescue operations.",
+        "Learn how to safely and effectively transport cargo using a helicopter.  External load training is essential for pilots who want to work in utility, firefighting, or search and rescue operations.",
       button: "Become a CFI",
       href: "/enrollment-form",
       image: slingLoadImage,
