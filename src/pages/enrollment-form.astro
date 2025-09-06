@@ -116,11 +116,27 @@ const headerData = {
         </div>
         <div class="sm:col-span-2">
           <div class="mt-2.5">
+            <select
+              name="weight-is-240lbs-or-less"
+              id="weight-is-240lbs-or-less"
+              required
+              class="border-primary-400 focus:border-primary-500 outline-primary-500 w-full rounded border bg-white p-3 text-sm placeholder:text-sm placeholder:font-semibold"
+            >
+              <option value="" disabled selected>
+                Is your weight 240 lbs or less?
+              </option>
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </div>
+        </div>
+        <div class="sm:col-span-2">
+          <div class="mt-2.5">
             <textarea
-              name="message"
-              id="message"
+              name="experience-goals"
+              id="experience-goals"
               rows="4"
-              placeholder="Any additional information you'd like to provide?"
+              placeholder="Tell us more about your flying experience and goals..."
               class="border-primary-400 focus:border-primary-500 outline-primary-500 w-full rounded border bg-white p-3 placeholder:text-sm placeholder:font-semibold"
             ></textarea>
           </div>
