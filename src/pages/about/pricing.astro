@@ -1,5 +1,6 @@
 ---
 import Header from "../../components/Header.astro";
+import PricingCard from "../../components/PricingCard.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 
 const headerData = {
@@ -7,6 +8,74 @@ const headerData = {
   primaryImage: "/src/assets/helicopter-cabri-drifting-dallas-texas.jpg",
   primaryAlt: "Helicopter Cabri Drifting Dallas, Texas",
 };
+
+const packages = [
+  {
+    name: "10hr Block Rate",
+    description:
+      "Serious about becoming a pilot or adding on to your existing license? Pay for your hourly rates in a ten hour block! You must pay for all ten hours, in full, at check out!",
+    price: 510,
+    unit: "/hr",
+    link: "https://truflight.azurewebsites.net/flight/blockrate10",
+    features: [
+      "10 hours of flight instruction in Guimbal's Cabri G2!",
+      "Does not include ground school",
+    ],
+  },
+  {
+    name: "20hr Block Rate",
+    description:
+      "Serious about becoming a pilot or adding on to your existing license? Pay for your hourly rates in a twenty hour block! You must pay for all twenty hours, in full, at check out!",
+    price: 495,
+    unit: "/hr",
+    link: "https://truflight.azurewebsites.net/flight/blockrate20",
+    features: [
+      "20 hours of flight instruction in Guimbal's Cabri G2!",
+      "Does not include ground school",
+    ],
+  },
+  {
+    name: "Voyager Package",
+    description:
+      "Want more than just a Discovery Flight? This includes your Cabri time and Ground School time! 5 hours of each in our specialty package for those who are exited to learn.",
+    price: 2925,
+    unit: "once",
+    link: "https://truflight.azurewebsites.net/flight/voyager",
+    features: [
+      "5 hours of flight instruction in Guimbal's Cabri G2!",
+      "5 hours of ground instruction covering aerodynamics, regulations, weather, and more.",
+      "Includes study materials and practice exams.",
+    ],
+  },
+];
+
+const individualLessons = [
+  {
+    name: "Pilot Training",
+    description:
+      "Train with the Guimbal Cabri G2 to earn your Private Pilot, Instrument, or Commercial Pilot License. Our goal as a company is to bring comprehensive and effective flight training to help you achieve your aviation goals.",
+    price: 525,
+    unit: "/hr",
+    link: "/enrollment-form",
+    features: [
+      "One hour of flight instruction in Guimbal's Cabri G2!",
+      "Does not include ground school",
+    ],
+  },
+  {
+    name: "Ground School",
+    description:
+      "Want to become a pilot? Ground instruction is part of that! You'll spend this time going over your flight, general aviation information, and preparing for your written exam!",
+    note: "Add-on students do not need to take a written exam.",
+    price: 70,
+    unit: "/hr",
+    link: "https://truflight.azurewebsites.net/flight/groundschool",
+    features: [
+      "One hour of ground instruction covering aerodynamics, regulations, weather, and more.",
+      "Includes study materials and practice exams.",
+    ],
+  },
+];
 ---
 
 <BaseLayout
@@ -14,4 +83,28 @@ const headerData = {
   siteDescription="Discover transparent and competitive pricing for helicopter flight training at TruFlight Academy. Explore our packages and start your journey to becoming a skilled pilot today!"
 >
   <Header slot="hero" data={headerData} />
+
+  <section class="mx-auto max-w-7xl px-4 py-20 lg:px-12">
+    <h2
+      class="font-display mb-8 text-4xl font-black tracking-wide text-pretty italic sm:text-5xl"
+    >
+      Packages
+    </h2>
+
+    <div class="grid gap-14 lg:grid-cols-3">
+      {packages.map((pack) => <PricingCard {...pack} />)}
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-7xl px-4 pb-20 lg:px-12">
+    <h2
+      class="font-display mb-8 text-4xl font-black tracking-wide text-pretty italic sm:text-5xl"
+    >
+      Hourly Rates
+    </h2>
+
+    <div class="grid gap-14 md:grid-cols-2">
+      {individualLessons.map((lesson) => <PricingCard {...lesson} />)}
+    </div>
+  </section>
 </BaseLayout>
