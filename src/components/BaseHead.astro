@@ -3,7 +3,7 @@
 // all pages through the use of the <BaseHead /> component.
 import "../styles/global.css";
 import type { ImageMetadata } from "astro";
-import FallbackImage from "../assets/truflight-helicopter-in-dallas.avif";
+import FallbackImage from "../assets/Truflight-OG.png";
 import { SITE_TITLE } from "../consts";
 import "@fontsource-variable/mulish";
 import mulishWoff2 from "@fontsource-variable/mulish/files/mulish-latin-wght-normal.woff2?url";
@@ -61,3 +61,72 @@ const { title, description, image = FallbackImage } = Astro.props;
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={new URL(image.src, Astro.url)} />
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://www.truflight.academy",
+    "name": "TruFlight Academy",
+    "url": "https://www.truflight.academy",
+    "logo": "https://www.truflight.academy/truflight-logo.png",
+    "description": "TruFlight Academy is a women-owned, veteran-owned helicopter flight school based at Finney Field near Howe and Sherman, Texas. We provide safe and professional rotorcraft training with modern Cabri G2 helicopters, including discovery flights, Private Pilot, Commercial Pilot, Instrument Rating, and rotorcraft add-on training.",
+    "image": "https://www.truflight.academy/Truflight-OG.png",
+    "telephone": "+1-833-722-4359",
+    "email": "ifly@truflightacademy.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "9007 FM 902, Finney Field Airport (T47)",
+      "addressLocality": "Howe",
+      "addressRegion": "TX",
+      "postalCode": "75459",
+      "addressCountry": "US"
+    },
+    "currenciesAccepted": "USD",
+    "paymentAccepted": "Cash, Credit Card, Visa, Mastercard, American Express, Discover, Checks",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 33.53421771794466,
+      "longitude": -96.65000425767064
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+        ],
+        "opens": "09:00",
+        "closes": "17:00"
+      }
+    ],
+    "sameAs": [
+      "https://www.instagram.com/truflight.academy/",
+      "https://www.facebook.com/truflightacademy"
+    ],
+    "areaServed": {
+      "@type": "Place",
+      "name": ["Dallas", "Howe", "Sherman", "McKinney", "North Texas"]
+    },
+    "makesOffer": {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "serviceType": "Helicopter Flight Instruction"
+      },
+      "priceCurrency": "USD",
+      "price": "Varies"
+    },
+    "identifier": [
+      {
+        "@type": "PropertyValue",
+        "name": "Airport Code",
+        "value": "T47"
+      }
+    ]
+  }
+</script>
