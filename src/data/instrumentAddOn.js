@@ -7,9 +7,10 @@ const instrumentRating = {
     subtitle: "NO FAA WRITTEN exam required",
     url: "/add-on/instrument-helicopter-add-on",
     slug: "instrument-helicopter-add-on",
-    siteTitle: "Instrument Helicopter Add-On | TruFlight Academy - Dallas, TX",
+    siteTitle:
+      "Instrument Helicopter Add-On Training in Dallas, TX | TruFlight Academy",
     siteDescription:
-      "Master instrument flying with TruFlight Academy's 2-month IFR training program in Dallas, Texas. Learn to navigate in all weather conditions with advanced avionics and gain the skills needed for a professional flying career.",
+      "Take your instrument flying skills to the next level with TruFlight Academy’s Instrument Helicopter Add-On program in Dallas, TX. Designed for instrument-rated pilots, this course teaches helicopter-specific procedures, advanced navigation, and precision flying in instrument conditions. Enroll today and master the skies!",
     siteKeywords:
       "instrument rating Dallas, IFR training Texas, instrument flight training Dallas, weather flying training Dallas, precision approach training, instrument pilot certification, IFR checkride preparation Dallas, instrument rating course Dallas, advanced pilot training, instrument flight rules training, flight training Dallas, pilot school Dallas, aviation training Northern Dallas",
     intro:

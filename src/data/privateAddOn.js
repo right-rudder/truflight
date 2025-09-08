@@ -8,9 +8,10 @@ const privatePilot = {
     subtitle: "NO FAA WRITTEN exam required",
     url: "/add-on/private-helicopter-add-on",
     slug: "private-helicopter-add-on",
-    siteTitle: "Private Helicopter Add-On | TruFlight Academy - Dallas, TX",
+    siteTitle:
+      "Private Helicopter Add-On Training in Dallas, TX | TruFlight Academy",
     siteDescription:
-      "Earn your Private Pilot License in as little as 3 months at TruFlight Academy in Dallas, TX. Learn to fly with expert CFIs in a structured, affordable program with Cessna aircraft and personalized instruction.",
+      "Expand your pilot skills with TruFlight Academy’s Private Helicopter Add-On program in Dallas, TX. Designed for licensed private pilots, this course teaches rotorcraft fundamentals, hovering, takeoffs, landings, and more in Cabri G2 helicopters. Enroll today and take the controls!",
     siteKeywords:
       "private pilot license Texas, PPL training Dallas, student pilot course Dallas, beginner flight training Texas, recreational pilot license, private pilot certification Texas, learn to fly private pilot, flight training for beginners Texas, private pilot ground school, Texas private pilot course, flight training Dallas, pilot school Salt Lake City, aviation training Northern Texas, discovery flight Texas",
     primaryImage:

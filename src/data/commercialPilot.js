@@ -11,9 +11,9 @@ const commercialPilot = {
     url: "/programs/commercial-pilot",
     slug: "commercial-pilot",
     siteTitle:
-      "Commercial Pilot Training in Dallas | Professional Aviation Career at Truflight Academy",
+      "Commercial Helicopter Pilot Training in Dallas, TX | TruFlight Academy",
     siteDescription:
-      "Train to become a commercial pilot in just 3 months at Truflight Academy in Dallas, Dallas. Master advanced maneuvers and complex aircraft operations while preparing for a professional aviation career with our experienced instructors.",
+      "Advance your aviation career with TruFlight Academy’s Commercial Pilot Program in Dallas, TX. Gain hands-on experience in Cabri G2 helicopters, log required flight hours, and master advanced maneuvers to fly professionally. Enroll today and start flying for hire!",
     siteKeywords:
       "commercial pilot license Dallas, CPL training Texas, professional pilot training Dallas, career pilot course Dallas, pilot preparation, commercial aviation training Dallas, professional pilot certification, aviation career training Dallas, commercial pilot course, pilot training Dallas, flight training Dallas, pilot school Texas, aviation training Northern Dallas",
     intro:

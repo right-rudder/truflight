@@ -11,9 +11,9 @@ const externalLoad = {
     url: "/programs/external-load-training",
     slug: "external-load-training",
     siteTitle:
-      "External Load Training in Dallas | Helicopter Sling Load Certification at Truflight Academy",
+      "Helicopter External Load Training in Dallas, TX | TruFlight Academy",
     siteDescription:
-      "Get certified in external load operations with Truflight Academy in Dallas, Texas. Our comprehensive training program covers essential skills for safely managing sling load missions, including rigging techniques, flight maneuvers, and emergency procedures. Learn from experienced instructors using our modern Cabri G2 helicopters, and prepare for a career in aerial crane operations, firefighting support, and more.",
+      "Master professional rotorcraft external load operations with TruFlight Academy in Dallas, TX. Learn sling techniques, precision hovering, and real-world load handling in Cabri G2 helicopters. Enroll today and gain the skills to safely move loads like a pro!",
     siteKeywords:
       "external load training Dallas, helicopter sling load certification Texas, aerial crane operations Dallas, sling load operations training, helicopter rigging techniques Dallas, external load safety training Texas, firefighting support training Dallas, utility helicopter training Dallas, external load pilot course, helicopter flight training Dallas, pilot school Texas, aviation training Northern Dallas",
     intro:

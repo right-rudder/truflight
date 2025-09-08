@@ -8,9 +8,9 @@ const privatePilot = {
     url: "/programs/private-pilot",
     slug: "private-pilot",
     siteTitle:
-      "Private Pilot License Training in Dallas, Texas | TruFlight Academy",
+      "Private Pilot Helicopter Training in Dallas, Texas | TruFlight Academy",
     siteDescription:
-      "Earn your Private Pilot License in as little as 3 months at TruFlight Academy in Dallas, TX. Learn to fly with expert CFIs in a structured, affordable program with Cessna aircraft and personalized instruction.",
+      "Earn your Private Pilot License (PPL) with TruFlight Academy near Dallas, Texas. Train in modern Cabri G2 helicopters with expert CFIs. Start your aviation journey with hands-on flight training, ground school, and solo flying experience. Enroll today!",
     siteKeywords:
       "private pilot license Texas, PPL training Dallas, student pilot course Dallas, beginner flight training Texas, recreational pilot license, private pilot certification Texas, learn to fly private pilot, flight training for beginners Texas, private pilot ground school, Texas private pilot course, flight training Dallas, pilot school Salt Lake City, aviation training Northern Texas, discovery flight Texas",
     primaryImage: "/src/assets/private-pilot-training-at-truflight.jpg",

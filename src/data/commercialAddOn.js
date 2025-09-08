@@ -11,9 +11,10 @@ const commercialPilot = {
     subtitle: "NO FAA WRITTEN exam required",
     url: "/add-on/commercial-helicopter-add-on",
     slug: "commercial-helicopter-add-on",
-    siteTitle: "Commercial Helicopter Add-On | TruFlight Academy - Dallas, TX",
+    siteTitle:
+      "Commercial Helicopter Add-On Training in Dallas, TX | TruFlight Academy",
     siteDescription:
-      "Train to become a commercial pilot in just 3 months at Truflight Academy in Dallas, Dallas. Master advanced maneuvers and complex aircraft operations while preparing for a professional aviation career with our experienced instructors.",
+      "Expand your aviation career with TruFlight Academy’s Commercial Helicopter Add-On program in Dallas, TX. Designed for instrument-rated pilots, this course transitions you from fixed-wing to rotorcraft, teaching advanced maneuvers, helicopter systems, and IFR cross-country skills. Enroll today and take your commercial flying to new heights!",
     siteKeywords:
       "commercial pilot license Dallas, CPL training Texas, professional pilot training Dallas, career pilot course Dallas, pilot preparation, commercial aviation training Dallas, professional pilot certification, aviation career training Dallas, commercial pilot course, pilot training Dallas, flight training Dallas, pilot school Texas, aviation training Northern Dallas",
     intro:

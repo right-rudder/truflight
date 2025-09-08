@@ -6,10 +6,9 @@ const instrumentRating = {
     title: "Instrument Pilot",
     url: "/programs/instrument-pilot",
     slug: "instrument-pilot",
-    siteTitle:
-      "Instrument Rating Course in Dallas | IFR Flight Training at TruFlight Academy",
+    siteTitle: "Helicopter Instrument Rating in Dallas, TX | TruFlight Academy",
     siteDescription:
-      "Master instrument flying with TruFlight Academy's 2-month IFR training program in Dallas, Texas. Learn to navigate in all weather conditions with advanced avionics and gain the skills needed for a professional flying career.",
+      "Take your helicopter skills to the next level with an Instrument Rating at TruFlight Academy in Dallas, TX. Master flying in low visibility using only instruments, gain hands-on experience in Cabri G2 helicopters, and prepare for FAA exams. Enroll today!",
     siteKeywords:
       "instrument rating Dallas, IFR training Texas, instrument flight training Dallas, weather flying training Dallas, precision approach training, instrument pilot certification, IFR checkride preparation Dallas, instrument rating course Dallas, advanced pilot training, instrument flight rules training, flight training Dallas, pilot school Dallas, aviation training Northern Dallas",
     intro:
