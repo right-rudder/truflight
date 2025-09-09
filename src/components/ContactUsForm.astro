@@ -190,7 +190,6 @@ const PORTAL_API_KEY = import.meta.env.PORTAL_API_KEY;
 
       const formData = new FormData(form);
       const confirmEmail = formData.get("confirm-email")?.trim();
-
       if (confirmEmail) return;
 
       const webhookURL = CONTACT_US_FORM_WEBHOOK_URL;
@@ -198,16 +197,31 @@ const PORTAL_API_KEY = import.meta.env.PORTAL_API_KEY;
 
       const urlEncodedBody = new URLSearchParams(formData).toString();
 
+      const excludedFields = [
+        "first-name",
+        "last-name",
+        "email",
+        "phone",
+        "confirm-email",
+        "agree-data-collection",
+      ];
+
+      const metadata = {};
+
+      for (const [key, value] of formData.entries()) {
+        if (!excludedFields.includes(key)) {
+          metadata[key] = value?.trim?.() ?? value;
+        }
+      }
+
       const jsonBody = {
         first_name: formData.get("first-name")?.trim() || "",
         last_name: formData.get("last-name")?.trim() || "",
         email: formData.get("email")?.trim() || "",
         phone: formData.get("phone")?.trim() || "",
-        campaign: "contact_us_form",
-        account_random_id: "ac_ly7kki3x",
-        metadata: {
-          message: formData.get("message")?.trim() || "",
-        },
+        campaign: "contact_us",
+        account_random_id: "ac_jvesu2r5",
+        metadata: metadata,
       };
 
       try {

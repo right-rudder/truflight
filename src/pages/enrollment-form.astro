@@ -1,7 +1,7 @@
 ---
 import Header from "../components/Header.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
-const CONTACT_US_FORM_WEBHOOK_URL = import.meta.env.CONTACT_US_FORM_WEBHOOK_URL;
+const ENROLLMENT_FORM_WEBHOOK_URL = import.meta.env.ENROLLMENT_FORM_WEBHOOK_URL;
 const PORTAL_API_KEY = import.meta.env.PORTAL_API_KEY;
 
 const headerData = {
@@ -25,7 +25,7 @@ const headerData = {
     <h2 class="font-display mt-3 mb-5 text-center text-5xl font-bold">
       Ready to Take Off? Enroll Today!
     </h2>
-    <form id="contact_form">
+    <form id="enrollment_form">
       <div class="grid grid-cols-1 gap-x-8 gap-y-2 sm:grid-cols-2">
         <div>
           <div class="mt-2.5">
@@ -174,9 +174,9 @@ const headerData = {
     </form>
   </section>
 
-  <script define:vars={{ CONTACT_US_FORM_WEBHOOK_URL, PORTAL_API_KEY }}>
+  <script define:vars={{ ENROLLMENT_FORM_WEBHOOK_URL, PORTAL_API_KEY }}>
     document.addEventListener("DOMContentLoaded", () => {
-      const form = document.getElementById("contact_form");
+      const form = document.getElementById("enrollment_form");
       if (!form) {
         console.error("Form element not found.");
         return;
@@ -187,24 +187,38 @@ const headerData = {
 
         const formData = new FormData(form);
         const confirmEmail = formData.get("confirm-email")?.trim();
-
         if (confirmEmail) return;
 
-        const webhookURL = CONTACT_US_FORM_WEBHOOK_URL;
+        const webhookURL = ENROLLMENT_FORM_WEBHOOK_URL;
         const apiKey = PORTAL_API_KEY;
 
         const urlEncodedBody = new URLSearchParams(formData).toString();
+
+        const excludedFields = [
+          "first-name",
+          "last-name",
+          "email",
+          "phone",
+          "confirm-email",
+          "agree-data-collection",
+        ];
+
+        const metadata = {};
+
+        for (const [key, value] of formData.entries()) {
+          if (!excludedFields.includes(key)) {
+            metadata[key] = value?.trim?.() ?? value;
+          }
+        }
 
         const jsonBody = {
           first_name: formData.get("first-name")?.trim() || "",
           last_name: formData.get("last-name")?.trim() || "",
           email: formData.get("email")?.trim() || "",
           phone: formData.get("phone")?.trim() || "",
-          campaign: "contact_us_form",
-          account_random_id: "ac_ly7kki3x",
-          metadata: {
-            message: formData.get("message")?.trim() || "",
-          },
+          campaign: "enrollment",
+          account_random_id: "ac_jvesu2r5",
+          metadata: metadata,
         };
 
         try {
@@ -228,7 +242,7 @@ const headerData = {
           ]);
 
           if (ghlRes.ok && portalRes.ok) {
-            window.location.href = "/contact-confirmation";
+            window.location.href = "/enrollment-confirmation";
           } else {
             console.error("Submission failed", {
               ghlStatus: ghlRes.status,
