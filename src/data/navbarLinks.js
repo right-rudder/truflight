@@ -83,7 +83,11 @@ export const navbarLinks = [
       },
       {
         name: "Pricing",
-        link: "/about/pricing",
+        link: "/pricing",
+      },
+      {
+        name: "Book Now",
+        link: "/book-now",
       },
     ],
   },

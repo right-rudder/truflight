@@ -1,12 +1,12 @@
 ---
-import Header from "../../components/Header.astro";
-import PricingCard from "../../components/PricingCard.astro";
-import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import PricingCard from "../components/PricingCard.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
 
 const headerData = {
-  title: "Pricing",
-  primaryImage: "/src/assets/helicopter-cabri-drifting-dallas-texas.jpg",
-  primaryAlt: "Helicopter Cabri Drifting Dallas, Texas",
+  title: "Book Now",
+  primaryImage: "/src/assets/truflight-at-dallas-airport-commercial-pilot.jpg",
+  primaryAlt: "TruFlight at Dallas Airport Commercial Pilot",
 };
 
 const packages = [
@@ -78,8 +78,8 @@ const individualLessons = [
 ---
 
 <BaseLayout
-  siteTitle="TruFlight Academy Helicopter Flight Training Pricing | Dallas, TX"
-  siteDescription="Discover TruFlight Academy’s transparent and flexible helicopter flight training pricing in Dallas, TX. Choose from hourly rates, block packages, or all-inclusive Voyager packages for Private, Instrument, and Commercial Pilot training. Start your aviation journey today!"
+  siteTitle="Book Helicopter Flight Training | TruFlight Academy Dallas, TX"
+  siteDescription="Book your helicopter flight training at TruFlight Academy in Dallas, TX. Explore detailed pricing, hourly rates, block packages, and Voyager all-inclusive options for Private, Instrument, and Commercial Pilot training."
 >
   <Header slot="hero" data={headerData} />
 

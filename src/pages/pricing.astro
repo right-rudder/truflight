@@ -1,0 +1,328 @@
+---
+import { Image } from "astro:assets";
+import Header from "../components/Header.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ImageComp from "../components/ImageComp.astro";
+
+const headerData = {
+  title: "Pricing",
+  primaryImage: "/src/assets/helicopter-cabri-drifting-dallas-texas.jpg",
+  primaryAlt: "Helicopter Cabri Drifting Dallas, Texas",
+};
+---
+
+<BaseLayout
+  siteTitle="TruFlight Academy Helicopter Flight Training Pricing | Dallas, TX"
+  siteDescription="Discover TruFlight Academy’s transparent and flexible helicopter flight training pricing in Dallas, TX. Choose from hourly rates, block packages, or all-inclusive Voyager packages for Private, Instrument, and Commercial Pilot training. Start your aviation journey today!"
+>
+  <Header slot="hero" data={headerData} />
+
+  <div class="bg-white py-24 sm:py-32">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="mx-auto max-w-4xl sm:text-center">
+        <h2
+          class="text-5xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-6xl sm:text-balance"
+        >
+          Transparent Pricing, No Surprises
+        </h2>
+        <p
+          class="mx-auto mt-6 max-w-2xl text-lg font-medium text-pretty text-gray-500 sm:text-xl/8"
+        >
+          <span class="text-primary-500 font-semibold">TruFlight Academy</span> is
+          committed to helping our students Fly Further! With these competitive prices,
+          the sky is the limit!
+        </p>
+      </div>
+      <div
+        class="mt-16 grid w-full rounded-3xl ring-1 ring-gray-200 sm:mt-20 md:grid-cols-3"
+      >
+        <div class="relative flex p-2">
+          <h3
+            class="absolute z-20 m-5 text-3xl font-bold tracking-tight text-white"
+          >
+            Block Rates
+          </h3>
+          <ImageComp
+            src="/src/assets/guimbal-cabri-g2-truflight-academy-spec4.jpg"
+            alt="Guimbal Cabri G2 in Dallas, Texas"
+            classes="h-[20rem] rounded-2xl object-cover brightness-75"
+          />
+        </div>
+        <div class="flex p-2">
+          <div
+            class="bg-primary-50/50 w-full rounded-2xl py-10 text-center inset-ring inset-ring-gray-900/5 lg:flex lg:flex-col lg:justify-center"
+          >
+            <div class="mx-auto max-w-xs px-8">
+              <p class="text-base font-semibold text-gray-600">
+                10hr Block Rate
+              </p>
+              <p class="mt-6 flex items-baseline justify-center gap-x-2">
+                <span
+                  class="text-5xl font-semibold tracking-tight text-gray-900"
+                  >$510</span
+                >
+                <span
+                  class="text-sm/6 font-semibold tracking-wide text-gray-600"
+                  >/hr</span
+                >
+              </p>
+              <a href="/book-now" class="btn-primary mx-auto mt-6 block w-full"
+                >Details</a
+              >
+              <p class="mt-6 text-xs/5 text-gray-600">
+                Must pre-purchase and pay in full.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="flex p-2">
+          <div
+            class="bg-primary-50/50 w-full rounded-2xl py-10 text-center inset-ring inset-ring-gray-900/5 lg:flex lg:flex-col lg:justify-center"
+          >
+            <div class="mx-auto max-w-xs px-8">
+              <p class="text-base font-semibold text-gray-600">
+                20hr Block Rate
+              </p>
+              <p class="mt-6 flex items-baseline justify-center gap-x-2">
+                <span
+                  class="text-5xl font-semibold tracking-tight text-gray-900"
+                  >$495</span
+                >
+                <span
+                  class="text-sm/6 font-semibold tracking-wide text-gray-600"
+                  >/hr</span
+                >
+              </p>
+              <a href="/book-now" class="btn-primary mx-auto mt-6 block w-full"
+                >Details</a
+              >
+              <p class="mt-6 text-xs/5 text-gray-600">
+                Must pre-purchase and pay in full.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="mt-16 grid w-full rounded-3xl ring-1 ring-gray-200 sm:mt-20 md:grid-cols-3"
+      >
+        <div class="relative flex p-2">
+          <h3
+            class="absolute z-20 m-5 text-3xl font-bold tracking-tight text-white"
+          >
+            Pilot Training
+          </h3>
+          <ImageComp
+            src="/src/assets/chief-pilot-todd-guison-checking-helicopter.jpg"
+            alt="Chief Pilot Todd Guison Checking Helicopter"
+            classes="h-[20rem] rounded-2xl object-cover brightness-75"
+          />
+        </div>
+        <div class="flex p-2">
+          <div
+            class="bg-primary-50/50 w-full rounded-2xl py-10 text-center inset-ring inset-ring-gray-900/5 lg:flex lg:flex-col lg:justify-center"
+          >
+            <div class="mx-auto max-w-xs px-8">
+              <p class="text-base font-semibold text-gray-600">Cabri Time</p>
+              <p class="mt-6 flex items-baseline justify-center gap-x-2">
+                <span
+                  class="text-5xl font-semibold tracking-tight text-gray-900"
+                  >$525</span
+                >
+                <span
+                  class="text-sm/6 font-semibold tracking-wide text-gray-600"
+                  >/hr</span
+                >
+              </p>
+              <a
+                href="/pilot-training/private-pilot"
+                class="btn-primary mx-auto mt-6 block w-full">Details</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="flex p-2">
+          <div
+            class="bg-primary-50/50 w-full rounded-2xl py-10 text-center inset-ring inset-ring-gray-900/5 lg:flex lg:flex-col lg:justify-center"
+          >
+            <div class="mx-auto max-w-xs px-8">
+              <p class="text-base font-semibold text-gray-600">Ground School</p>
+              <p class="mt-6 flex items-baseline justify-center gap-x-2">
+                <span
+                  class="text-5xl font-semibold tracking-tight text-gray-900"
+                  >$70</span
+                >
+                <span
+                  class="text-sm/6 font-semibold tracking-wide text-gray-600"
+                  >/hr</span
+                >
+              </p>
+              <a href="/book-now" class="btn-primary mx-auto mt-6 block w-full"
+                >Details</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="mt-16 grid w-full rounded-3xl ring-1 ring-gray-200 sm:mt-20 md:grid-cols-9"
+      >
+        <div class="relative flex p-2 md:col-span-3">
+          <h3
+            class="absolute z-20 m-5 text-3xl font-bold tracking-tight text-white"
+          >
+            Advanced Training
+          </h3>
+          <ImageComp
+            src="/src/assets/external-load-training-in-dallas-texas.jpg"
+            alt="External Load Student at TruFlight Academy"
+            classes="h-[20rem] rounded-2xl object-cover brightness-75"
+          />
+        </div>
+        <div class="flex p-2 md:col-span-2">
+          <div
+            class="bg-primary-50/50 w-full rounded-2xl py-10 text-center inset-ring inset-ring-gray-900/5 lg:flex lg:flex-col lg:justify-center"
+          >
+            <div class="mx-auto max-w-xs px-8">
+              <p class="text-base font-semibold text-gray-600">
+                External Loads
+              </p>
+              <p class="mt-6 flex items-baseline justify-center gap-x-2">
+                <span
+                  class="text-5xl font-semibold tracking-tight text-gray-900"
+                  >$725</span
+                >
+                <span
+                  class="text-sm/6 font-semibold tracking-wide text-gray-600"
+                  >/hr</span
+                >
+              </p>
+              <a
+                href="/pilot-training/external-load-training"
+                class="btn-primary mx-auto mt-6 block w-full">Details</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="flex p-2 md:col-span-2">
+          <div
+            class="bg-primary-50/50 w-full rounded-2xl py-10 text-center inset-ring inset-ring-gray-900/5 lg:flex lg:flex-col lg:justify-center"
+          >
+            <div class="mx-auto max-w-xs px-8">
+              <p class="text-base font-semibold text-gray-600">
+                Instrument Rating
+              </p>
+              <p class="mt-6 flex items-baseline justify-center gap-x-2">
+                <span
+                  class="text-5xl font-semibold tracking-tight text-gray-900"
+                  >$525</span
+                >
+                <span
+                  class="text-sm/6 font-semibold tracking-wide text-gray-600"
+                  >/hr</span
+                >
+              </p>
+              <a
+                href="/pilot-training/instrument-pilot"
+                class="btn-primary mx-auto mt-6 block w-full">Details</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="flex p-2 md:col-span-2">
+          <div
+            class="bg-primary-50/50 w-full rounded-2xl py-10 text-center inset-ring inset-ring-gray-900/5 lg:flex lg:flex-col lg:justify-center"
+          >
+            <div class="mx-auto max-w-xs px-8">
+              <p class="text-base font-semibold text-gray-600">Solo/Rentals</p>
+              <p class="mt-6 flex items-baseline justify-center gap-x-2">
+                <span
+                  class="text-5xl font-semibold tracking-tight text-gray-900"
+                  >$455</span
+                >
+                <span
+                  class="text-sm/6 font-semibold tracking-wide text-gray-600"
+                  >/hr</span
+                >
+              </p>
+              <a
+                href="/contact-us"
+                class="btn-primary mx-auto mt-6 block w-full">Details</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="mt-16 grid w-full rounded-3xl ring-1 ring-gray-200 sm:mt-20 md:grid-cols-3"
+      >
+        <div class="relative flex p-2">
+          <h3
+            class="absolute z-20 m-5 text-3xl font-bold tracking-tight text-white"
+          >
+            Great Start
+          </h3>
+          <ImageComp
+            src="/src/assets/truflight-instructor-with-student-on-helicopter.jpg"
+            alt="TruFlight Instructor with Student on Helicopter"
+            classes="h-[20rem] rounded-2xl object-cover brightness-75"
+          />
+        </div>
+        <div class="flex p-2">
+          <div
+            class="bg-primary-50/50 w-full rounded-2xl py-10 text-center inset-ring inset-ring-gray-900/5 lg:flex lg:flex-col lg:justify-center"
+          >
+            <div class="mx-auto max-w-xs px-8">
+              <p class="text-base font-semibold text-gray-600">
+                Voyager Package
+              </p>
+              <p class="mt-6 flex items-baseline justify-center gap-x-2">
+                <span
+                  class="text-5xl font-semibold tracking-tight text-gray-900"
+                  >$2925</span
+                >
+                <span
+                  class="text-sm/6 font-semibold tracking-wide text-gray-600"
+                  >once</span
+                >
+              </p>
+              <a href="/book-now" class="btn-primary mx-auto mt-6 block w-full"
+                >Details</a
+              >
+              <p class="mt-6 text-xs/5 text-gray-600">
+                Must pre-purchase and pay in full.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="flex p-2">
+          <div
+            class="bg-primary-50/50 w-full rounded-2xl py-10 text-center inset-ring inset-ring-gray-900/5 lg:flex lg:flex-col lg:justify-center"
+          >
+            <div class="mx-auto max-w-xs px-8">
+              <p class="text-base font-semibold text-gray-600">
+                Discovery Flight
+              </p>
+              <p class="mt-6 flex items-baseline justify-center gap-x-2">
+                <span
+                  class="text-5xl font-semibold tracking-tight text-gray-900"
+                  >$195</span
+                >
+                <span
+                  class="text-sm/6 font-semibold tracking-wide text-gray-600"
+                ></span>
+              </p>
+              <a
+                href="/discovery-flight"
+                class="btn-primary mx-auto mt-6 block w-full">Details</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

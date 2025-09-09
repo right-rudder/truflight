@@ -12,12 +12,10 @@ export default defineConfig({
     plugins: [tailwindcss()],
   },
   redirects: {
-    "/pricing": "/about/pricing",
     "/careers": "/why-become-a-pilot",
     "/wecometoyou": "/#weComeToYou",
     "/registration": "/discovery-flight",
     "/videos": "/",
-    "/book-now": "/about/pricing",
     "/add-ons": "/add-on/private-helicopter-add-on",
     "/about-us": "/about/our-story",
     "/services-9": "/pilot-training/external-load-training",
