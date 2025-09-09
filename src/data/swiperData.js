@@ -37,22 +37,21 @@ const swiperData = [
     btnLink: "/about/our-fleet",
   },
   {
-    imagePath:
-      "/src/assets/cabri-g2-helicopter-truflight-academy-dallas-texas.avif",
-    imageAlt: "Cabri G2 Helicopter at TruFlight Academy",
-    title: "Take Your Training to the Next Step with External Load Training",
+    imagePath: "/src/assets/external-load-operations-truflight-dallas.jpg",
+    imageAlt: "Helicopter Commercial External Load Operations",
+    title: "Professional Commercial External Load Operations",
     subtitle:
-      "Ready to take your helicopter training to the next level? Enroll in our External Load Training program at TruFlight Academy and learn how to safely and effectively operate helicopters with external loads.",
-    btnText: "External Load Training",
-    btnLink: "/pilot-training/external-load-training",
+      "From precision lifting to utility support, TruFlight Academy provides safe, reliable, and FAA-certified helicopter external load services for commercial clients across Texas.",
+    btnText: "Commercial Operations",
+    btnLink: "/about/commercial-external-load-operations",
   },
   {
     imagePath: "/src/assets/sling-load-training-at-truflight-academy.avif",
     imageAlt: "Sling Load Training at TruFlight Academy",
-    title: "Looking for Sling Load Training? Look No Further!",
+    title: "External Load Training for Pilots",
     subtitle:
-      "TruFlight Academy offers top-notch Sling Load Training for aspiring helicopter pilots. Our experienced instructors will teach you the skills and techniques needed to safely and effectively operate helicopters with sling loads.",
-    btnText: "Sling Load Training",
+      "Take your helicopter skills to the next level with our External Load Training program. Learn the techniques and safety procedures required to master helicopter sling load operations.",
+    btnText: "External Load Training",
     btnLink: "/pilot-training/external-load-training",
   },
 ];

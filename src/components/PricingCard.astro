@@ -15,12 +15,9 @@ const { name, description, price, unit, features, note, link } = Astro.props;
   </div>
   <p class="mt-4 text-sm/6 text-gray-800">
     {description}
-    <span class="mt-2 block text-xs text-gray-600 italic"
-      >*Students must sign up with a log in to schedule.</span
-    >
     {
       note && (
-        <span class="mt-2 block text-xs text-gray-600 italic">**{note}</span>
+        <span class="mt-2 block text-xs text-gray-600 italic">*{note}</span>
       )
     }
   </p>

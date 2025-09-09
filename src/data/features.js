@@ -7,7 +7,7 @@ const features = [
     link: "/about/our-chief-pilot",
   },
   {
-    icon: "FiMonitor",
+    icon: "GiHelicopterTail",
     title: "Modern Cabri G2 Helicopters",
     description:
       "We use modern Cabri G2 helicopters for training, ensuring a safe and effective learning experience.",
