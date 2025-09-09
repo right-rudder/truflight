@@ -28,6 +28,10 @@ export const navbarLinks = [
         link: "/pilot-training/commercial-pilot",
       },
       {
+        name: "Certified Flight Instructor",
+        link: "/pilot-training/certified-flight-instructor",
+      },
+      {
         name: "External Load Training",
         link: "/pilot-training/external-load-training",
       },
@@ -47,6 +51,10 @@ export const navbarLinks = [
       {
         name: "Commercial Helicopter Add-On",
         link: "/add-on/commercial-helicopter-add-on",
+      },
+      {
+        name: "CFI Helicopter Add-On",
+        link: "/add-on/cfi-helicopter-add-on",
       },
     ],
   },

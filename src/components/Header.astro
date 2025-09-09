@@ -22,9 +22,16 @@ import ImageComp from "./ImageComp.astro";
       </h1>
       {
         data.subtitle && (
-          <h2 class="max-w-3xl text-xl font-semibold lg:text-3xl">
+          <h2 class="max-w-3xl text-xl font-semibold text-pretty lg:text-3xl">
             {data.subtitle}
           </h2>
+        )
+      }
+      {
+        data.button && (
+          <a href={data.button.href} class="btn-primary shadow-none!">
+            {data.button.text}
+          </a>
         )
       }
     </div>

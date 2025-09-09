@@ -20,7 +20,7 @@ const commercialPilot = {
     intro:
       "The Commercial Pilot Certificate (CPL) elevates your skills to professional standards, enabling you to receive compensation for flying services. Our CPL program at Truflight Academy focuses on advanced maneuvers, complex aircraft operations, and aviation professionalism, unlocking opportunities in passenger transport, cargo, and specialized aviation fields.",
     description: [
-      "Already a commercial pilot but looking to expand your wings into the world of helicopters? Our Commercial Helicopter Add-On program is the perfect way to upgrade your license and broaden your career opportunities. Based in Dallas, Texas, TruFlight Academy offers one of the most comprehensive add-on programs in the region, designed to transition you smoothly from fixed-wing to rotorcraft flying.",
+      "Are you a commercial pilot ready to take your skills to the skies in a helicopter? Our Commercial Helicopter Add-On program is the perfect way to upgrade your license and broaden your career opportunities. Based in Dallas, Texas, TruFlight Academy offers one of the most comprehensive add-on programs in the region, designed to transition you smoothly from fixed-wing to rotorcraft flying.",
       "With ground and in-flight instruction tailored to your experience, you’ll master everything from helicopter aerodynamics to advanced maneuvers in our modern Cabri G2 aircraft. As long as you hold a valid commercial pilot certificate and a current FAA medical (third-class or higher), you’re ready to start. Think of it as adding a whole new dimension to your aviation skills, because flying sideways and backwards isn’t just cool, it’s commercial.",
     ],
     primaryImage:
