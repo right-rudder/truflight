@@ -13,7 +13,7 @@ const TrainingCoursesCarrousel = () => {
   const courses = [
     {
       name: "Private Pilot",
-      duration: "3 to 6 months",
+      duration: "As little as 6 weeks",
       description:
         "The private pilot certificate is the first certification you will receive as a pilot.  You will be granted the privileges of flying a helicopter as the pilot in command and can fly passengers.",
       button: "Become a private pilot",
@@ -22,7 +22,7 @@ const TrainingCoursesCarrousel = () => {
     },
     {
       name: "Instrument Pilot",
-      duration: "3 to 6 months",
+      duration: "As little as 6 weeks",
       description:
         "Being an instrument rated pilot means that you've received training to fly a helicopter with sole reference to the flight instruments.  This allows you to safely navigate more challenging weather and makes you a sharper pilot.",
       button: "Become instrument rated",
@@ -31,7 +31,7 @@ const TrainingCoursesCarrousel = () => {
     },
     {
       name: "Commercial Pilot",
-      duration: "3 to 6 months",
+      duration: "As little as 6 weeks",
       description:
         "Obtaining a commercial pilot certificate allows you to fly for compensation or hire. Start your pilot career and gain flight experience while getting paid to fly.",
       button: "Start your pilot career",
@@ -40,7 +40,7 @@ const TrainingCoursesCarrousel = () => {
     },
     {
       name: "External Load Training",
-      duration: "2 weeks",
+      duration: "As little as 6 weeks",
       description:
         "Learn how to safely and effectively transport cargo using a helicopter.  External load training is essential for pilots who want to work in utility, firefighting, or search and rescue operations.",
       button: "Become a CFI",
