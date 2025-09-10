@@ -5,7 +5,6 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 import Navbar from "../components/Navbar";
 const { pathname } = Astro.url;
 const { siteTitle, siteDescription, siteImage } = Astro.props;
-import ImageComp from "../components/ImageComp.astro";
 ---
 
 <!doctype html>
@@ -18,6 +17,13 @@ import ImageComp from "../components/ImageComp.astro";
     />
   </head>
   <body class="font-mulish">
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-N8R7V9MJ"
+        height="0"
+        width="0"
+        style="display:none;visibility:hidden"></iframe></noscript
+    >
     <header>
       <Navbar pathname={pathname} client:load />
     </header>
