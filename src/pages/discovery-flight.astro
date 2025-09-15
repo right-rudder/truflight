@@ -2,7 +2,22 @@
 import { FaCheck } from "react-icons/fa";
 import ImageComp from "../components/ImageComp.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import ServiceSchema from "../components/schema/ServiceSchema.astro";
+
+// Discovery Flight service data for schema
+const discoveryFlightService = {
+  name: "Helicopter Discovery Flight",
+  description:
+    "Take the controls and experience the thrill of flying with a Discovery Flight at TruFlight Academy. Fly our modern Cabri G2 helicopter and see what it's like to be a pilot.",
+  url: "https://www.truflightacademy.com/discovery-flight",
+  price: "$195",
+  duration: "PT1H", // 1 hour in ISO 8601 duration format
+  category: "Recreational Flight Experience",
+  areaServed: ["Dallas, TX", "North Texas", "Sherman, TX", "McKinney, TX"],
+};
 ---
+
+<ServiceSchema service={discoveryFlightService} />
 
 <BaseLayout
   siteTitle="Helicopter Discovery Flight in Dallas, TX | TruFlight Academy"

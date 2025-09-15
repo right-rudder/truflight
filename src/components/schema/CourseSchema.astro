@@ -1,0 +1,141 @@
+---
+interface CourseData {
+  name: string;
+  description: string;
+  url: string;
+  duration?: string;
+  cost?: string;
+  prerequisites?: string[];
+  outcomes?: string[];
+  flightHours?: number;
+  groundHours?: number;
+}
+
+interface Props {
+  course: CourseData;
+  provider?: {
+    name: string;
+    url: string;
+  };
+}
+
+const {
+  course,
+  provider = {
+    name: "TruFlight Academy",
+    url: "https://www.truflightacademy.com",
+  },
+} = Astro.props;
+
+const schema: any = {
+  "@context": "https://schema.org",
+  "@type": "Course",
+  name: course.name,
+  description: course.description,
+  url: course.url,
+  provider: {
+    "@type": "EducationalOrganization",
+    name: provider.name,
+    url: provider.url,
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "9007 FM 902, Finney Field Airport (T47)",
+      addressLocality: "Howe",
+      addressRegion: "TX",
+      postalCode: "75459",
+      addressCountry: "US",
+    },
+  },
+  educationalLevel: "Professional Certificate",
+  courseMode: ["In-person", "Hands-on Training"],
+  inLanguage: "en-US",
+  availableLanguage: "English",
+  teaches: [
+    "Helicopter Flight Operations",
+    "Aviation Safety",
+    "Federal Aviation Regulations",
+    "Aerodynamics",
+    "Navigation",
+    "Weather Systems",
+    "Emergency Procedures",
+  ],
+  coursePrerequisites: course.prerequisites || [
+    "Must be at least 17 years old for Private Pilot",
+    "English language proficiency",
+    "Valid government-issued ID",
+  ],
+  educationalCredentialAwarded: {
+    "@type": "EducationalOccupationalCredential",
+    name: course.name,
+    credentialCategory: "Professional Certificate",
+    recognizedBy: {
+      "@type": "Organization",
+      name: "Federal Aviation Administration",
+      sameAs: "https://www.faa.gov",
+    },
+  },
+  learningResourceType: "Course",
+  educationalUse: "Professional Development",
+  audience: {
+    "@type": "EducationalAudience",
+    educationalRole: "Student Pilot",
+  },
+  isAccessibleForFree: false,
+  hasCourseInstance: {
+    "@type": "CourseInstance",
+    courseMode: "In-person",
+    location: {
+      "@type": "Place",
+      name: "TruFlight Academy",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "9007 FM 902, Finney Field Airport (T47)",
+        addressLocality: "Howe",
+        addressRegion: "TX",
+        postalCode: "75459",
+        addressCountry: "US",
+      },
+    },
+    instructor: {
+      "@type": "Person",
+      name: "Todd Guison",
+      jobTitle: "Chief Pilot & Flight Instructor",
+      description:
+        "Certified Flight Instructor with extensive military and civilian helicopter experience",
+    },
+  },
+};
+
+// Add duration if provided
+if (course.duration) {
+  schema.timeRequired = course.duration;
+  schema.hasCourseInstance.duration = course.duration;
+}
+
+// Add cost if provided
+if (course.cost) {
+  schema.offers = {
+    "@type": "Offer",
+    price: course.cost,
+    priceCurrency: "USD",
+    availability: "InStock",
+    validFrom: new Date().toISOString().split("T")[0],
+  };
+}
+
+// Add specific flight training details
+if (course.flightHours) {
+  schema.teaches.push(`${course.flightHours} hours of flight training`);
+}
+
+if (course.groundHours) {
+  schema.teaches.push(`${course.groundHours} hours of ground school`);
+}
+
+// Add course outcomes if provided
+if (course.outcomes && course.outcomes.length > 0) {
+  schema.competencyRequired = course.outcomes;
+}
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(schema, null, 2)} />

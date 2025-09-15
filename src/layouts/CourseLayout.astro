@@ -3,9 +3,23 @@ import { FaDotCircle } from "react-icons/fa";
 import ImageComp from "../components/ImageComp.astro";
 import { FaHelicopter } from "react-icons/fa6";
 import CTA from "../components/CTA.astro";
+import CourseSchema from "../components/schema/CourseSchema.astro";
 
 const { data } = Astro.props;
+
+// Prepare course data for schema
+const courseData = {
+  name: data.title,
+  description: data.description[0], // Use first description paragraph
+  url: `https://www.truflightacademy.com${data.url}`,
+  duration: data.duration,
+  prerequisites: data.prerequisites,
+  outcomes: data.steps?.map((step: any) => step.title) || [],
+};
 ---
+
+<!-- Course Schema Markup -->
+<CourseSchema course={courseData} />
 
 <section class="mx-auto my-24 max-w-2xl lg:max-w-6xl">
   <div class="mb-10 px-4 lg:px-12">
@@ -43,7 +57,7 @@ const { data } = Astro.props;
                   </span>
                   {program.description}
                 </p>
-              ),
+              )
             )
         }
       </div>
@@ -76,7 +90,7 @@ const { data } = Astro.props;
                       </div>
                     </div>
                   </li>
-                ),
+                )
               )}
             </ul>
           </div>
@@ -109,7 +123,7 @@ const { data } = Astro.props;
                       </div>
                     </div>
                   </li>
-                ),
+                )
               )}
             </ul>
           </div>

@@ -12,7 +12,11 @@ import DiscoveryFlightIcon from "../assets/discovery-flight.svg";
 import AirplaneIcon from "../assets/airplane.svg";
 import { TbStatusChange } from "react-icons/tb";
 import { FaHelicopterSymbol } from "react-icons/fa6";
+import FAQSchema from "../components/schema/FAQSchema.astro";
+import { generalFAQs } from "../data/faqs.js";
 ---
+
+<FAQSchema faqs={generalFAQs} name="Helicopter Flight Training FAQs" />
 
 <BaseLayout
   siteTitle="Helicopter Flight School in Dallas, TX | TruFlight Academy – Private, Commercial & Advanced Training"

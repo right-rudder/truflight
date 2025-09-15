@@ -6,7 +6,10 @@ import MarqueeLeft from "../../components/MarqueeLeft.jsx";
 import CTA from "../../components/CTA.astro";
 import imagesMarqueeRight from "../../data/imagesMarqueeRight.js";
 import imagesMarqueeLeft from "../../data/imagesMarqueeLeft.js";
+import OrganizationSchema from "../../components/schema/OrganizationSchema.astro";
 ---
+
+<OrganizationSchema includePersons={true} includeBrand={true} />
 
 <BaseLayout
   siteTitle="About TruFlight Academy – Women & Veteran-Owned Helicopter Flight School"
