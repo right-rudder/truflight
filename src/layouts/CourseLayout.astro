@@ -4,6 +4,8 @@ import ImageComp from "../components/ImageComp.astro";
 import { FaHelicopter } from "react-icons/fa6";
 import CTA from "../components/CTA.astro";
 import CourseSchema from "../components/schema/CourseSchema.astro";
+import RelatedCourses from "../components/RelatedCourses.astro";
+import Breadcrumb from "../components/Breadcrumb.astro";
 
 const { data } = Astro.props;
 
@@ -20,6 +22,13 @@ const courseData = {
 
 <!-- Course Schema Markup -->
 <CourseSchema course={courseData} />
+
+<Breadcrumb
+  items={[
+    { name: "Pilot Training", href: "/pilot-training/private-pilot" },
+    { name: data.title },
+  ]}
+/>
 
 <section class="mx-auto my-24 max-w-2xl lg:max-w-6xl">
   <div class="mb-10 px-4 lg:px-12">
@@ -176,4 +185,6 @@ const courseData = {
   <CTA
     text="Ready to take the next step and make your pilot dreams a reality?"
   />
+
+  <RelatedCourses currentCourse={data.title} />
 </section>

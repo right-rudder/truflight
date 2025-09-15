@@ -3,6 +3,8 @@ import { FaCheck } from "react-icons/fa";
 import ImageComp from "../components/ImageComp.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import ServiceSchema from "../components/schema/ServiceSchema.astro";
+import RelatedCourses from "../components/RelatedCourses.astro";
+import Breadcrumb from "../components/Breadcrumb.astro";
 
 // Discovery Flight service data for schema
 const discoveryFlightService = {
@@ -21,8 +23,15 @@ const discoveryFlightService = {
 
 <BaseLayout
   siteTitle="Helicopter Discovery Flight in Dallas, TX | TruFlight Academy"
-  siteDescription="Take the controls and experience the thrill of flying with a Discovery Flight at TruFlight Academy in Dallas, TX. Fly our modern Cabri G2 helicopter for just $195 and see what it’s like to be a pilot. Book your Discovery Flight today!"
+  siteDescription="Take the controls and experience the thrill of flying with a Discovery Flight at TruFlight Academy in Dallas, TX. Fly our modern Cabri G2 helicopter for just $195 and see what it's like to be a pilot. Book your Discovery Flight today!"
 >
+  <Breadcrumb
+    items={[
+      { name: "Services", href: "/discovery-flight" },
+      { name: "Discovery Flight" },
+    ]}
+  />
+
   <section class="bg-primary-50/50 mt-18 flex flex-col lg:mt-24 lg:flex-row">
     <div
       class="mx-auto flex max-w-screen-sm flex-col gap-3 px-5 py-10 lg:mx-0 lg:min-w-[640px] lg:px-28 lg:py-28"
@@ -36,13 +45,19 @@ const discoveryFlightService = {
         Experience the Thrill of Flight with a Discovery Flight
       </p>
       <p class="my-2 text-lg text-pretty text-gray-700">
-        You can take the controls of our brand new Cabri G2 helicopter. Feel the
-        joy and excitement of a "Tru" Flight!
+        You can take the controls of our brand new <a
+          href="/about/our-fleet"
+          class="text-primary-500 font-semibold hover:underline"
+          >Cabri G2 helicopter</a
+        >. Feel the joy and excitement of a "Tru" Flight!
       </p>
       <p class="text-sm tracking-wide text-gray-600 italic">
         <strong class="text-primary-500 font-semibold">Disclaimer!</strong> TruFlight
         is not responsible for any lingering desire to fly helicopters....but we
-        can certainly get you more flight time.
+        can certainly get you more <a
+          href="/pilot-training/private-pilot"
+          class="text-primary-500 font-semibold hover:underline">flight time</a
+        >.
       </p>
       <a
         href="/about/our-chief-pilot#credentials"
@@ -60,7 +75,7 @@ const discoveryFlightService = {
       <a
         href="https://truflight.azurewebsites.net/flight/discovery"
         target="_blank"
-        class="btn-secondary mt-3">Schedule</a
+        class="btn-secondary mt-3">Schedule Discovery Flight</a
       >
     </div>
     <div class="h-screen w-full">
@@ -72,4 +87,6 @@ const discoveryFlightService = {
       />
     </div>
   </section>
+
+  <RelatedCourses currentCourse="Discovery Flight" />
 </BaseLayout>

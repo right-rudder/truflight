@@ -100,4 +100,8 @@ export const navbarLinks = [
       },
     ],
   },
+  {
+    name: "Contact Us",
+    link: "/contact-us",
+  },
 ];
