@@ -12,11 +12,16 @@ import DiscoveryFlightIcon from "../assets/discovery-flight.svg";
 import AirplaneIcon from "../assets/airplane.svg";
 import { TbStatusChange } from "react-icons/tb";
 import { FaHelicopterSymbol } from "react-icons/fa6";
+import FAQSchema from "../components/schema/FAQSchema.astro";
+import { generalFAQs } from "../data/faqs.js";
 ---
 
+<FAQSchema faqs={generalFAQs} name="Helicopter Flight Training FAQs" />
+
 <BaseLayout
-  siteTitle="Helicopter Flight School in Dallas, TX | TruFlight Academy – Private, Commercial & Advanced Training"
-  siteDescription="TruFlight Academy is Dallas’s premier helicopter flight school offering discovery flights, private pilot, commercial pilot, instrument rating, and external load training. Train with experienced instructors, fly modern Cabri G2 helicopters, and take the first step toward your aviation career today."
+  siteTitle="Helicopter Flight School in Dallas, TX | TruFlight Academy - Private, Commercial & Advanced Training"
+  siteDescription="TruFlight Academy is Dallas's premier helicopter flight school offering discovery flights, private pilot, commercial pilot, instrument rating, and external load training. Train with experienced instructors, fly modern Cabri G2 helicopters, and take the first step toward your aviation career today."
+  siteKeywords="helicopter flight school Dallas, helicopter training Dallas, private pilot helicopter Dallas, commercial pilot helicopter Dallas, instrument rating helicopter Dallas, external load training Dallas, Cabri G2 helicopter training, helicopter flight lessons Dallas, helicopter pilot school Texas, helicopter aviation training North Texas"
 >
   <HomepageHeader slot="hero" />
 
@@ -155,29 +160,55 @@ import { FaHelicopterSymbol } from "react-icons/fa6";
           class="text-accent-400 max-w-lg text-sm font-medium tracking-wider lg:text-base/6"
         >
           At TruFlight Academy, we are dedicated to making your helicopter
-          flight dreams a reality. As one of the leading helicopter flight
-          schools in Dallas, our state-of-the-art aircraft and our highly
-          trained CFIs provide you with the ability to obtain the certification
-          you seek. Our commitment is to provide you with the in-depth
-          knowledge, skills and confidence you need for success.
+          flight dreams a reality. As one of the leading <a
+            href="/about/our-story"
+            class="text-primary-500 font-semibold hover:underline"
+            >helicopter flight schools in Dallas</a
+          >, our state-of-the-art <a
+            href="/about/our-fleet"
+            class="text-primary-500 font-semibold hover:underline"
+            >Cabri G2 aircraft</a
+          > and our highly trained <a
+            href="/about/our-chief-pilot"
+            class="text-primary-500 font-semibold hover:underline"
+            >certified flight instructors</a
+          > provide you with the ability to obtain the certification you seek. Our
+          commitment is to provide you with the in-depth knowledge, skills and confidence
+          you need for success.
         </p>
 
         <ul class="my-3 flex flex-col gap-2 font-bold">
           <li class="flex items-center gap-3">
             <FaCheck className="text-primary-500" />
-            Beginners looking to start their helicopter flight training
+            Beginners looking to start their <a
+              href="/pilot-training/private-pilot"
+              class="text-primary-500 font-semibold hover:underline"
+              >helicopter flight training</a
+            >
           </li>
           <li class="flex items-center gap-3">
             <FaCheck className="text-primary-500" />
-            Fixed-wing pilots seeking to upgrade their skills to helicopters
+            Fixed-wing pilots seeking to <a
+              href="/add-on/private-helicopter-add-on"
+              class="text-primary-500 font-semibold hover:underline"
+              >upgrade their skills to helicopters</a
+            >
           </li>
           <li class="flex items-center gap-3">
             <FaCheck className="text-primary-500" />
-            Experienced helicopter pilots aiming to enhance their skills
+            Experienced helicopter pilots aiming to <a
+              href="/pilot-training/commercial-pilot"
+              class="text-primary-500 font-semibold hover:underline"
+              >enhance their skills</a
+            >
           </li>
           <li class="flex items-center gap-3">
             <FaCheck className="text-primary-500" />
-            Anyone interested in pursuing a career in aviation
+            Anyone interested in pursuing a <a
+              href="/why-become-a-pilot"
+              class="text-primary-500 font-semibold hover:underline"
+              >career in aviation</a
+            >
           </li>
         </ul>
 
@@ -185,7 +216,15 @@ import { FaHelicopterSymbol } from "react-icons/fa6";
           class="text-accent-400 max-w-lg text-sm font-medium tracking-wider lg:text-base/6"
         >
           Join us at TruFlight Academy and take the first step towards your
-          dream of becoming a helicopter pilot!
+          dream of becoming a helicopter pilot! Start with a <a
+            href="/discovery-flight"
+            class="text-primary-500 font-semibold hover:underline"
+            >discovery flight</a
+          > or explore our <a
+            href="/pilot-training/private-pilot"
+            class="text-primary-500 font-semibold hover:underline"
+            >private pilot training</a
+          >.
         </p>
 
         <div class="mt-5 flex flex-col items-center gap-5 sm:flex-row">

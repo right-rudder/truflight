@@ -5,6 +5,7 @@ import { FaCheck } from "react-icons/fa6";
 import ImageComp from "../../components/ImageComp.astro";
 import MarqueeLeft from "../../components/MarqueeLeft.jsx";
 import imagesGuimbal from "../../data/imagesGuimbal";
+import Breadcrumb from "../../components/Breadcrumb.astro";
 
 const headerData = {
   title: "Our Fleet",
@@ -15,7 +16,8 @@ const headerData = {
 
 <BaseLayout
   siteTitle="TruFlight Academy Helicopter Fleet | Guimbal Cabri G2 Training Aircraft"
-  siteDescription="Explore TruFlight Academy’s state-of-the-art helicopter fleet featuring the modern Guimbal Cabri G2. Designed for safety, reliability, and advanced training, our aircraft provide students with a seamless learning experience and prepare them for professional rotorcraft operations in North Texas."
+  siteDescription="Explore TruFlight Academy's state-of-the-art helicopter fleet featuring the modern Guimbal Cabri G2. Designed for safety, reliability, and advanced training, our aircraft provide students with a seamless learning experience and prepare them for professional rotorcraft operations in North Texas."
+  siteKeywords="helicopter fleet Dallas, Guimbal Cabri G2 Dallas, helicopter training aircraft Texas, helicopter flight school fleet North Texas, modern training helicopters Dallas, rotorcraft training aircraft Texas, helicopter rental Dallas, helicopter flight lessons aircraft Texas, helicopter pilot training fleet North Texas, TruFlight Academy helicopters"
 >
   <Header slot="hero" data={headerData} />
 
@@ -198,4 +200,5 @@ const headerData = {
       </div>
     </MarqueeLeft>
   </section>
+  <Breadcrumb items={[{ name: "Our Story" }]} />
 </BaseLayout>

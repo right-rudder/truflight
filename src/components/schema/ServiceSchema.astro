@@ -1,0 +1,120 @@
+---
+interface ServiceData {
+  name: string;
+  description: string;
+  url: string;
+  price?: string;
+  duration?: string;
+  category?: string;
+  areaServed?: string[];
+}
+
+interface Props {
+  service: ServiceData;
+  provider?: {
+    name: string;
+    url: string;
+  };
+}
+
+const {
+  service,
+  provider = {
+    name: "TruFlight Academy",
+    url: "https://www.truflightacademy.com",
+  },
+} = Astro.props;
+
+const schema: any = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: service.name,
+  description: service.description,
+  url: service.url,
+  category: service.category || "Flight Training",
+  serviceType: "Aviation Training",
+  provider: {
+    "@type": "LocalBusiness",
+    name: provider.name,
+    url: provider.url,
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "9007 FM 902, Finney Field Airport (T47)",
+      addressLocality: "Howe",
+      addressRegion: "TX",
+      postalCode: "75459",
+      addressCountry: "US",
+    },
+    telephone: "+1-833-722-4359",
+    email: "ifly@truflightacademy.com",
+  },
+  areaServed: service.areaServed || [
+    {
+      "@type": "Place",
+      name: "Dallas, TX",
+    },
+    {
+      "@type": "Place",
+      name: "North Texas",
+    },
+  ],
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Flight Training Services",
+    itemListElement: [
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: service.name,
+          description: service.description,
+        },
+        priceCurrency: "USD",
+        availability: "InStock",
+      },
+    ],
+  },
+  termsOfService:
+    "https://www.truflightacademy.com/privacy-policy-and-terms-of-service",
+  hoursAvailable: {
+    "@type": "OpeningHoursSpecification",
+    dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+    opens: "07:00",
+    closes: "21:00",
+  },
+};
+
+// Add price if provided
+if (service.price) {
+  schema.hasOfferCatalog.itemListElement[0].price = service.price;
+}
+
+// Add duration if provided
+if (service.duration) {
+  schema.hasOfferCatalog.itemListElement[0].estimatedDuration =
+    service.duration;
+}
+
+// Add specific service features based on service type
+if (service.name.toLowerCase().includes("discovery")) {
+  schema.additionalType = "RecreationalActivity";
+  schema.keywords =
+    "discovery flight, helicopter experience, first flight, trial lesson";
+} else if (service.name.toLowerCase().includes("private")) {
+  schema.additionalType = "EducationalService";
+  schema.keywords =
+    "private pilot license, PPL, helicopter training, beginner pilot";
+} else if (service.name.toLowerCase().includes("commercial")) {
+  schema.additionalType = "ProfessionalService";
+  schema.keywords =
+    "commercial pilot license, CPL, professional pilot training";
+} else if (service.name.toLowerCase().includes("instrument")) {
+  schema.additionalType = "EducationalService";
+  schema.keywords = "instrument rating, IFR, weather flying, advanced training";
+} else if (service.name.toLowerCase().includes("external load")) {
+  schema.additionalType = "ProfessionalService";
+  schema.keywords = "external load operations, sling load, utility helicopter";
+}
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(schema, null, 2)} />

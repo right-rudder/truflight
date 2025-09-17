@@ -1,14 +1,29 @@
 ---
 import ImageComp from "./ImageComp.astro";
-const { text } = Astro.props;
+
+interface Props {
+  text: string;
+  buttonText?: string;
+  buttonLink?: string;
+  backgroundImage?: string;
+  backgroundColor?: string;
+}
+
+const {
+  text,
+  buttonText = "Enroll Now",
+  buttonLink = "/enrollment-form",
+  backgroundImage = "/src/assets/private-pilot-training-at-truflight.jpg",
+  backgroundColor = "bg-accent-500/80",
+} = Astro.props;
 ---
 
 <section
   class="relative mx-4 mt-20 flex h-[30rem] flex-col items-center justify-center overflow-hidden rounded-xl px-5 text-white lg:mx-12"
 >
-  <div class="bg-accent-500/80 absolute inset-0 z-10"></div>
+  <div class=`${backgroundColor} absolute inset-0 z-10`></div>
   <ImageComp
-    src="/src/assets/private-pilot-training-at-truflight.jpg"
+    src={backgroundImage}
     alt="Student of the Private Pilot Flight Training Program at TruFlight Academy"
     classes="absolute object-cover w-full h-full inset-0"
   />
@@ -19,7 +34,7 @@ const { text } = Astro.props;
     class="font-display z-20 mt-3 max-w-2xl text-center text-3xl font-medium text-pretty sm:text-4xl lg:text-5xl/14"
     set:html={text}
   />
-  <a href="/enrollment-form" class="btn-primary z-20 mt-5 !shadow-none"
-    >Enroll Now</a
+  <a href={buttonLink} class="btn-primary z-20 mt-5 !shadow-none"
+    >{buttonText}</a
   >
 </section>

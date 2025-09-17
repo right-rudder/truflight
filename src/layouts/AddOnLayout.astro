@@ -3,6 +3,7 @@ import { FaDotCircle } from "react-icons/fa";
 import ImageComp from "../components/ImageComp.astro";
 import { FaHelicopter } from "react-icons/fa6";
 import CTA from "../components/CTA.astro";
+import Breadcrumb from "../components/Breadcrumb.astro";
 
 const { data } = Astro.props;
 ---
@@ -85,7 +86,7 @@ const { data } = Astro.props;
                   </span>
                   {program.description}
                 </p>
-              ),
+              )
             )
         }
       </div>
@@ -96,3 +97,4 @@ const { data } = Astro.props;
     text="Ready to shed your wings and take controls of a helicopter? <br /> All you need is hours!"
   />
 </section>
+<Breadcrumb items={[{ name: data.title }]} />

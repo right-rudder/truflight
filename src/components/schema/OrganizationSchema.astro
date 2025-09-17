@@ -1,0 +1,186 @@
+---
+interface Props {
+  includePersons?: boolean;
+  includeBrand?: boolean;
+}
+
+const { includePersons = true, includeBrand = true } = Astro.props;
+
+const schema: any = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://www.truflightacademy.com/#organization",
+  name: "TruFlight Academy",
+  alternateName: "TruFlight Helicopter Academy",
+  url: "https://www.truflightacademy.com",
+  logo: {
+    "@type": "ImageObject",
+    url: "https://www.truflightacademy.com/truflight-logo.png",
+    width: 300,
+    height: 100,
+  },
+  description:
+    "Premier helicopter flight training academy in North Texas, offering comprehensive pilot certification programs from discovery flights to commercial licenses.",
+  slogan: "Where Dreams Take Flight",
+  foundingDate: "2020",
+  legalName: "TruFlight Academy LLC",
+  taxID: "XXX-XX-XXXX", // This should be filled with actual tax ID if public
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "9007 FM 902, Finney Field Airport (T47)",
+    addressLocality: "Howe",
+    addressRegion: "TX",
+    postalCode: "75459",
+    addressCountry: "US",
+  },
+  contactPoint: [
+    {
+      "@type": "ContactPoint",
+      telephone: "+1-833-722-4359",
+      contactType: "customer service",
+      email: "ifly@truflightacademy.com",
+      availableLanguage: "English",
+      hoursAvailable: {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        opens: "07:00",
+        closes: "21:00",
+      },
+    },
+    {
+      "@type": "ContactPoint",
+      telephone: "+1-833-722-4359",
+      contactType: "sales",
+      email: "ifly@truflightacademy.com",
+      availableLanguage: "English",
+    },
+  ],
+  sameAs: [
+    "https://www.instagram.com/truflight.academy/",
+    "https://www.facebook.com/truflightacademy",
+    "https://www.linkedin.com/company/truflight-academy", // Add if exists
+    "https://www.youtube.com/channel/truflight-academy", // Add if exists
+  ],
+  areaServed: [
+    {
+      "@type": "Place",
+      name: "Dallas-Fort Worth Metroplex",
+      sameAs:
+        "https://en.wikipedia.org/wiki/Dallas%E2%80%93Fort_Worth_metroplex",
+    },
+    {
+      "@type": "Place",
+      name: "North Texas",
+      sameAs: "https://en.wikipedia.org/wiki/North_Texas",
+    },
+  ],
+  knowsAbout: [
+    "Helicopter Flight Training",
+    "Private Pilot Certification",
+    "Commercial Pilot Certification",
+    "Instrument Rating Training",
+    "Flight Instructor Certification",
+    "External Load Operations",
+    "Discovery Flights",
+    "Aviation Safety",
+    "Guimbal Cabri G2 Training",
+  ],
+  memberOf: [
+    {
+      "@type": "Organization",
+      name: "Aircraft Owners and Pilots Association",
+      sameAs: "https://www.aopa.org",
+    },
+    {
+      "@type": "Organization",
+      name: "Helicopter Association International",
+      sameAs: "https://www.rotor.org",
+    },
+  ],
+  hasCredential: [
+    {
+      "@type": "EducationalOccupationalCredential",
+      credentialCategory: "FAA Part 61 Flight School",
+      recognizedBy: {
+        "@type": "Organization",
+        name: "Federal Aviation Administration",
+        sameAs: "https://www.faa.gov",
+      },
+    },
+  ],
+  owns: [
+    {
+      "@type": "Product",
+      name: "Guimbal Cabri G2 Helicopter Fleet",
+      manufacturer: {
+        "@type": "Organization",
+        name: "Hélicoptères Guimbal",
+        sameAs: "https://www.guimbal.com",
+      },
+    },
+  ],
+  subOrganization: [
+    {
+      "@type": "EducationalOrganization",
+      name: "TruFlight Flight Training Division",
+      description:
+        "Specialized division focused on pilot certification programs",
+    },
+  ],
+};
+
+// Add founder and key personnel if requested
+if (includePersons) {
+  schema.founder = [
+    {
+      "@type": "Person",
+      name: "Todd Guison",
+      jobTitle: "Chief Pilot & Co-Founder",
+      description:
+        "Veteran helicopter pilot with extensive military and civilian experience",
+      alumniOf: "United States Army Aviation",
+      hasCredential: [
+        {
+          "@type": "EducationalOccupationalCredential",
+          credentialCategory: "Certified Flight Instructor - Helicopter",
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          credentialCategory: "Commercial Helicopter Pilot",
+        },
+      ],
+    },
+    {
+      "@type": "Person",
+      name: "Scarlett Guison",
+      jobTitle: "Owner & Co-Founder",
+      description:
+        "Business owner and aviation enthusiast driving TruFlight's mission",
+    },
+  ];
+
+  schema.employee = [
+    {
+      "@type": "Person",
+      name: "Todd Guison",
+      jobTitle: "Chief Pilot & Flight Instructor",
+      worksFor: {
+        "@type": "Organization",
+        name: "TruFlight Academy",
+      },
+    },
+  ];
+}
+
+// Add brand information if requested
+if (includeBrand) {
+  schema.brand = {
+    "@type": "Brand",
+    name: "TruFlight Academy",
+    logo: "https://www.truflightacademy.com/truflight-logo.png",
+    slogan: "Where Dreams Take Flight",
+  };
+}
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(schema, null, 2)} />

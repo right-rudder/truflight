@@ -1,0 +1,241 @@
+---
+import type { ImageMetadata } from "astro";
+
+interface Props {
+  additionalTypes?: string[];
+  services?: Array<{
+    name: string;
+    description: string;
+    url: string;
+    price?: string;
+  }>;
+  reviews?: Array<{
+    author: string;
+    rating: number;
+    reviewBody: string;
+    datePublished: string;
+  }>;
+  image?: ImageMetadata;
+}
+
+const {
+  additionalTypes = [],
+  services = [],
+  reviews = [],
+  image,
+} = Astro.props;
+
+const baseTypes = [
+  "LocalBusiness",
+  "EducationalOrganization",
+  "FlightTrainingSchool",
+];
+const allTypes = [...baseTypes, ...additionalTypes];
+
+const schema: any = {
+  "@context": "https://schema.org",
+  "@type": allTypes,
+  "@id": "https://www.truflightacademy.com",
+  name: "TruFlight Academy",
+  alternateName: "TruFlight Helicopter Academy",
+  url: "https://www.truflightacademy.com",
+  logo: {
+    "@type": "ImageObject",
+    url: "https://www.truflightacademy.com/truflight-logo.png",
+    width: 300,
+    height: 100,
+  },
+  description:
+    "TruFlight Academy is a women-owned, veteran-owned helicopter flight school based at Finney Field near Howe and Sherman, Texas. We provide safe and professional rotorcraft training with modern Cabri G2 helicopters, including discovery flights, Private Pilot, Commercial Pilot, Instrument Rating, and rotorcraft add-on training.",
+  slogan: "Where Dreams Take Flight",
+  image: image
+    ? `https://www.truflightacademy.com${image.src}`
+    : "https://www.truflightacademy.com/Truflight-OG.png",
+  telephone: "+1-833-722-4359",
+  email: "ifly@truflightacademy.com",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "9007 FM 902, Finney Field Airport (T47)",
+    addressLocality: "Howe",
+    addressRegion: "TX",
+    postalCode: "75459",
+    addressCountry: "US",
+  },
+  currenciesAccepted: "USD",
+  paymentAccepted: [
+    "Cash",
+    "Credit Card",
+    "Visa",
+    "Mastercard",
+    "American Express",
+    "Discover",
+    "Check",
+  ],
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 33.53421771794466,
+    longitude: -96.65000425767064,
+  },
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      opens: "07:00",
+      closes: "21:00",
+    },
+  ],
+  sameAs: [
+    "https://www.instagram.com/truflight.academy/",
+    "https://www.facebook.com/truflightacademy",
+  ],
+  areaServed: [
+    {
+      "@type": "Place",
+      name: "Dallas",
+      sameAs: "https://en.wikipedia.org/wiki/Dallas",
+    },
+    {
+      "@type": "Place",
+      name: "Howe",
+      sameAs: "https://en.wikipedia.org/wiki/Howe,_Texas",
+    },
+    {
+      "@type": "Place",
+      name: "Sherman",
+      sameAs: "https://en.wikipedia.org/wiki/Sherman,_Texas",
+    },
+    {
+      "@type": "Place",
+      name: "McKinney",
+      sameAs: "https://en.wikipedia.org/wiki/McKinney,_Texas",
+    },
+    {
+      "@type": "Place",
+      name: "North Texas",
+      sameAs: "https://en.wikipedia.org/wiki/North_Texas",
+    },
+  ],
+  founder: [
+    {
+      "@type": "Person",
+      name: "Todd Guison",
+      jobTitle: "Chief Pilot & Co-Founder",
+      description:
+        "Veteran helicopter pilot with extensive military and civilian experience",
+    },
+    {
+      "@type": "Person",
+      name: "Scarlett Guison",
+      jobTitle: "Owner & Co-Founder",
+      description: "Business owner and aviation enthusiast",
+    },
+  ],
+  employee: [
+    {
+      "@type": "Person",
+      name: "Todd Guison",
+      jobTitle: "Chief Pilot & Flight Instructor",
+      description:
+        "Certified Flight Instructor with military helicopter experience",
+    },
+  ],
+  owns: [
+    {
+      "@type": "Product",
+      name: "Guimbal Cabri G2 Helicopter Fleet",
+      description:
+        "Modern training helicopters used for all flight instruction",
+    },
+  ],
+  hasCredential: [
+    {
+      "@type": "EducationalOccupationalCredential",
+      credentialCategory: "FAA Part 61 Flight School",
+      educationalLevel: "Professional Certificate",
+    },
+  ],
+  identifier: [
+    {
+      "@type": "PropertyValue",
+      name: "Airport Code",
+      value: "T47",
+    },
+    {
+      "@type": "PropertyValue",
+      name: "FAA Identifier",
+      value: "Part 61 Flight School",
+    },
+  ],
+  keywords:
+    "helicopter flight school, pilot training, Dallas Texas, private pilot license, commercial pilot license, instrument rating, discovery flight, Cabri G2, flight instructor, aviation training",
+  knowsAbout: [
+    "Helicopter Flight Training",
+    "Private Pilot Certification",
+    "Commercial Pilot Certification",
+    "Instrument Rating",
+    "Flight Instructor Certification",
+    "External Load Operations",
+    "Discovery Flights",
+    "Aviation Safety",
+  ],
+  serviceArea: {
+    "@type": "GeoCircle",
+    geoMidpoint: {
+      "@type": "GeoCoordinates",
+      latitude: 33.53421771794466,
+      longitude: -96.65000425767064,
+    },
+    geoRadius: "50 miles",
+  },
+};
+
+// Add services if provided
+if (services.length > 0) {
+  schema.hasOfferCatalog = {
+    "@type": "OfferCatalog",
+    name: "Flight Training Services",
+    itemListElement: services.map((service, index) => ({
+      "@type": "Offer",
+      position: index + 1,
+      itemOffered: {
+        "@type": "Service",
+        name: service.name,
+        description: service.description,
+        url: service.url,
+      },
+      priceCurrency: "USD",
+      price: service.price || "Contact for pricing",
+    })),
+  };
+}
+
+// Add reviews if provided
+if (reviews.length > 0) {
+  schema.review = reviews.map((review) => ({
+    "@type": "Review",
+    author: {
+      "@type": "Person",
+      name: review.author,
+    },
+    reviewRating: {
+      "@type": "Rating",
+      ratingValue: review.rating,
+      bestRating: 5,
+    },
+    reviewBody: review.reviewBody,
+    datePublished: review.datePublished,
+  }));
+
+  // Calculate aggregate rating
+  const avgRating =
+    reviews.reduce((sum, review) => sum + review.rating, 0) / reviews.length;
+  schema.aggregateRating = {
+    "@type": "AggregateRating",
+    ratingValue: avgRating.toFixed(1),
+    reviewCount: reviews.length,
+    bestRating: 5,
+  };
+}
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(schema, null, 2)} />

@@ -17,7 +17,11 @@ export function getStaticPaths() {
 const { data } = Astro.props;
 ---
 
-<BaseLayout siteTitle={data.siteTitle} siteDescription={data.siteDescription}>
+<BaseLayout
+  siteTitle={data.siteTitle}
+  siteDescription={data.siteDescription}
+  siteKeywords={data.siteKeywords}
+>
   <Header slot="hero" data={data} />
   <AddOnLayout data={data} />
 </BaseLayout>

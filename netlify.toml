@@ -1,0 +1,64 @@
+[build]
+  publish = "dist"
+  command = "npm run build"
+
+# Redirects
+[[redirects]]
+  from = "/careers"
+  to = "/why-become-a-pilot"
+  status = 301
+
+[[redirects]]
+  from = "/wecometoyou"
+  to = "/#weComeToYou"
+  status = 301
+
+[[redirects]]
+  from = "/registration"
+  to = "/discovery-flight"
+  status = 301
+
+[[redirects]]
+  from = "/videos"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/add-ons"
+  to = "/add-on/private-helicopter-add-on"
+  status = 301
+
+[[redirects]]
+  from = "/about-us"
+  to = "/about/our-story"
+  status = 301
+
+[[redirects]]
+  from = "/services-9"
+  to = "/pilot-training/external-load-training"
+  status = 301
+
+[[redirects]]
+  from = "/about-the-pilot"
+  to = "/about/our-chief-pilot"
+  status = 301
+
+[[redirects]]
+  from = "/news"
+  to = "/blog"
+  status = 301
+
+[[redirects]]
+  from = "/pilot-training-old"
+  to = "/pilot-training/private-pilot"
+  status = 301
+
+[[redirects]]
+  from = "/slingloadtraining"
+  to = "/pilot-training/external-load-training"
+  status = 301
+
+[[redirects]]
+  from = "/general-9-1"
+  to = "/pilot-training/external-load-training"
+  status = 301

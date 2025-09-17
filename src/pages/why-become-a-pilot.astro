@@ -5,6 +5,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import Features from "../components/Features.astro";
 import Features2 from "../components/Features2.astro";
 import CTA from "../components/CTA.astro";
+import RelatedCourses from "../components/RelatedCourses.astro";
 
 const headerData = {
   title: "Why Become a Helicopter Pilot?",
@@ -19,6 +20,7 @@ const headerData = {
 <BaseLayout
   siteTitle="Why Become a Helicopter Pilot? | Career, Training & Opportunities at TruFlight Academy"
   siteDescription="Discover why becoming a helicopter pilot is a rewarding career choice. TruFlight Academy in Dallas, TX offers affordable training, high-demand career opportunities, and a faster path to success compared to traditional college degrees. Start your aviation journey today."
+  siteKeywords="helicopter pilot career, why become helicopter pilot, helicopter pilot jobs Dallas, aviation career opportunities Texas, helicopter pilot salary, helicopter pilot training career, pilot career path Dallas, aviation jobs Texas, helicopter pilot benefits, rotorcraft pilot career"
 >
   <Header slot="hero" data={headerData} />
 
@@ -51,15 +53,26 @@ const headerData = {
           for jobs hours in the aircraft are what they look at most. If you're a
           high schooler looking to work something other than retail when you
           graduate, this is the job for you! Additionally, if college isn't your
-          thing, this is definitely a career for you.
+          thing, <a
+            href="/pilot-training/private-pilot"
+            class="text-primary-500 font-semibold hover:underline"
+            >helicopter pilot training</a
+          > is definitely a career for you.
         </p>
 
         <p
           class="text-accent-400 mt-5 max-w-lg text-sm font-medium tracking-wider lg:text-base/6"
         >
           You can start logging hours as soon as you hit high school. You have
-          to be 16 to solo, 17 to take your private check-ride, and 18 to take
-          your commercial check-ride.
+          to be 16 to solo, 17 to take your <a
+            href="/pilot-training/private-pilot"
+            class="text-primary-500 font-semibold hover:underline"
+            >private check-ride</a
+          >, and 18 to take your <a
+            href="/pilot-training/commercial-pilot"
+            class="text-primary-500 font-semibold hover:underline"
+            >commercial check-ride</a
+          >.
         </p>
 
         <div class="mt-5 flex flex-col items-center gap-5 sm:flex-row">
@@ -80,17 +93,26 @@ const headerData = {
       The average cost of getting a college degree in the United States,
       including books and supplies, is $35, 551 A YEAR. This means a 4-year
       degree costs about $142,000. Most careers that require a college degree
-      can take years to pay for itself. At TruFlight we chose our helicopter
-      (Guimbal's Cabri G2) specifically to save our students as much money as
-      possible in the safest, easiest to transition, training helicopter
-      available.
+      can take years to pay for itself. At TruFlight we chose our <a
+        href="/about/our-fleet"
+        class="text-primary-500 font-semibold hover:underline"
+        >helicopter (Guimbal's Cabri G2)</a
+      > specifically to save our students as much money as possible in the safest,
+      easiest to transition, training helicopter available.
     </p>
     <p class="tracking-wider text-gray-700 lg:text-lg">
       Bottom line, including the cost of your FAA Exams (3), check rides (3),
       flight hours (150hrs), and ground school time (about 100hrs) TruFlight
-      Academy can get you to your CFI for approximately half the cost of a
-      college degree. Helicopter pilots are in high demand, once you have your
-      commercial certificate, finding a job is easy.
+      Academy can get you to your <a
+        href="/pilot-training/certified-flight-instructor"
+        class="text-primary-500 font-semibold hover:underline">CFI</a
+      > for approximately half the cost of a college degree. Helicopter pilots are
+      in high demand, once you have your
+      <a
+        href="/pilot-training/commercial-pilot"
+        class="text-primary-500 font-semibold hover:underline"
+        >commercial certificate</a
+      >, finding a job is easy.
     </p>
   </section>
 
@@ -101,4 +123,6 @@ const headerData = {
       text="Ready to take the next step and make your pilot dreams a reality?"
     />
   </section>
+
+  <RelatedCourses showDiscoveryFlight={true} />
 </BaseLayout>

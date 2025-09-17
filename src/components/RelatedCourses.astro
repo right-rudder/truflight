@@ -1,0 +1,271 @@
+---
+import { FaHelicopter } from "react-icons/fa6";
+import ImageComp from "./ImageComp.astro";
+
+interface Course {
+  title: string;
+  description: string;
+  image: string;
+  imageAlt: string;
+  link: string;
+  duration?: string;
+  price?: string;
+}
+
+interface Props {
+  currentCourse?: string;
+  showDiscoveryFlight?: boolean;
+  showAllCourses?: boolean;
+  customCourses?: Course[];
+}
+
+const {
+  currentCourse,
+  showDiscoveryFlight = true,
+  showAllCourses = false,
+  customCourses,
+} = Astro.props;
+
+// Define all available courses
+const allCourses: Course[] = [
+  {
+    title: "Discovery Flight",
+    description:
+      "Take the controls and experience the thrill of flying with our modern Cabri G2 helicopter.",
+    image: "/src/assets/discovery-flight-at-truflight-academy-dallas.avif",
+    imageAlt: "Discovery Flight at TruFlight Academy Dallas",
+    link: "/discovery-flight",
+    duration: "1 hour",
+    price: "$195",
+  },
+  {
+    title: "Private Pilot Training",
+    description:
+      "Start your helicopter pilot journey with comprehensive private pilot certification training.",
+    image: "/src/assets/private-pilot-at-truflight-academy-dallas.avif",
+    imageAlt: "Private Pilot Training at TruFlight Academy",
+    link: "/pilot-training/private-pilot",
+    duration: "40+ hours",
+  },
+  {
+    title: "Instrument Rating",
+    description:
+      "Enhance your skills with instrument flight training for weather and low-visibility flying.",
+    image: "/src/assets/instrument-rating-truflight-academy.avif",
+    imageAlt: "Instrument Rating Training",
+    link: "/pilot-training/instrument-pilot",
+    duration: "15+ hours",
+  },
+  {
+    title: "Commercial Pilot",
+    description:
+      "Take your skills to the professional level with commercial pilot certification.",
+    image: "/src/assets/commercial-pilot-at-truflight-academy-dallas.avif",
+    imageAlt: "Commercial Pilot Training",
+    link: "/pilot-training/commercial-pilot",
+    duration: "100+ hours",
+  },
+  {
+    title: "Certified Flight Instructor",
+    description:
+      "Become a helicopter flight instructor and share your passion for aviation.",
+    image: "/src/assets/certified-flight-instructor-truflight-academy.jpg",
+    imageAlt: "CFI Training at TruFlight Academy",
+    link: "/pilot-training/certified-flight-instructor",
+    duration: "150+ hours",
+  },
+  {
+    title: "External Load Training",
+    description:
+      "Specialized training for external load operations and commercial helicopter work.",
+    image: "/src/assets/sling-load-training-truflight-academy-dallas.avif",
+    imageAlt: "External Load Training",
+    link: "/pilot-training/external-load-training",
+    duration: "Varies",
+  },
+  {
+    title: "Private Helicopter Add-On",
+    description:
+      "Fixed-wing pilots can add helicopter privileges to their existing certificate.",
+    image: "/src/assets/guimbal-cabri-g2-truflight-academy.jpg",
+    imageAlt: "Helicopter Add-On Training",
+    link: "/add-on/private-helicopter-add-on",
+    duration: "20+ hours",
+  },
+];
+
+// Logic to determine which courses to show
+let coursesToShow: Course[] = [];
+
+if (customCourses) {
+  coursesToShow = customCourses;
+} else if (showAllCourses) {
+  coursesToShow = allCourses.filter((course) => course.title !== currentCourse);
+} else {
+  // Show contextual recommendations based on current course
+  switch (currentCourse) {
+    case "Discovery Flight":
+      coursesToShow = allCourses.filter((course) =>
+        ["Private Pilot Training", "Private Helicopter Add-On"].includes(
+          course.title
+        )
+      );
+      break;
+    case "Private Pilot Training":
+      coursesToShow = allCourses.filter((course) =>
+        ["Discovery Flight", "Instrument Rating", "Commercial Pilot"].includes(
+          course.title
+        )
+      );
+      break;
+    case "Instrument Rating":
+      coursesToShow = allCourses.filter((course) =>
+        [
+          "Private Pilot Training",
+          "Commercial Pilot",
+          "External Load Training",
+        ].includes(course.title)
+      );
+      break;
+    case "Commercial Pilot":
+      coursesToShow = allCourses.filter((course) =>
+        [
+          "Instrument Rating",
+          "Certified Flight Instructor",
+          "External Load Training",
+        ].includes(course.title)
+      );
+      break;
+    case "Certified Flight Instructor":
+      coursesToShow = allCourses.filter((course) =>
+        [
+          "Commercial Pilot",
+          "External Load Training",
+          "Discovery Flight",
+        ].includes(course.title)
+      );
+      break;
+    case "External Load Training":
+      coursesToShow = allCourses.filter((course) =>
+        [
+          "Commercial Pilot",
+          "Certified Flight Instructor",
+          "Instrument Rating",
+        ].includes(course.title)
+      );
+      break;
+    case "Private Helicopter Add-On":
+      coursesToShow = allCourses.filter((course) =>
+        ["Discovery Flight", "Instrument Rating", "Commercial Pilot"].includes(
+          course.title
+        )
+      );
+      break;
+    default:
+      // Show popular courses
+      coursesToShow = allCourses.filter((course) =>
+        [
+          "Discovery Flight",
+          "Private Pilot Training",
+          "Commercial Pilot",
+        ].includes(course.title)
+      );
+  }
+
+  // Limit to 3 courses unless showing all
+  coursesToShow = coursesToShow.slice(0, 3);
+}
+
+// Don't render if no courses to show
+if (coursesToShow.length === 0) return;
+---
+
+<section class="bg-primary-50/30 py-16">
+  <div class="mx-auto max-w-7xl px-4 lg:px-12">
+    <div class="mb-10 text-center">
+      <h2 class="font-display text-3xl font-bold text-gray-900 lg:text-4xl">
+        {
+          showAllCourses
+            ? "All Training Programs"
+            : "You Might Also Be Interested In"
+        }
+      </h2>
+      <p class="mt-4 text-lg text-gray-600">
+        {
+          showAllCourses
+            ? "Explore all our helicopter training programs and find the perfect fit for your aviation goals."
+            : "Continue your aviation journey with these recommended programs."
+        }
+      </p>
+    </div>
+
+    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      {
+        coursesToShow.map((course) => (
+          <div class="group overflow-hidden rounded-lg bg-white shadow-lg transition-shadow duration-300 hover:shadow-xl">
+            <div class="relative">
+              <ImageComp
+                src={course.image}
+                alt={course.imageAlt}
+                classes="h-48 w-full object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+              <div class="absolute top-4 left-4">
+                <FaHelicopter className="text-primary-500 size-6" />
+              </div>
+              {course.price && (
+                <div class="bg-primary-500 absolute top-4 right-4 rounded-full px-3 py-1 text-sm font-semibold text-white">
+                  {course.price}
+                </div>
+              )}
+            </div>
+
+            <div class="p-6">
+              <h3 class="mb-2 text-xl font-bold text-gray-900">
+                {course.title}
+              </h3>
+              <p class="mb-4 text-sm text-gray-600">{course.description}</p>
+
+              {course.duration && (
+                <div class="mb-4">
+                  <span class="text-primary-500 text-sm font-semibold">
+                    Duration: {course.duration}
+                  </span>
+                </div>
+              )}
+
+              <a
+                href={course.link}
+                class="text-primary-500 hover:text-primary-600 inline-flex items-center gap-2 font-semibold transition-colors duration-200"
+              >
+                Learn More
+                <svg
+                  class="h-4 w-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+
+    {
+      !showAllCourses && (
+        <div class="mt-12 text-center">
+          <a href="/pilot-training/private-pilot" class="btn-primary">
+            View All Training Programs
+          </a>
+        </div>
+      )
+    }
+  </div>
+</section>

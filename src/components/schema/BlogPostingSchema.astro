@@ -1,0 +1,116 @@
+---
+import type { ImageMetadata } from "astro";
+
+interface BlogData {
+  title: string;
+  description: string;
+  content: string;
+  url: string;
+  datePublished: string;
+  dateModified?: string;
+  author?: {
+    name: string;
+    url?: string;
+  };
+  heroImage?: ImageMetadata;
+  keywords?: string[];
+}
+
+interface Props {
+  blog: BlogData;
+  publisher?: {
+    name: string;
+    url: string;
+    logo?: string;
+  };
+}
+
+const {
+  blog,
+  publisher = {
+    name: "TruFlight Academy",
+    url: "https://www.truflightacademy.com",
+    logo: "https://www.truflightacademy.com/truflight-logo.png",
+  },
+} = Astro.props;
+
+const schema: any = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  headline: blog.title,
+  description: blog.description,
+  url: blog.url,
+  datePublished: blog.datePublished,
+  dateModified: blog.dateModified || blog.datePublished,
+  author: {
+    "@type": "Person",
+    name: blog.author?.name || "TruFlight Academy",
+    url: blog.author?.url || "https://www.truflightacademy.com/about/our-story",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: publisher.name,
+    url: publisher.url,
+    logo: {
+      "@type": "ImageObject",
+      url: publisher.logo,
+    },
+  },
+  mainEntityOfPage: {
+    "@type": "WebPage",
+    "@id": blog.url,
+  },
+  articleSection: "Aviation Training",
+  about: [
+    {
+      "@type": "Thing",
+      name: "Helicopter Training",
+    },
+    {
+      "@type": "Thing",
+      name: "Flight School",
+    },
+    {
+      "@type": "Thing",
+      name: "Aviation Education",
+    },
+  ],
+  inLanguage: "en-US",
+  copyrightHolder: {
+    "@type": "Organization",
+    name: publisher.name,
+  },
+  copyrightYear: new Date(blog.datePublished).getFullYear(),
+  isPartOf: {
+    "@type": "Blog",
+    name: "TruFlight Academy Blog",
+    url: "https://www.truflightacademy.com/blog",
+  },
+};
+
+// Add image if provided
+if (blog.heroImage) {
+  schema.image = {
+    "@type": "ImageObject",
+    url: `https://www.truflightacademy.com${blog.heroImage.src}`,
+    width: blog.heroImage.width,
+    height: blog.heroImage.height,
+  };
+}
+
+// Add keywords if provided
+if (blog.keywords && blog.keywords.length > 0) {
+  schema.keywords = blog.keywords.join(", ");
+}
+
+// Add estimated reading time (based on average 200 words per minute)
+const wordCount = blog.content.split(/\s+/).length;
+const readingTime = Math.ceil(wordCount / 200);
+schema.timeRequired = `PT${readingTime}M`;
+
+// Add article body (first 300 characters for snippet)
+const snippet = blog.content.substring(0, 300).replace(/<[^>]*>/g, "");
+schema.articleBody = snippet + (blog.content.length > 300 ? "..." : "");
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(schema, null, 2)} />
