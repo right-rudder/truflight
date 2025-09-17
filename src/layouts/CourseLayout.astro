@@ -23,13 +23,6 @@ const courseData = {
 <!-- Course Schema Markup -->
 <CourseSchema course={courseData} />
 
-<Breadcrumb
-  items={[
-    { name: "Pilot Training", href: "/pilot-training/private-pilot" },
-    { name: data.title },
-  ]}
-/>
-
 <section class="mx-auto my-24 max-w-2xl lg:max-w-6xl">
   <div class="mb-10 px-4 lg:px-12">
     <ImageComp
@@ -188,3 +181,4 @@ const courseData = {
 
   <RelatedCourses currentCourse={data.title} />
 </section>
+<Breadcrumb items={[{ name: data.title }]} />

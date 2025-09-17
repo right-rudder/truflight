@@ -2,6 +2,7 @@
 import type { CollectionEntry } from "astro:content";
 import FormattedDate from "../components/FormattedDate.astro";
 import ImageComp from "../components/ImageComp.astro";
+import Breadcrumb from "../components/Breadcrumb.astro";
 
 type Props = CollectionEntry<"blog">["data"] & {
   content?: string;
@@ -27,3 +28,4 @@ const { title, description, pubDate, heroImage } = Astro.props;
   </div>
   <slot />
 </article>
+<Breadcrumb items={[{ name: "Blog", href: "/blog" }, { name: title }]} />

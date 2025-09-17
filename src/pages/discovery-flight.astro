@@ -26,13 +26,6 @@ const discoveryFlightService = {
   siteDescription="Take the controls and experience the thrill of flying with a Discovery Flight at TruFlight Academy in Dallas, TX. Fly our modern Cabri G2 helicopter for just $195 and see what it's like to be a pilot. Book your Discovery Flight today!"
   siteKeywords="helicopter discovery flight Dallas, helicopter experience Dallas, first helicopter flight Texas, trial lesson helicopter Dallas, helicopter rides Dallas, discovery flight North Texas, helicopter training introduction Dallas, try flying helicopter Texas"
 >
-  <Breadcrumb
-    items={[
-      { name: "Services", href: "/discovery-flight" },
-      { name: "Discovery Flight" },
-    ]}
-  />
-
   <section class="bg-primary-50/50 mt-18 flex flex-col lg:mt-24 lg:flex-row">
     <div
       class="mx-auto flex max-w-screen-sm flex-col gap-3 px-5 py-10 lg:mx-0 lg:min-w-[640px] lg:px-28 lg:py-28"
@@ -90,4 +83,5 @@ const discoveryFlightService = {
   </section>
 
   <RelatedCourses currentCourse="Discovery Flight" />
+  <Breadcrumb items={[{ name: "Discovery Flight" }]} />
 </BaseLayout>

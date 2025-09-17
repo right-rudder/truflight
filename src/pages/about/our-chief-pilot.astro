@@ -6,6 +6,7 @@ import CTA from "../../components/CTA.astro";
 import imagesChiefPilot from "../../data/imagesChiefPilot";
 import { FaArrowRight } from "react-icons/fa6";
 import { FaDotCircle } from "react-icons/fa";
+import Breadcrumb from "../../components/Breadcrumb.astro";
 
 const aircraftsFlown = [
   "Schweizer (300C)",
@@ -168,4 +169,5 @@ const certificates = [
       text="Ready to take the next step and make your pilot dreams a reality?"
     />
   </section>
+  <Breadcrumb items={[{ name: "Our Chief Pilot" }]} />
 </BaseLayout>

@@ -5,6 +5,7 @@ import { FaCheck } from "react-icons/fa6";
 import ImageComp from "../../components/ImageComp.astro";
 import MarqueeLeft from "../../components/MarqueeLeft.jsx";
 import imagesGuimbal from "../../data/imagesGuimbal";
+import Breadcrumb from "../../components/Breadcrumb.astro";
 
 const headerData = {
   title: "Our Fleet",
@@ -199,4 +200,5 @@ const headerData = {
       </div>
     </MarqueeLeft>
   </section>
+  <Breadcrumb items={[{ name: "Our Story" }]} />
 </BaseLayout>
