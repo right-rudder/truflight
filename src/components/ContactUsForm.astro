@@ -70,6 +70,7 @@ const PORTAL_API_KEY = import.meta.env.PORTAL_API_KEY;
       <div class="flex-[1.5_1.5_0]">
         <form id="contact_form">
           <div class="grid grid-cols-1 gap-x-8 gap-y-2 sm:grid-cols-2">
+            <!-- First Name -->
             <div>
               <div class="mt-2.5">
                 <input
@@ -83,6 +84,7 @@ const PORTAL_API_KEY = import.meta.env.PORTAL_API_KEY;
                 />
               </div>
             </div>
+            <!-- Last Name -->
             <div>
               <div class="mt-2.5">
                 <input
@@ -96,6 +98,7 @@ const PORTAL_API_KEY = import.meta.env.PORTAL_API_KEY;
                 />
               </div>
             </div>
+            <!-- Email -->
             <div>
               <div class="mt-2.5">
                 <input
@@ -116,6 +119,7 @@ const PORTAL_API_KEY = import.meta.env.PORTAL_API_KEY;
                 />
               </label>
             </p>
+            <!-- Phone number -->
             <div>
               <div class="relative mt-2.5">
                 <input
@@ -129,47 +133,71 @@ const PORTAL_API_KEY = import.meta.env.PORTAL_API_KEY;
                 />
               </div>
             </div>
+            <!-- Reach out Reason  -->
             <div class="sm:col-span-2">
               <div class="mt-2.5">
-                <textarea
-                  name="message"
-                  id="message"
-                  rows="4"
-                  placeholder="How can we help?"
+                <select
+                  name="reach-out-reason"
+                  id="reach-out-reason"
+                  class="border-primary-400 focus:border-primary-500 outline-primary-500 w-full rounded border bg-white p-3 text-gray-500 placeholder:text-sm placeholder:font-semibold"
                   required
-                  class="border-primary-400 focus:border-primary-500 outline-primary-500 w-full rounded border bg-white p-3 placeholder:text-sm placeholder:font-semibold"
-                ></textarea>
-              </div>
-            </div>
-            <div class="mt-5 flex gap-x-4 sm:col-span-2">
-              <div class="flex items-center gap-2">
-                <input
-                  type="checkbox"
-                  id="agree-terms"
-                  name="agree-terms"
-                  class="h-4 w-4 cursor-pointer rounded border-gray-300 bg-white text-gray-900 focus:ring-2 focus:ring-gray-900"
-                  required
-                />
-                <label
-                  for="agree-terms"
-                  class="text-accent-400 ml-2 text-sm font-medium tracking-wider lg:text-base/6"
                 >
-                  I agree to <a
-                    href="/privacy-policy-and-terms-of-service"
-                    target="_blank"
-                    class="underline">terms & conditions</a
-                  > provided by the company. By providing my phone number, I agree
-                  to receive text messages from TruFlight Academy.
-                </label>
+                  <option> Choose your reason to contact us </option>
+                  <option value="helicopter-pilot-training">
+                    Helicopter Pilot Training
+                  </option>
+                  <option value="discovery-flight">Discovery Flight</option>
+                  <option value="fixed-wing-or-add-on">
+                    Fixed Wing or Add-on
+                  </option>
+                  <option value="other">Other</option>
+                </select>
               </div>
             </div>
-            <div class="mt-5">
-              <button
-                id="submit-button"
-                type="submit"
-                class="btn-primary cursor-pointer">Submit</button
-              >
+          </div>
+          <!-- Message -->
+          <div class="sm:col-span-2">
+            <div class="mt-2.5">
+              <textarea
+                name="message"
+                id="message"
+                rows="4"
+                placeholder="How can we help?"
+                required
+                class="border-primary-400 focus:border-primary-500 outline-primary-500 w-full rounded border bg-white p-3 placeholder:text-sm placeholder:font-semibold"
+              ></textarea>
             </div>
+          </div>
+          <!-- Terms Toggle -->
+          <div class="mt-5 flex gap-x-4 sm:col-span-2">
+            <div class="flex items-center gap-2">
+              <input
+                type="checkbox"
+                id="agree-terms"
+                name="agree-terms"
+                class="h-4 w-4 cursor-pointer rounded border-gray-300 bg-white text-gray-900 focus:ring-2 focus:ring-gray-900"
+                required
+              />
+              <label
+                for="agree-terms"
+                class="text-accent-400 ml-2 text-sm font-medium tracking-wider lg:text-base/6"
+              >
+                I agree to <a
+                  href="/privacy-policy-and-terms-of-service"
+                  target="_blank"
+                  class="underline">terms & conditions</a
+                > provided by the company. By providing my phone number, I agree
+                to receive text messages from TruFlight Academy.
+              </label>
+            </div>
+          </div>
+          <!-- Submit -->
+          <div class="mt-5">
+            <button
+              id="submit-button"
+              type="submit"
+              class="btn-primary cursor-pointer">Submit</button
+            >
           </div>
         </form>
       </div>
