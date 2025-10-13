@@ -25,7 +25,7 @@ const instrumentRating = {
     secondaryAlt: "Cabri G2 helicopter instrument panel at TruFlight Academy",
     prerequisites: [
       "NO FAA WRITTEN exam required",
-      "Already hold a Commercial (or higher) Pilot Certificate",
+      "Already hold a Instrument (or higher) Pilot Certificate",
       "Hold a current 3rd Class (or higher) FAA Medical Certificate",
       "Complete 50 hours* Dual Instruction",
       "Complete 35 hours of PIC in a helicopter",
