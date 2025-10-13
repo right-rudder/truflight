@@ -33,7 +33,11 @@ const { data } = Astro.props;
             ))
           }
         </ul>
-        <span class="mb-3 text-sm font-medium">*Minimum required hours</span>
+        {
+          data.slug == "cfi-helicopter-add-on" ? null : (
+            <span class="mb-3 text-sm font-medium">*Minimum required hours</span>
+          )
+        }
         <a
           href="/enrollment-form"
           class="btn-secondary hover:border-primary-500! border-white! text-white!"
