@@ -32,7 +32,7 @@ const commercialPilot = {
       "Commercial Flight Training at TruFlight Academy in Dallas, Texas",
     prerequisites: [
       "NO FAA WRITTEN exam required",
-      "Already hold an Instrument Certificate",
+      "Already hold a Commercial (or higher) Pilot Certificate",
       "Hold a current 3rd Class (or higher) FAA Medical Certificate",
       "10 hours* of IFR cross-country in a helicopter",
       "15 hours* total instrument time in helicopters",
