@@ -1,7 +1,7 @@
 ---
 title: "Your Complete Guide to Helicopter Pilot Training in Texas: From Private to CFI(I)"
 description: "Learn everything you need to know about helicopter pilot training in Texas. This complete guide covers licenses from Private through CFI(I), training requirements, and how to start flying at TruFlight Academy."
-pubDate: "Nov 15 2025"
+pubDate: "Nov 30 2025"
 heroImage: "/src/assets/helicopter-cabri-drifting-dallas-texas.jpg"
 ---
 
