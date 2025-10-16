@@ -6,7 +6,7 @@ import { FaTree } from "react-icons/fa";
 
 const externalLoad = {
   data: {
-    title: "External Load Training",
+    title: "External Load Training – TFYL558S",
     subtitle: "Rotorcraft External-Load Operations​",
     url: "/programs/external-load-training",
     slug: "external-load-training",
