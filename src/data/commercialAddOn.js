@@ -16,7 +16,7 @@ const commercialPilot = {
     siteDescription:
       "Expand your aviation career with TruFlight Academy’s Commercial Helicopter Add-On program in Dallas, TX. Designed for instrument-rated pilots, this course transitions you from fixed-wing to rotorcraft, teaching advanced maneuvers, helicopter systems, and IFR cross-country skills. Enroll today and take your commercial flying to new heights!",
     siteKeywords:
-      "commercial pilot license Dallas, CPL training Texas, professional pilot training Dallas, career pilot course Dallas, pilot preparation, commercial aviation training Dallas, professional pilot certification, aviation career training Dallas, commercial pilot course, pilot training Dallas, flight training Dallas, pilot school Texas, aviation training Northern Dallas",
+      "helicopter school, rotory wing add on, commercial pilot license Dallas, CPL training Texas, professional pilot training Dallas, career pilot course Dallas, pilot preparation, commercial aviation training Dallas, professional pilot certification, aviation career training Dallas, commercial pilot course, pilot training Dallas, flight training Dallas, pilot school Texas, aviation training Northern Dallas",
     intro:
       "The Commercial Pilot Certificate (CPL) elevates your skills to professional standards, enabling you to receive compensation for flying services. Our CPL program at Truflight Academy focuses on advanced maneuvers, complex aircraft operations, and aviation professionalism, unlocking opportunities in passenger transport, cargo, and specialized aviation fields.",
     description: [
