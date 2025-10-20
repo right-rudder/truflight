@@ -8,7 +8,7 @@ const cfiHelicopterAddOn = {
     siteDescription:
       "Expand your instructor credentials with a CFI Helicopter Add-On at TruFlight Academy near Dallas, Texas. Train with expert instructors in Cabri G2 helicopters, prepare for your written exam, and gain the ability to teach helicopter students.",
     siteKeywords:
-      "cfi helicopter add-on Texas, helicopter instructor training Dallas, add helicopter to flight instructor certificate, rotorcraft cfi add-on, helicopter cfi course Texas, become helicopter instructor Dallas",
+      "helicopter school, rotory wing add on, cfi helicopter add-on Texas, helicopter instructor training Dallas, add helicopter to flight instructor certificate, rotorcraft cfi add-on, helicopter cfi course Texas, become helicopter instructor Dallas",
     primaryImage:
       "/src/assets/certified-flight-instructor-add-on-at-truflight-academy.jpg",
     primaryAlt:
