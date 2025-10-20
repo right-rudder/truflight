@@ -1,7 +1,7 @@
 ---
 title: "Why the Cabri G2 is the World’s Safest Training Helicopter"
 description: "Discover why TruFlight Academy trains with the Guimbal Cabri G2, the safest and most advanced piston helicopter designed for student pilots in Texas."
-pubDate: "Sep 30 2025"
+pubDate: "Oct 15 2025"
 heroImage: "/src/assets/discovery-flight-fun-at-truflight-academy.jpg"
 ---
 
@@ -46,4 +46,4 @@ When paired with TruFlight Academy’s **experienced CFIs**, consistent instruct
 
 At TruFlight Academy, we believe that **the safest training aircraft combined with the best instructors creates the most confident pilots**. That’s why our students learn in the Cabri G2—the world’s safest training helicopter.
 
-👉 Ready to take the first step? Explore our [Helicopter Pilot Training Programs in Texas](/your-complete-guide-to-helicopter-pilot-training-in-texas) and see how TruFlight Academy prepares you for every stage of your aviation journey.
+Ready to take the first step? Explore our [Helicopter Pilot Training Programs in Texas](/pilot-training/private-pilot) and see how TruFlight Academy prepares you for every stage of your aviation journey.
