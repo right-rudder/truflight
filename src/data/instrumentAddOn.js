@@ -12,7 +12,7 @@ const instrumentRating = {
     siteDescription:
       "Take your instrument flying skills to the next level with TruFlight Academy’s Instrument Helicopter Add-On program in Dallas, TX. Designed for instrument-rated pilots, this course teaches helicopter-specific procedures, advanced navigation, and precision flying in instrument conditions. Enroll today and master the skies!",
     siteKeywords:
-      "instrument rating Dallas, IFR training Texas, instrument flight training Dallas, weather flying training Dallas, precision approach training, instrument pilot certification, IFR checkride preparation Dallas, instrument rating course Dallas, advanced pilot training, instrument flight rules training, flight training Dallas, pilot school Dallas, aviation training Northern Dallas",
+      "helicopter school, rotory wing add on, instrument rating Dallas, IFR training Texas, instrument flight training Dallas, weather flying training Dallas, precision approach training, instrument pilot certification, IFR checkride preparation Dallas, instrument rating course Dallas, advanced pilot training, instrument flight rules training, flight training Dallas, pilot school Dallas, aviation training Northern Dallas",
     intro:
       "Earning an Instrument Rating (IR) enables you to fly in low visibility and adverse weather conditions using instruments. At TruFlight Academy, our IR training emphasizes precision in IFR operations, preparing you for commercial aviation and airline operations.",
     description: [
