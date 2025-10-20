@@ -13,7 +13,7 @@ const privatePilot = {
     siteDescription:
       "Expand your pilot skills with TruFlight Academy’s Private Helicopter Add-On program in Dallas, TX. Designed for licensed private pilots, this course teaches rotorcraft fundamentals, hovering, takeoffs, landings, and more in Cabri G2 helicopters. Enroll today and take the controls!",
     siteKeywords:
-      "private pilot license Texas, PPL training Dallas, student pilot course Dallas, beginner flight training Texas, recreational pilot license, private pilot certification Texas, learn to fly private pilot, flight training for beginners Texas, private pilot ground school, Texas private pilot course, flight training Dallas, pilot school Salt Lake City, aviation training Northern Texas, discovery flight Texas",
+      "helicopter school, rotory wing add on, private pilot license Texas, PPL training Dallas, student pilot course Dallas, beginner flight training Texas, recreational pilot license, private pilot certification Texas, learn to fly private pilot, flight training for beginners Texas, private pilot ground school, Texas private pilot course, flight training Dallas, pilot school Salt Lake City, aviation training Northern Texas, discovery flight Texas",
     primaryImage:
       "/src/assets/truflight-instructor-with-student-on-helicopter.jpg",
     primaryAlt:
