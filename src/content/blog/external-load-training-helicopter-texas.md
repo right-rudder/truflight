@@ -1,15 +1,15 @@
 ---
 title: "External Load Training: How TruFlight Academy Prepares Pilots for Real-World Missions"
 description: "Learn how TruFlight Academy’s external load (sling load) helicopter training in Texas sets pilots apart with specialized skills for utility, firefighting, and rescue operations."
-pubDate: "Nov 15 2025"
-heroImage: "/src/assets/external-load-student.-truflight-academy.jpg"
+pubDate: "Nov 19 2025"
+heroImage: "/src/assets/external-load-operations-truflight-dallas.jpg"
 ---
 
 ## What Is External Load Training?
 
 Also known as **sling load training**, external load operations involve carrying cargo or equipment suspended beneath the helicopter by a long line. These missions are common in **utility work, construction, firefighting, and military operations**.
 
-At TruFlight Academy, we provide this **unique training opportunity** right here in Texas—giving our students the chance to build advanced skills that few schools offer.
+At TruFlight Academy, we provide this **unique training opportunity** right here in Texas, giving our students the chance to build advanced skills that few schools offer.
 
 ---
 
@@ -52,4 +52,4 @@ External load training is ideal for:
 
 At TruFlight Academy, our goal is to produce pilots who are **capable, confident, and employable**. By offering **external load helicopter training in Texas**, we give students a skill set that sets them apart.
 
-👉 Learn more about our [Helicopter Training Programs in Texas](/your-complete-guide-to-helicopter-pilot-training-in-texas) and discover how external load experience can take your aviation career further.
+Learn more about our [Helicopter External Load Training Programs in Texas](/pilot-training/external-load-training) and discover how external load experience can take your aviation career further.
