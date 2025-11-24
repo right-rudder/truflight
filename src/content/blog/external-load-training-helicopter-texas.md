@@ -52,4 +52,4 @@ External load training is ideal for:
 
 At TruFlight Academy, our goal is to produce pilots who are **capable, confident, and employable**. By offering **external load helicopter training in Texas**, we give students a skill set that sets them apart.
 
-Learn more about our [Helicopter External Loan Training Programs in Texas](/pilot-training/external-load-training) and discover how external load experience can take your aviation career further.
+Learn more about our [Helicopter External Load Training Programs in Texas](/pilot-training/external-load-training) and discover how external load experience can take your aviation career further.
