@@ -1,0 +1,96 @@
+---
+import MarqueeRight from "../../components/MarqueeRight.jsx";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ImageComp from "../../components/ImageComp.astro";
+import MarqueeLeft from "../../components/MarqueeLeft.jsx";
+import CTA from "../../components/CTA.astro";
+import imagesMarqueeRight from "../../data/imagesMarqueeRight.js";
+import imagesMarqueeLeft from "../../data/imagesMarqueeLeft.js";
+import OrganizationSchema from "../../components/schema/OrganizationSchema.astro";
+import Breadcrumb from "../../components/Breadcrumb.astro";
+---
+
+<OrganizationSchema includePersons={true} includeBrand={true} />
+
+<BaseLayout
+  siteTitle="About TruFlight Academy – Women & Veteran-Owned Helicopter Flight School"
+  siteDescription="Learn about TruFlight Academy, a women-owned and veteran-owned helicopter flight school in Texas founded by Scarlett and Todd Guison. Discover our passion for aviation, expert instructors, and commitment to safe, professional, and personalized helicopter flight training. Join our family-driven school and start your journey to becoming a skilled pilot today."
+  siteKeywords="TruFlight Academy about, women-owned helicopter school Dallas, veteran-owned flight school Texas, Scarlett Todd Guison helicopter school, family helicopter business Dallas, helicopter flight school story Texas, aviation training family business, North Texas helicopter academy"
+>
+  <section class="mt-18 flex flex-col gap-10 py-10 lg:mt-24" slot="hero">
+    <MarqueeRight client:only="react">
+      <div class="flex gap-10 px-5">
+        {
+          imagesMarqueeRight.map((image) => (
+            <ImageComp
+              src={image.src}
+              alt={image.alt}
+              classes="size-48 lg:size-72 rounded-2xl object-cover"
+            />
+          ))
+        }
+      </div>
+    </MarqueeRight>
+
+    <MarqueeLeft client:only="react">
+      <div class="flex gap-10 px-5">
+        {
+          imagesMarqueeLeft.map((image) => (
+            <ImageComp
+              src={image.src}
+              alt={image.alt}
+              classes="size-48 lg:size-72 rounded-2xl object-cover"
+            />
+          ))
+        }
+      </div>
+    </MarqueeLeft>
+  </section>
+
+  <section class="mx-auto my-12 max-w-2xl lg:my-20 lg:max-w-6xl">
+    <div class="mx-auto flex max-w-7xl flex-col gap-20 px-4 lg:px-12">
+      <div class="flex flex-1 flex-col gap-5">
+        <h1
+          class="font-display max-w-lg text-4xl font-black tracking-wide text-pretty italic sm:text-5xl"
+        >
+          Student Housing
+        </h1>
+        <p class="tracking-wider text-gray-700 lg:text-lg">
+            To support students traveling from outside the local area, TruFlight Academy
+            offers convenient on-site and nearby student housing options designed to make
+            training as focused and stress-free as possible. Our housing solutions allow
+            students to stay close to the training environment, minimizing commute time
+            and maximizing time spent learning and flying.
+            </p>
+
+            <p class="tracking-wider text-gray-700 lg:text-lg">
+            Student housing accommodations are selected with comfort, safety, and
+            practicality in mind. Options typically include fully furnished living
+            spaces, shared common areas, and essential amenities to support day-to-day
+            life during training. Whether students are enrolled in short-term programs or
+            extended courses, housing arrangements are designed to fit a variety of
+            training schedules.
+            </p>
+
+            <p class="tracking-wider text-gray-700 lg:text-lg">
+            Living alongside fellow students fosters a strong sense of community and
+            collaboration. Many students find that sharing housing with peers creates an
+            environment of mutual support, study, and camaraderie, extending the learning
+            experience beyond the flight line and into everyday life.
+            </p>
+
+            <p class="tracking-wider text-gray-700 lg:text-lg">
+            Availability, pricing, and housing details may vary based on enrollment and
+            program length. Our team is happy to assist prospective and current students
+            with housing questions and help determine the best option to support a smooth
+            and successful training experience at TruFlight Academy.
+            </p>
+      </div>
+    </div>
+
+    <CTA
+      text="Ready to take the next step and make your pilot dreams a reality?"
+    />
+  </section>
+  <Breadcrumb items={[{ name: "Our Story" }]} />
+</BaseLayout>

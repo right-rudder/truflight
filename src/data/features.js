@@ -18,7 +18,7 @@ const features = [
     title: "Flexible Training Options",
     description:
       "We offer flexible training options, including on-site student housing and mobile training at private airports or residences.",
-    link: "/#weComeToYou",
+    link: "/about/student-housing",
   },
   {
     icon: "LiaHelicopterSolid",

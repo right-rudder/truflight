@@ -95,6 +95,10 @@ export const navbarLinks = [
         link: "/about/our-fleet",
       },
       {
+        name: "Student Housing",
+        link: "/about/student-housing",
+      },
+      {
         name: "Our Blog",
         link: "/blog",
       },
