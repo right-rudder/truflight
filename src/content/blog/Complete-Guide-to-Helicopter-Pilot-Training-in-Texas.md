@@ -1,7 +1,7 @@
 ---
 title: "Your Complete Guide to Helicopter Pilot Training in Texas: From Private to CFI(I)"
 description: "Learn everything you need to know about helicopter pilot training in Texas. This complete guide covers licenses from Private through CFI(I), training requirements, and how to start flying at TruFlight Academy."
-pubDate: "Nov 30 2025"
+pubDate: "Dec 15, 2025"
 heroImage: "/src/assets/helicopter-cabri-drifting-dallas-texas.jpg"
 ---
 
@@ -62,7 +62,7 @@ Becoming a **Certified Flight Instructor (CFI)** allows you to teach new pilots.
 
 Training at TruFlight Academy means more than just logging hours. Here’s why students choose us:
 
-- **Experienced CFIs** – Only 700–1000+ hour instructors, ensuring consistent, high-quality training
+- **Experienced CFIs** – 700–1000+ hour instructors, ensuring consistent, high-quality training
 - **Rental Options After Licensing** – Fly without buying your own helicopter (rare in the industry)
 - **External Load Training** – Learn advanced skills with sling load operations
 - **Fixed-Wing Add-Ons** – No FAA written exam required, saving time and money
@@ -91,7 +91,7 @@ Texas’s diverse economy and wide-open spaces mean demand for rotorcraft pilots
 
 The best way to begin your helicopter journey is with a **Discovery Flight**. In just one session, you’ll sit in the pilot’s seat of a helicopter, take the controls under instructor guidance, and experience firsthand what it’s like to fly.
 
-From there, you can choose the training program that matches your goals — whether flying recreationally, adding on to your fixed-wing license, or pursuing a full commercial career.
+From there, you can choose the training program that matches your goals, whether flying recreationally, adding on to your fixed-wing license, or pursuing a full commercial career.
 
 ---
 
@@ -103,11 +103,4 @@ TruFlight Academy makes it simple to start your journey:
 2. **Meet Our Experienced Instructors** and tour the fleet
 3. **Choose Your Training Path** from Private through CFI(I)
 
-👉 Visit [TruFlight Academy](https://www.truflightacademy.com) to learn more about programs, pricing, and training options in Texas.
-
----
-
-## Internal Links (Future Additions)
-
-- [Why the Cabri G2 is the Safest Training Helicopter](/blog/Cabri-G2-Safest-Training-Helicopter)
-- [Helicopter Rentals in Texas](/blog/Helicopter-Renta)
+👉 [Contact us](/contact-us) to learn more about programs, pricing, and training options in Texas.
