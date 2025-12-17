@@ -28,28 +28,28 @@ Texas offers several advantages for helicopter training:
 
 At TruFlight Academy, students can pursue a variety of FAA certifications depending on their career goals.
 
-### 🛫 Private Pilot License (PPL) – The First Step
+### Private Pilot License (PPL) – The First Step
 
 The **Private Pilot License (PPL)** allows you to fly helicopters for personal use, recreation, and travel. You cannot fly commercially, but it’s the foundation of all other training.
 
 - **Minimum Requirements:** 40 hours total flight time (per FAA Part 61)
 - **Training Includes:** Basic flight maneuvers, navigation, safety procedures, emergency training
 
-### 🎯 Instrument Rating (IR)
+### Instrument Rating (IR)
 
 The **Instrument Rating** teaches you to fly safely using instruments alone, without visual reference to the ground.
 
 - **Benefits:** Fly in more weather conditions, build precision skills
 - **Requirements:** Hold at least a Private Pilot certificate
 
-### 💼 Commercial Pilot License (CPL)
+### Commercial Pilot License (CPL)
 
 With a **Commercial License**, you can be paid to fly. This is the key step toward a professional helicopter career.
 
 - **Minimum Requirements:** 150 hours total flight time
 - **Training Includes:** Advanced maneuvers, navigation, cross-country flights, safety proficiency
 
-### 👨‍🏫 Certified Flight Instructor (CFI & CFII)
+### Certified Flight Instructor (CFI & CFII)
 
 Becoming a **Certified Flight Instructor (CFI)** allows you to teach new pilots. Adding the **Instrument Instructor (CFII)** rating lets you train students on advanced instrument flying.
 
