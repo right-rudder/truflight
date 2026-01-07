@@ -34,7 +34,7 @@ const commercialPilot = {
       "NO FAA WRITTEN exam required",
       "Already hold a Commercial (or higher) Pilot Certificate",
       "Hold a current 3rd Class (or higher) FAA Medical Certificate",
-      "Complete 50 hours* Dual Instruction",
+      // "Complete 50 hours* Dual Instruction",
       "Complete 35 hours of PIC in a helicopter",
     ],
     duration: "3 months, 3-5 times/week",
