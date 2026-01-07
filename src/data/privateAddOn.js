@@ -31,7 +31,7 @@ const privatePilot = {
       "NO FAA WRITTEN exam required",
       "Already hold a Private (or higher) Pilot Certificate",
       "Hold a current 3rd Class (or higher) FAA Medical Certificate",
-      "Complete 20 hours* dual instruction",
+      // "Complete 20 hours* dual instruction",
       "Complete 10 hours of Solo Flight Time",
     ],
     duration: "3 months, 2-3 times/week",
