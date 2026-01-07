@@ -34,8 +34,8 @@ const { data } = Astro.props;
           }
         </ul>
         {
-          data.slug == "cfi-helicopter-add-on" ? null : (
-            <span class="mb-3 text-sm font-medium">*Minimum required hours</span>
+          data.slug == "instrument-helicopter-add-on" ? <span class="mb-3 text-sm font-medium">*Minimum required hours</span> : (
+            null
           )
         }
         <a
