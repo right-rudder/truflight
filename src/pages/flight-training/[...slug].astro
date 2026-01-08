@@ -1,0 +1,50 @@
+---
+import { type CollectionEntry, getCollection } from "astro:content";
+import BlogPost from "../../layouts/BlogPost.astro";
+import { render } from "astro:content";
+import Header from "../../components/Header.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import BlogPostingSchema from "../../components/schema/BlogPostingSchema.astro";
+
+export async function getStaticPaths() {
+  const location = await getCollection("flight-training");
+  return location.map((post) => ({
+    params: { slug: post.id },
+    props: post,
+  }));
+}
+type Props = CollectionEntry<"flight-training">;
+const post = Astro.props;
+const { Content } = await render(post);
+const { title, description, heroImage, pubDate } = post.data;
+
+// Get the raw content for schema
+const content = post.body || "";
+
+const headerData = {
+  title,
+  primaryImage: heroImage,
+  primaryAlt: title,
+};
+
+// Prepare blog data for schema
+// const blogData = {
+//   title,
+//   description,
+//   content,
+//   url: `https://www.truflightacademy.com/flight-training/${post.id}`,
+//   datePublished: pubDate.toISOString(),
+//   keywords: [
+//     "helicopter training",
+//     "flight school",
+//     "aviation",
+//     "Dallas Texas",
+//     "pilot training",
+//   ],
+// };
+---
+
+<!-- <BlogPostingSchema blog={blogData} /> -->
+<BaseLayout siteTitle={title} siteDescription={description}>
+  <Header slot="hero" data={headerData} />
+</BaseLayout>
