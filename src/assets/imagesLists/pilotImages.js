@@ -1,4 +1,4 @@
-const pilotImages = [
+export const pilotImages = [
   {
     src: "src/assets/commercial-pilot-student-at-truflight-academy.jpg",
     alt: "Commercial pilot student at TruFlight Academy",
