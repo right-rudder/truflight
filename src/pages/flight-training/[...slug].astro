@@ -8,6 +8,8 @@ import BlogPostingSchema from "../../components/schema/BlogPostingSchema.astro";
 import ImageComp from "../../components/ImageComp.astro";
 
 import { headerImages } from "../../assets/imagesLists/headerImages";
+import { ctaImages } from "../../assets/imagesLists/ctaImages";
+import { pilotImages } from "../../assets/imagesLists/pilotImages";
 import { randomImages } from "../../components/utils/randomImage";
 
 import { FaArrowRight } from "react-icons/fa6";
@@ -31,7 +33,15 @@ export async function getStaticPaths() {
 type Props = CollectionEntry<"flight-training">;
 const post = Astro.props;
 const { Content } = await render(post);
-const { title, description, pubDate } = post.data;
+const {
+  city,
+  stateLong,
+  stateShort,
+  description,
+  descriptions,
+  distance,
+  locationKeywords,
+} = post.data;
 
 const heroImage = randomImages(headerImages);
 
@@ -39,9 +49,9 @@ const heroImage = randomImages(headerImages);
 const content = post.body || "";
 
 const headerData = {
-  title,
+  title: `Helicopter Flight Training Near ${city}
+  | TruFlight Academy`,
   primaryImage: heroImage,
-  primaryAlt: title,
 };
 
 // Prepare blog data for schema
@@ -62,7 +72,11 @@ const headerData = {
 ---
 
 <!-- <BlogPostingSchema blog={blogData} /> -->
-<BaseLayout siteTitle={title} siteDescription={description}>
+<BaseLayout
+  siteTitle={`Helicopter Flight Training Near ${city}, ${stateLong}
+  | TruFlight Academy`}
+  siteDescription={description}
+>
   <Header slot="hero" data={headerData} />
 
   <section>
