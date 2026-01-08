@@ -1,4 +1,4 @@
-const headerImages = [
+export const headerImages = [
   {
     src: "src/assets/truflight-at-dallas-airport-commercial-pilot.jpg",
     alt: "TruFlight at Dallas airport commercial pilot",
