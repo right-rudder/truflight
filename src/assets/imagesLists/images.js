@@ -1,4 +1,4 @@
-export const images = [
+export const imagesList = [
   {
     src: "/src/assets/airplane.svg",
     alt: "Airplane icon",
