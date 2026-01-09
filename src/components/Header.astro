@@ -5,8 +5,8 @@ import ImageComp from "./ImageComp.astro";
 
 <div class="relative mt-18 flex h-[60vh] overflow-hidden object-cover lg:mt-24">
   <ImageComp
-    src={data.primaryImage}
-    alt={data.primaryAlt}
+    src={data.primaryImage.src || data.primaryImage}
+    alt={data.primaryImage.alt || data.primaryAlt}
     classes={`object-cover h-full w-full`}
     loading="eager"
   />
