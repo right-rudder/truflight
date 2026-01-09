@@ -11,6 +11,8 @@ import { headerImages } from "../../assets/imagesLists/headerImages";
 import { ctaImages } from "../../assets/imagesLists/ctaImages";
 import { pilotImages } from "../../assets/imagesLists/pilotImages";
 import { randomImages } from "../../components/utils/randomImage";
+import features from "../../data/features.js";
+import FeatureCard from "../../components/FeatureCard.astro";
 
 import { FaArrowRight } from "react-icons/fa6";
 import Features from "../../components/Features.astro";
@@ -97,7 +99,7 @@ const headerData = {
         <h3
           class="text-dark-blue font-display group-hover:text-primary-500 text-xl font-bold duration-100 group-hover:scale-125"
         >
-          Pilot Training
+          Pilot Training near {city}
         </h3>
       </a>
       <a
@@ -168,18 +170,6 @@ const headerData = {
     </div>
   </section>
 
-  <!-- Elfsight Instagram Feed -->
-  <section>
-    <div class="mx-auto max-w-7xl px-4 py-24 lg:px-12">
-      <script src="https://elfsightcdn.com/platform.js" async></script>
-      <div
-        class="elfsight-app-a9453111-37af-4b23-a537-951078d76aa6"
-        data-elfsight-app-lazy
-      >
-      </div>
-    </div>
-  </section>
-
   <section>
     <div class="mx-auto max-w-7xl px-4 py-24 lg:px-12">
       <div class="mb-10 flex flex-col gap-5">
@@ -187,10 +177,56 @@ const headerData = {
           >Choose Training Program
         </strong>
         <h2 class="font-display text-3xl font-bold lg:text-5xl">
-          Find the right program for you
+          Find the right program for you near {city}, {stateLong}
         </h2>
       </div>
       <TrainingCoursesCarrousel client:visible />
+    </div>
+  </section>
+
+  <section id="weComeToYou" class="scroll-mt-20">
+    <div
+      class="mx-auto flex max-w-xl flex-col px-4 py-24 lg:max-w-7xl lg:flex-row lg:px-12"
+    >
+      <div class="flex-1">
+        <ImageComp
+          src={secondCTAImage.src}
+          alt={secondCTAImage.alt}
+          classes="lg:rounded-l-lg object-cover h-full w-full rounded-t-lg lg:rounded-tr-none"
+        />
+      </div>
+      <div
+        class="bg-dark-gray flex-1 rounded-b-lg text-white lg:rounded-r-lg lg:rounded-bl-none"
+      >
+        <div class="flex flex-col px-12 py-12 lg:py-20">
+          <strong class="text-medium-blue text-primary-500 text-lg font-bold"
+            >We Come To You
+          </strong>
+          <h2
+            class="text-dark-blue font-display my-5 text-3xl leading-tight font-bold lg:text-4xl"
+          >
+            We Bring the Best Helicopter Flight Training to Your Location
+          </h2>
+          <p
+            class="text-accent-100 text-sm font-medium tracking-wider lg:text-base/6"
+          >
+            You contact us and we fly out to you to give you your flight lesson.
+            If lessons are at an airport where more than one student is flying
+            with us that day, convenience fee can be split equally between
+            students. Convenience fee is simply a there and back ferry flight
+            cost. We are located just north of McKinney.
+          </p>
+
+          <div class="mt-5 flex flex-col gap-5 sm:flex-row">
+            <a
+              href="/contact-us"
+              class="btn-secondary hover:border-primary-500! border-white! text-white!"
+              >Contact Us
+              <FaArrowRight />
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -212,7 +248,7 @@ const headerData = {
         <h2
           class="text-dark-blue font-display mb-5 text-5xl leading-tight font-bold"
         >
-          Your Journey to Becoming a Helicopter Pilot Starts Here
+          Your Journey to Becoming a Helicopter Pilot near {city}, {stateLong}
         </h2>
         <p
           class="text-accent-400 max-w-lg text-sm font-medium tracking-wider lg:text-base/6"
@@ -232,7 +268,8 @@ const headerData = {
             >certified flight instructors</a
           > provide you with the ability to obtain the certification you seek. Our
           commitment is to provide you with the in-depth knowledge, skills and confidence
-          you need for success.
+          you need for success. Come train with us near {city}, {stateLong}. Is
+          just {distance} drive. Or check if we can fly to get you!
         </p>
 
         <ul class="my-3 flex flex-col gap-2 font-bold">
@@ -284,7 +321,10 @@ const headerData = {
           Join us at TruFlight Academy near {city}, {stateLong} and take the first
           step towards your dream of becoming a helicopter pilot! Is just {
             distance
-          } drive. Start with a <a
+          } drive.Or <a
+            href="/contact-us"
+            class="text-primary-500 font-semibold hover:underline">contact us</a
+          > to see if we can fly to get you. Start with a <a
             href="/discovery-flight"
             class="text-primary-500 font-semibold hover:underline"
             >discovery flight</a
@@ -302,53 +342,42 @@ const headerData = {
     </div>
   </section>
 
-  <Features />
-
-  <section id="weComeToYou" class="scroll-mt-20">
-    <div
-      class="mx-auto flex max-w-xl flex-col px-4 py-24 lg:max-w-7xl lg:flex-row lg:px-12"
-    >
-      <div class="flex-1">
-        <ImageComp
-          src={secondCTAImage.src}
-          alt={secondCTAImage.alt}
-          classes="lg:rounded-l-lg object-cover h-full w-full rounded-t-lg lg:rounded-tr-none"
-        />
-      </div>
+  <!-- Elfsight Instagram Feed -->
+  <section>
+    <div class="mx-auto max-w-7xl px-4 py-24 lg:px-12">
+      <script src="https://elfsightcdn.com/platform.js" async></script>
       <div
-        class="bg-dark-gray flex-1 rounded-b-lg text-white lg:rounded-r-lg lg:rounded-bl-none"
+        class="elfsight-app-a9453111-37af-4b23-a537-951078d76aa6"
+        data-elfsight-app-lazy
       >
-        <div class="flex flex-col px-12 py-12 lg:py-20">
-          <strong class="text-medium-blue text-primary-500 text-lg font-bold"
-            >We Come To You
-          </strong>
-          <h2
-            class="text-dark-blue font-display my-5 text-3xl leading-tight font-bold lg:text-4xl"
-          >
-            We Bring the Best Helicopter Flight Training to Your Location
-          </h2>
-          <p
-            class="text-accent-100 text-sm font-medium tracking-wider lg:text-base/6"
-          >
-            You contact us and we fly out to you to give you your flight lesson.
-            If lessons are at an airport where more than one student is flying
-            with us that day, convenience fee can be split equally between
-            students. Convenience fee is simply a there and back ferry flight
-            cost. We are located just north of McKinney.
-          </p>
-
-          <div class="mt-5 flex flex-col gap-5 sm:flex-row">
-            <a
-              href="/contact-us"
-              class="btn-secondary hover:border-primary-500! border-white! text-white!"
-              >Contact Us
-              <FaArrowRight />
-            </a>
-          </div>
-        </div>
       </div>
     </div>
   </section>
+
+  <Features />
+
+  <section class="bg-primary-50/50">
+    <div
+      class="mx-auto flex max-w-2xl flex-col items-center gap-10 px-4 py-24 lg:max-w-7xl lg:gap-10 lg:px-12"
+    >
+      <h2 class="mx-auto text-center">
+        <strong class="text-medium-blue text-primary-500 text-lg font-bold"
+          >Why Choose</strong
+        >
+        <br />
+        <span
+          class="text-dark-blue font-display mb-5 text-4xl leading-tight font-black italic lg:text-5xl"
+          >TruFlight Academy</span
+        >
+      </h2>
+      <h3>Just an {distance} drive from {city}, {stateLong}</h3>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3">
+        {features.map((feature) => <FeatureCard {...feature} />)}
+      </div>
+    </div>
+  </section>
+
   <!-- Testing All images links -->
   <!-- {
     imagesList.map((imageTest) => (
