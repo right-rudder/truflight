@@ -3,6 +3,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import Header from "../components/Header.astro";
 import { FaCheck } from "react-icons/fa6";
 import ImageComp from "../components/ImageComp.astro";
+import TrainingCoursesCarrousel from "../components/TrainingCoursesCarrousel";
 
 const headerData = {
   title: "Commercial External Load Operations",
@@ -73,6 +74,124 @@ const headerData = {
         </ul>
         <div class="mt-5 flex flex-col items-center gap-5 sm:flex-row">
           <a href="/contact-us" class="btn-secondary">Request Service</a>
+        </div>
+      </div>
+    </div>
+  </section>
+    </section>
+    <section>
+    <div class="mx-auto max-w-7xl px-4 py-24 lg:px-12">
+      <div class="mb-10 flex flex-col gap-5">
+        <strong class="text-medium-blue text-primary-500 text-lg font-bold"
+          >Choose Training Program
+        </strong>
+        <h2 class="font-display text-3xl font-bold lg:text-5xl">
+          Find the right program for you
+        </h2>
+      </div>
+      <TrainingCoursesCarrousel client:visible />
+    </div>
+  </section>
+    <section>
+    <div
+      class="mx-auto flex max-w-xl flex-col-reverse items-center gap-10 px-4 py-24 lg:max-w-7xl lg:flex-row lg:gap-10 lg:px-12"
+    >
+      <div class="flex-1">
+        <ImageComp
+          src="/src/assets/helicopter-taking-off-at-truflight-academy.avif"
+          alt="A helicopter taking off at TruFlight Academy"
+          classes="aspect-square rounded-md object-cover"
+        />
+      </div>
+      <div class="flex flex-1 flex-col">
+        <strong class="text-medium-blue text-primary-500 text-lg font-bold"
+          >About Us</strong
+        >
+        <h2
+          class="text-dark-blue font-display mb-5 text-5xl leading-tight font-bold"
+        >
+          Your Journey to Becoming a Helicopter Pilot Starts Here
+        </h2>
+        <p
+          class="text-accent-400 max-w-lg text-sm font-medium tracking-wider lg:text-base/6"
+        >
+          At TruFlight Academy, we are dedicated to making your helicopter
+          flight dreams a reality. As one of the leading <a
+            href="/about/our-story"
+            class="text-primary-500 font-semibold hover:underline"
+            >helicopter flight schools in Dallas</a
+          >, our state-of-the-art <a
+            href="/about/our-fleet"
+            class="text-primary-500 font-semibold hover:underline"
+            >Cabri G2 aircraft</a
+          > and our highly trained <a
+            href="/about/our-chief-pilot"
+            class="text-primary-500 font-semibold hover:underline"
+            >certified flight instructors</a
+          > provide you with the ability to obtain the certification you seek. Our
+          commitment is to provide you with the in-depth knowledge, skills and confidence
+          you need for success.
+        </p>
+
+        <ul class="my-3 flex flex-col gap-2 font-bold">
+          <li class="flex items-center gap-3">
+            <FaCheck className="text-primary-500" />
+            <div>
+              Beginners looking to start their <a
+                href="/pilot-training/private-pilot"
+                class="text-primary-500 font-semibold hover:underline"
+                >helicopter flight training</a
+              >
+            </div>
+          </li>
+          <li class="flex items-center gap-3">
+            <FaCheck className="text-primary-500" />
+            <div>
+              Fixed-wing pilots seeking to <a
+                href="/add-on/private-helicopter-add-on"
+                class="text-primary-500 font-semibold hover:underline"
+                >upgrade their skills to helicopters</a
+              >
+            </div>
+          </li>
+          <li class="flex items-center gap-3">
+            <FaCheck className="text-primary-500" />
+            <div>
+              Experienced helicopter pilots aiming to <a
+                href="/pilot-training/commercial-pilot"
+                class="text-primary-500 font-semibold hover:underline"
+                >enhance their skills</a
+              >
+            </div>
+          </li>
+          <li class="flex items-center gap-3">
+            <FaCheck className="text-primary-500" />
+            <div>
+              Anyone interested in pursuing a <a
+                href="/why-become-a-pilot"
+                class="text-primary-500 font-semibold hover:underline"
+                >career in aviation</a>
+            </div>
+          </li>
+        </ul>
+
+        <p
+          class="text-accent-400 max-w-lg text-sm font-medium tracking-wider lg:text-base/6"
+        >
+          Join us at TruFlight Academy and take the first step towards your
+          dream of becoming a helicopter pilot! Start with a <a
+            href="/discovery-flight"
+            class="text-primary-500 font-semibold hover:underline"
+            >discovery flight</a
+          > or explore our <a
+            href="/pilot-training/private-pilot"
+            class="text-primary-500 font-semibold hover:underline"
+            >private pilot training</a
+          >.
+        </p>
+
+        <div class="mt-5 flex flex-col items-center gap-5 sm:flex-row">
+          <a href="/contact-us" class="btn-secondary"> Contact Us </a>
         </div>
       </div>
     </div>
