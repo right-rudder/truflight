@@ -6,16 +6,16 @@ import ImageComp from "../components/ImageComp.astro";
 import TrainingCoursesCarrousel from "../components/TrainingCoursesCarrousel";
 
 const headerData = {
-  title: "Commercial External Load Operations",
-  subtitle: "Rotorcraft External-Load Operations – TFYL558S​",
-  primaryImage: "/src/assets/helicopter-commercial-external-load-truflight.jpg",
-  primaryAlt: "Helicopter Commercial External Load at TruFlight Academy",
+  title: "Helicopter Tour Flights",
+  subtitle: "Scenic Helicopter Tours in North Texas",
+  primaryImage: "/src/assets/helicopter-flight-instructor-truflight.jpg",
+  primaryAlt: "Helicopter tour flight at TruFlight Academy in Texas",
 };
 ---
 
 <BaseLayout
-  siteTitle="TruFlight Academy Commercial External Load Operations | Professional Helicopter Services"
-  siteDescription="TruFlight Academy offers FAA-certified commercial external load operations with high-hour, professional helicopter pilots. From sling loads to specialized cargo transport, our team delivers safe, efficient, and reliable rotorcraft services for commercial clients across North Texas."
+  siteTitle="TruFlight Academy Helicopter Tour Flights | Scenic Tours in North Texas"
+  siteDescription="Experience North Texas from the air with TruFlight Academy’s helicopter tour flights. Perfect for dates, gifts, special occasions, and first-time flyers. Call for details and pricing."
 >
   <Header slot="hero" data={headerData} />
 
@@ -25,60 +25,63 @@ const headerData = {
     >
       <div class="flex-1">
         <ImageComp
-          src="/src/assets/external-load-operations-truflight-dallas.jpg"
-          alt="External Load Operations at TruFlight Academy"
+          src="/src/assets/helicopter-taking-off-at-truflight.jpg"
+          alt="Helicopter tour flight departing from TruFlight Academy in Texas"
           classes="aspect-square rounded-md object-cover"
         />
       </div>
+
       <div class="flex flex-1 flex-col">
         <strong class="text-medium-blue text-primary-500 text-lg font-bold">
-          Commercial External Load Operations
+          Helicopter Tour Flights
         </strong>
+
         <h2
           class="text-dark-blue font-display mb-5 text-5xl leading-tight font-bold"
         >
-          Reliable External Load Services
+          See North Texas From a New View
         </h2>
+
         <p
           class="text-accent-400 max-w-lg text-sm font-medium tracking-wider lg:text-base/6"
         >
-          TruFlight Academy provides professional external load services for a
-          variety of commercial operations. Our high-hour pilots specialize in
-          safe, efficient, and reliable sling load and cargo transport
-          operations. Whether it’s utility work, firefighting support, or
-          specialized lifting tasks, we deliver experienced personnel and
-          trusted service every time.
+          Helicopter tour flights are a simple way to experience what rotorcraft
+          flying is like without committing to training. Whether you are
+          celebrating a special occasion, looking for a unique gift, or you just
+          want a fun first flight, TruFlight Academy offers tour flights with
+          professional pilots and a focus on safety. Pricing and availability
+          vary by route, group size, and timing, so call for details and pricing.
         </p>
 
         <ul class="my-3 flex flex-col gap-2 font-bold">
           <li class="flex items-center gap-3">
             <FaCheck className="text-primary-500" />
-            FAA-certified commercial operations
+            Call for details and pricing
           </li>
           <li class="flex items-center gap-3">
             <FaCheck className="text-primary-500" />
-            High-hour professional pilots
+            Professional pilots focused on safety
           </li>
           <li class="flex items-center gap-3">
             <FaCheck className="text-primary-500" />
-            Safe and efficient cargo handling
+            Great for gifts, dates, and special occasions
           </li>
           <li class="flex items-center gap-3">
             <FaCheck className="text-primary-500" />
-            Flexible scheduling for commercial clients
+            Flexible scheduling based on availability
           </li>
           <li class="flex items-center gap-3">
             <FaCheck className="text-primary-500" />
-            Comprehensive risk and operations management
+            First-time flyer friendly experience
           </li>
         </ul>
+
         <div class="mt-5 flex flex-col items-center gap-5 sm:flex-row">
-          <a href="/contact-us" class="btn-secondary">Request Service</a>
+          <a href="/contact-us" class="btn-secondary">Book a Tour Flight</a>
         </div>
       </div>
     </div>
   </section>
-    </section>
     <section>
     <div class="mx-auto max-w-7xl px-4 py-24 lg:px-12">
       <div class="mb-10 flex flex-col gap-5">

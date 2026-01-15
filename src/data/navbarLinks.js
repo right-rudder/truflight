@@ -56,6 +56,10 @@ export const navbarLinks = [
         name: "CFI Helicopter Add-On",
         link: "/add-on/cfi-helicopter-add-on",
       },
+      {
+        name: "Turbine Transition Add-On",
+        link: "/add-on/turbine-transition-add-on",
+      },
     ],
   },
   {
@@ -64,6 +68,10 @@ export const navbarLinks = [
       {
         name: "Commercial External Load Operations",
         link: "/commercial-external-load-operations",
+      },
+      {
+        name: "Helicopter Tours",
+        link: "/helicopter-tours",
       },
       {
         name: "Discovery Flight",
