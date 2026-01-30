@@ -7,7 +7,7 @@ heroImage: "/src/assets/cabri-g2-helicopter-truflight-academy-dallas-texas.avif"
 
 ## The Path to Your Helicopter License in Texas
 
-Earning your **helicopter license in Texas** opens the door to adventure, career opportunities, and personal achievement. At TruFlight Academy, we guide you through every step of the process—from your very first discovery flight to advanced commercial training.
+Earning your **helicopter license in Texas** opens the door to adventure, career opportunities, and personal achievement. At TruFlight Academy, we guide you through every step of the process, from your very first discovery flight to advanced commercial training.
 
 Here’s what you need to know before getting started.
 
@@ -22,7 +22,7 @@ The type of license you pursue depends on your aviation goals:
 - **Instrument Rating (IR-H):** Adds the ability to fly in low-visibility and IFR conditions.
 - **Certified Flight Instructor (CFI/CFII):** Allows you to teach others and build valuable hours.
 
-👉 For a complete breakdown of each license, visit our [Complete Guide to Helicopter Pilot Training in Texas](/your-complete-guide-to-helicopter-pilot-training-in-texas).
+<!-- For a complete breakdown of each license, visit our [Complete Guide to Helicopter Pilot Training in Texas](/your-complete-guide-to-helicopter-pilot-training-in-texas). -->
 
 ---
 
@@ -68,4 +68,4 @@ What makes us different?
 
 Whether you’re pursuing a career or chasing a dream, earning a **helicopter license in Texas** is within reach.
 
-👉 Visit [TruFlight Academy](https://www.truflightacademy.com) to schedule your **Discovery Flight** and start your journey toward becoming a licensed helicopter pilot.
+👉 Visit [TruFlight Academy](https://www.truflightacademy.com) to schedule your [**Discovery Flight**](/discovery-flight) and start your journey toward becoming a licensed helicopter pilot.
