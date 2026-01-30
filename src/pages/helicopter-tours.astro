@@ -8,7 +8,8 @@ import TrainingCoursesCarrousel from "../components/TrainingCoursesCarrousel";
 const headerData = {
   title: "Helicopter Tour Flights",
   subtitle: "Scenic Helicopter Tours in North Texas",
-  primaryImage: "/src/assets/truflight-bell-206b-jetranger-helicopter-flight-school-dallas-texas.jpg",
+  primaryImage:
+    "/src/assets/truflight-bell-206b-jetranger-helicopter-flight-school-dallas-texas.jpg",
   primaryAlt: "Helicopter tour flight at TruFlight Academy in Texas",
 };
 ---
@@ -45,12 +46,11 @@ const headerData = {
         <p
           class="text-accent-400 max-w-lg text-sm font-medium tracking-wider lg:text-base/6"
         >
-          Helicopter tour flights are a simple way to experience what rotorcraft
-          flying is like without committing to training. Whether you are
-          celebrating a special occasion, looking for a unique gift, or you just
-          want a fun first flight, TruFlight Academy offers tour flights with
-          professional pilots and a focus on safety. Pricing and availability
-          vary by route, group size, and timing, so call for details and pricing.
+          Whether you are celebrating a special occasion, looking for a unique
+          gift, or you just want to see the world with new eyes, TruFlight
+          Academy offers tour flights of Dallas.
+          <br />Get a new perspective on the city’s skyline, landmarks, and
+          natural beauty from the air!
         </p>
 
         <ul class="my-3 flex flex-col gap-2 font-bold">
@@ -60,19 +60,11 @@ const headerData = {
           </li>
           <li class="flex items-center gap-3">
             <FaCheck className="text-primary-500" />
-            Professional pilots focused on safety
-          </li>
-          <li class="flex items-center gap-3">
-            <FaCheck className="text-primary-500" />
             Great for gifts, dates, and special occasions
           </li>
           <li class="flex items-center gap-3">
             <FaCheck className="text-primary-500" />
             Flexible scheduling based on availability
-          </li>
-          <li class="flex items-center gap-3">
-            <FaCheck className="text-primary-500" />
-            First-time flyer friendly experience
           </li>
         </ul>
 
@@ -82,7 +74,7 @@ const headerData = {
       </div>
     </div>
   </section>
-    <section>
+  <section>
     <div class="mx-auto max-w-7xl px-4 py-24 lg:px-12">
       <div class="mb-10 flex flex-col gap-5">
         <strong class="text-medium-blue text-primary-500 text-lg font-bold"
@@ -95,7 +87,7 @@ const headerData = {
       <TrainingCoursesCarrousel client:visible />
     </div>
   </section>
-    <section>
+  <section>
     <div
       class="mx-auto flex max-w-xl flex-col-reverse items-center gap-10 px-4 py-24 lg:max-w-7xl lg:flex-row lg:gap-10 lg:px-12"
     >
@@ -173,7 +165,8 @@ const headerData = {
               Anyone interested in pursuing a <a
                 href="/why-become-a-pilot"
                 class="text-primary-500 font-semibold hover:underline"
-                >career in aviation</a>
+                >career in aviation</a
+              >
             </div>
           </li>
         </ul>
