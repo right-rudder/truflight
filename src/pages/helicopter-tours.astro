@@ -25,11 +25,16 @@ const headerData = {
       class="mx-auto flex max-w-xl flex-col-reverse items-center gap-10 px-4 py-24 lg:max-w-7xl lg:flex-row lg:gap-10 lg:px-12"
     >
       <div class="flex-1">
-        <ImageComp
-          src="/src/assets/truflight-bell-206-jetranger-helicopter-flight-training-mckinney-texas-cropped.jpg"
-          alt="Helicopter tour flight departing from TruFlight Academy in Texas"
-          classes="aspect-square rounded-md object-cover"
-        />
+        <video
+          src="/truflight-helicopter-tours-dallas-texas.mp4"
+          autoplay
+          loop
+          muted
+          playsinline
+          class="aspect-square rounded-md object-cover w-full h-full"
+        >
+          Your browser does not support the video tag.
+        </video>
       </div>
 
       <div class="flex flex-1 flex-col">
@@ -40,31 +45,31 @@ const headerData = {
         <h2
           class="text-dark-blue font-display mb-5 text-5xl leading-tight font-bold"
         >
-          See North Texas From a New View
+          See North Texas like never before!
         </h2>
 
         <p
           class="text-accent-400 max-w-lg text-sm font-medium tracking-wider lg:text-base/6"
         >
-          Whether you are celebrating a special occasion, looking for a unique
-          gift, or you just want to see the world with new eyes, TruFlight
-          Academy offers tour flights of Dallas.
-          <br />Get a new perspective on the city’s skyline, landmarks, and
-          natural beauty from the air!
+          Helicopter tours are a unique experience for anyone looking to see the world with a new perspective! North Texas and the unique skyline only Dallas can provide is absolutely stunning from the sky! Schedule a helicopter tour in our beautiful Bell 206 to treat your family, loved ones, coworkers, or friends to join you in this exceptional experience. Celebrate special occasions, create magical memories, or instill a love of flying in those you care about most; all can be accomplished on one of our once in a lifetime flights. Call to schedule!
         </p>
 
         <ul class="my-3 flex flex-col gap-2 font-bold">
           <li class="flex items-center gap-3">
             <FaCheck className="text-primary-500" />
-            Call for details and pricing
+            Call to schedule your exceptional experience today!
           </li>
           <li class="flex items-center gap-3">
             <FaCheck className="text-primary-500" />
-            Great for gifts, dates, and special occasions
+            Great for gifts, dates, special occasions, and proposals
           </li>
           <li class="flex items-center gap-3">
             <FaCheck className="text-primary-500" />
-            Flexible scheduling based on availability
+            Tour flights are done in our beautiful Bell 206
+          </li>
+          <li class="flex items-center gap-3">
+            <FaCheck className="text-primary-500" />
+            Helicopter seats three passengers
           </li>
         </ul>
 
@@ -75,10 +80,79 @@ const headerData = {
     </div>
   </section>
   <section>
+    <div
+      class="mx-auto flex max-w-xl flex-col items-center gap-10 px-4 py-24 lg:max-w-7xl lg:flex-row lg:gap-10 lg:px-12"
+    >
+      <div class="flex flex-1 flex-col">
+        <strong class="text-medium-blue text-primary-500 text-lg font-bold">
+          Tour Flight Location
+        </strong>
+
+        <h2
+          class="text-dark-blue font-display mb-5 text-5xl leading-tight font-bold"
+        >
+          Where to check in for your helicopter tour
+        </h2>
+
+        <p
+          class="text-accent-400 max-w-lg text-sm font-medium tracking-wider lg:text-base/6"
+        >
+          Our helicopter tour check in location is in Addison, Texas. When you arrive,
+          look for Hangar V4. If you have any trouble finding us, call and we can help.
+        </p>
+
+        <div class="mt-4 w-full max-w-lg rounded-md ring-1 ring-gray-200 bg-white p-5">
+          <p class="text-dark-blue font-bold">TruFlight Academy Tours</p>
+          <p class="text-accent-400 text-sm font-medium tracking-wider lg:text-base/6">
+            4511 Claire Chennault Drive<br />
+            Hangar V4<br />
+            Addison, TX 75001<br />
+            United States
+          </p>
+        </div>
+
+        <ul class="my-5 flex flex-col gap-2 font-bold">
+          <li class="flex items-center gap-3">
+            <FaCheck className="text-primary-500" />
+            Arrive 15 minutes early for check in
+          </li>
+          <li class="flex items-center gap-3">
+            <FaCheck className="text-primary-500" />
+            Free parking available near the hangar
+          </li>
+          <li class="flex items-center gap-3">
+            <FaCheck className="text-primary-500" />
+            Check in at the lobby before your flight
+          </li>
+        </ul>
+
+        <div class="mt-2 flex flex-col items-center gap-5 sm:flex-row">
+          <a href="/contact-us" class="btn-secondary">Get Tour Details</a>
+        </div>
+      </div>
+
+      <div class="flex-1 w-full">
+        <div class="flex flex-col gap-4">
+          <ImageComp
+            src="/src/assets/truflight-helicopter-tours-dallas-texas.jpg"
+            alt="Outside view of TruFlight Academy helicopter tour location in Addison, Texas"
+            classes="aspect-video rounded-md object-cover w-full"
+          />
+          <ImageComp
+            src="/src/assets/truflight-helicopter-tours-dallas-texas-helicopter-flight-training.jpg"
+            alt="Lobby check in area for TruFlight Academy helicopter tours in Addison, Texas"
+            classes="aspect-video rounded-md object-cover w-full"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
     <div class="mx-auto max-w-7xl px-4 py-24 lg:px-12">
       <div class="mb-10 flex flex-col gap-5">
         <strong class="text-medium-blue text-primary-500 text-lg font-bold"
-          >Choose Training Program
+          >Choose a Training Program
         </strong>
         <h2 class="font-display text-3xl font-bold lg:text-5xl">
           Find the right program for you
