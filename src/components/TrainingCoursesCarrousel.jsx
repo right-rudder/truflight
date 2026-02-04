@@ -4,10 +4,10 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import TrainingCourseCard from "./TrainingCourseCard";
-import privatePilotImage from "../assets/private-pilot-at-truflight-academy-dallas.avif";
-import instrumentRatingImage from "../assets/instrument-rating-truflight-academy.avif";
-import commercialPilotImage from "../assets/commercial-pilot-at-truflight-academy-dallas.avif";
-import slingLoadImage from "../assets/sling-load-training-truflight-academy-dallas.avif";
+import privatePilotImage from "/src/assets/private-pilot-at-truflight-academy-dallas.webp";
+import instrumentRatingImage from "/src/assets/instrument-rating-truflight-academy.webp";
+import commercialPilotImage from "/src/assets/commercial-pilot-at-truflight-academy-dallas.webp";
+import slingLoadImage from "/src/assets/sling-load-training-truflight-academy-dallas.webp";
 
 const TrainingCoursesCarrousel = () => {
   const courses = [
