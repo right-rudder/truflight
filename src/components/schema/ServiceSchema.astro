@@ -96,24 +96,22 @@ if (service.duration) {
 }
 
 // Add specific service features based on service type
+// TODO : Switch the keywords property. Schema.keywords is not recognized by schema.org, a similar property was not found. 
 if (service.name.toLowerCase().includes("discovery")) {
   schema.additionalType = "RecreationalActivity";
-  schema.keywords =
-    "discovery flight, helicopter experience, first flight, trial lesson";
+  // schema.keywords = "discovery flight, helicopter experience, first flight, trial lesson";
 } else if (service.name.toLowerCase().includes("private")) {
   schema.additionalType = "EducationalService";
-  schema.keywords =
-    "private pilot license, PPL, helicopter training, beginner pilot";
+  // schema.keywords = "private pilot license, PPL, helicopter training, beginner pilot";
 } else if (service.name.toLowerCase().includes("commercial")) {
   schema.additionalType = "ProfessionalService";
-  schema.keywords =
-    "commercial pilot license, CPL, professional pilot training";
+  // schema.keywords = "commercial pilot license, CPL, professional pilot training";
 } else if (service.name.toLowerCase().includes("instrument")) {
   schema.additionalType = "EducationalService";
-  schema.keywords = "instrument rating, IFR, weather flying, advanced training";
+  // schema.keywords = "instrument rating, IFR, weather flying, advanced training";
 } else if (service.name.toLowerCase().includes("external load")) {
   schema.additionalType = "ProfessionalService";
-  schema.keywords = "external load operations, sling load, utility helicopter";
+  // schema.keywords = "external load operations, sling load, utility helicopter";
 }
 ---
 
