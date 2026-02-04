@@ -2,7 +2,7 @@
 title: "Helicopter License in Texas: What You Need to Know"
 description: "Learn the step-by-step process of earning your helicopter license in Texas, from eligibility and FAA requirements to training programs at TruFlight Academy."
 pubDate: "Jan 15 2026"
-heroImage: "/src/assets/cabri-g2-helicopter-truflight-academy-dallas-texas.avif"
+heroImage: "/src/assets/cabri-g2-helicopter-truflight-academy-dallas-texas.webp"
 ---
 
 ## The Path to Your Helicopter License in Texas

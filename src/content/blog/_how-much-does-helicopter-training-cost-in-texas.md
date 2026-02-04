@@ -2,7 +2,7 @@
 title: "How Much Does Helicopter Training Cost in Texas?"
 description: "Understand the cost of helicopter pilot training in Texas, what affects pricing, and how TruFlight Academy helps students plan their training with clarity and safety in mind."
 pubDate: "Feb 28, 2026"
-heroImage: "/src/assets/truflight-academy-present-at-heliexpo.avif"
+heroImage: "/src/assets/truflight-academy-present-at-heliexpo.webp"
 metaDescription: "Helicopter pilot training Texas costs explained. Learn pricing factors and plan your training with TruFlight Academy’s safety-focused approach."
 ---
 

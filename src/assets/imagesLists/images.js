@@ -4,7 +4,7 @@ export const imagesList = [
     alt: "Airplane icon",
   },
   {
-    src: "/src/assets/baby-guison.avif",
+    src: "/src/assets/baby-guison.webp",
     alt: "Baby Guison",
   },
   {
@@ -16,7 +16,7 @@ export const imagesList = [
     alt: "Bottom view from TruFlight helicopter",
   },
   {
-    src: "/src/assets/cabri-g2-helicopter-truflight-academy-dallas-texas.avif",
+    src: "/src/assets/cabri-g2-helicopter-truflight-academy-dallas-texas.webp",
     alt: "Cabri G2 helicopter at TruFlight Academy in Dallas, Texas",
   },
   {
@@ -32,11 +32,11 @@ export const imagesList = [
     alt: "Certified Flight Instructor at TruFlight Academy",
   },
   {
-    src: "/src/assets/chief-pilot-guison-army.avif",
+    src: "/src/assets/chief-pilot-guison-army.webp",
     alt: "Chief Pilot Guison in Army",
   },
   {
-    src: "/src/assets/chief-pilot-todd-guison-at-truflight-academy.avif",
+    src: "/src/assets/chief-pilot-todd-guison-at-truflight-academy.webp",
     alt: "Chief Pilot Todd Guison at TruFlight Academy",
   },
   {
@@ -56,7 +56,7 @@ export const imagesList = [
     alt: "Commercial helicopter flight training at TruFlight",
   },
   {
-    src: "/src/assets/commercial-pilot-at-truflight-academy-dallas.avif",
+    src: "/src/assets/commercial-pilot-at-truflight-academy-dallas.webp",
     alt: "Commercial pilot at TruFlight Academy in Dallas",
   },
   {
@@ -68,7 +68,7 @@ export const imagesList = [
     alt: "Customer taking a discovery flight at TruFlight Academy",
   },
   {
-    src: "/src/assets/discovery-flight-at-truflight-academy-dallas.avif",
+    src: "/src/assets/discovery-flight-at-truflight-academy-dallas.webp",
     alt: "Discovery flight at TruFlight Academy in Dallas",
   },
   {
@@ -152,7 +152,7 @@ export const imagesList = [
     alt: "Guimbal Cabri G2 at TruFlight Academy",
   },
   {
-    src: "/src/assets/guison-family-at-expo.avif",
+    src: "/src/assets/guison-family-at-expo.webp",
     alt: "Guison family at expo",
   },
   {
@@ -160,7 +160,7 @@ export const imagesList = [
     alt: "Guison family inside helicopter",
   },
   {
-    src: "/src/assets/guison-family-kids.avif",
+    src: "/src/assets/guison-family-kids.webp",
     alt: "Guison family with kids",
   },
   {
@@ -168,11 +168,11 @@ export const imagesList = [
     alt: "Helicopter agriculture application",
   },
   {
-    src: "/src/assets/helicopter-at-truflight-academy.avif",
+    src: "/src/assets/helicopter-at-truflight-academy.webp",
     alt: "Helicopter at TruFlight Academy",
   },
   {
-    src: "/src/assets/helicopter-blackhawk-truflight-academy.avif",
+    src: "/src/assets/helicopter-blackhawk-truflight-academy.webp",
     alt: "Blackhawk helicopter at TruFlight Academy",
   },
   {
@@ -188,7 +188,7 @@ export const imagesList = [
     alt: "Commercial helicopter external load at TruFlight",
   },
   {
-    src: "/src/assets/helicopter-controls.avif",
+    src: "/src/assets/helicopter-controls.webp",
     alt: "Helicopter controls",
   },
   {
@@ -224,7 +224,7 @@ export const imagesList = [
     alt: "Powerline surveying helicopter",
   },
   {
-    src: "/src/assets/helicopter-taking-off-at-truflight-academy.avif",
+    src: "/src/assets/helicopter-taking-off-at-truflight-academy.webp",
     alt: "Helicopter taking off at TruFlight Academy",
   },
   {
@@ -236,15 +236,15 @@ export const imagesList = [
     alt: "Helicopter tour",
   },
   {
-    src: "/src/assets/helicopters-army-truflight-aviation.avif",
+    src: "/src/assets/helicopters-army-truflight-aviation.webp",
     alt: "Army helicopters at TruFlight Aviation",
   },
   {
-    src: "/src/assets/instrument-rating-truflight-academy.avif",
+    src: "/src/assets/instrument-rating-truflight-academy.webp",
     alt: "Instrument rating at TruFlight Academy",
   },
   {
-    src: "/src/assets/owner-of-truflight-academy-scarlett-guison.avif",
+    src: "/src/assets/owner-of-truflight-academy-scarlett-guison.webp",
     alt: "Owner of TruFlight Academy Scarlett Guison",
   },
   {
@@ -252,7 +252,7 @@ export const imagesList = [
     alt: "Pilot training icon",
   },
   {
-    src: "/src/assets/private-pilot-at-truflight-academy-dallas.avif",
+    src: "/src/assets/private-pilot-at-truflight-academy-dallas.webp",
     alt: "Private pilot at TruFlight Academy in Dallas",
   },
   {
@@ -260,15 +260,15 @@ export const imagesList = [
     alt: "Private pilot training at TruFlight",
   },
   {
-    src: "/src/assets/scarlett-and-todd-guison.avif",
+    src: "/src/assets/scarlett-and-todd-guison.webp",
     alt: "Scarlett and Todd Guison",
   },
   {
-    src: "/src/assets/sling-load-training-at-truflight-academy.avif",
+    src: "/src/assets/sling-load-training-at-truflight-academy.webp",
     alt: "Sling load training at TruFlight Academy",
   },
   {
-    src: "/src/assets/sling-load-training-truflight-academy-dallas.avif",
+    src: "/src/assets/sling-load-training-truflight-academy-dallas.webp",
     alt: "Sling load training at TruFlight Academy in Dallas",
   },
   {
@@ -280,35 +280,35 @@ export const imagesList = [
     alt: "Student pilot at TruFlight Academy in Dallas",
   },
   {
-    src: "/src/assets/the-guison-family.avif",
+    src: "/src/assets/the-guison-family.webp",
     alt: "The Guison family",
   },
   {
-    src: "/src/assets/todd-and-scarlett-guison-at-heliexpo.avif",
+    src: "/src/assets/todd-and-scarlett-guison-at-heliexpo.webp",
     alt: "Todd and Scarlett Guison at HeliExpo",
   },
   {
-    src: "/src/assets/todd-and-scarlett-guison-wedding.avif",
+    src: "/src/assets/todd-and-scarlett-guison-wedding.webp",
     alt: "Todd and Scarlett Guison wedding",
   },
   {
-    src: "/src/assets/todd-guison-and-scarlett-guison.avif",
+    src: "/src/assets/todd-guison-and-scarlett-guison.webp",
     alt: "Todd Guison and Scarlett Guison",
   },
   {
-    src: "/src/assets/todd-guison-army.avif",
+    src: "/src/assets/todd-guison-army.webp",
     alt: "Todd Guison in Army",
   },
   {
-    src: "/src/assets/todd-guison-in-helicopter.avif",
+    src: "/src/assets/todd-guison-in-helicopter.webp",
     alt: "Todd Guison in helicopter",
   },
   {
-    src: "/src/assets/todd-guison-in-truflight-academy.avif",
+    src: "/src/assets/todd-guison-in-truflight-academy.webp",
     alt: "Todd Guison in TruFlight Academy",
   },
   {
-    src: "/src/assets/truflight-academy-chief-pilot.avif",
+    src: "/src/assets/truflight-academy-chief-pilot.webp",
     alt: "TruFlight Academy Chief Pilot",
   },
   {
@@ -316,7 +316,7 @@ export const imagesList = [
     alt: "TruFlight Academy helicopter in hangar",
   },
   {
-    src: "/src/assets/truflight-academy-present-at-heliexpo.avif",
+    src: "/src/assets/truflight-academy-present-at-heliexpo.webp",
     alt: "TruFlight Academy present at HeliExpo",
   },
   {
@@ -332,7 +332,7 @@ export const imagesList = [
     alt: "TruFlight helicopter flying over Dallas, Texas",
   },
   {
-    src: "/src/assets/truflight-helicopter-in-dallas.avif",
+    src: "/src/assets/truflight-helicopter-in-dallas.webp",
     alt: "TruFlight helicopter in Dallas",
   },
   {
@@ -340,7 +340,7 @@ export const imagesList = [
     alt: "TruFlight helicopter in the sunset",
   },
   {
-    src: "/src/assets/truflight-helicopter-interior.avif",
+    src: "/src/assets/truflight-helicopter-interior.webp",
     alt: "TruFlight helicopter interior",
   },
   {
@@ -352,7 +352,7 @@ export const imagesList = [
     alt: "TruFlight instructor with student on helicopter",
   },
   {
-    src: "/src/assets/truflight-logo.avif",
+    src: "/src/assets/truflight-logo.webp",
     alt: "TruFlight logo",
   },
   {

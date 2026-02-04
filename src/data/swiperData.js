@@ -9,7 +9,7 @@ const swiperData = [
     btnLink: "/pilot-training/private-pilot",
   },
   {
-    imagePath: "/src/assets/truflight-academy-chief-pilot.avif",
+    imagePath: "/src/assets/truflight-academy-chief-pilot.webp",
     imageAlt: "Chief Pilot Todd Guison",
     title: "Our Chief Pilot at TruFlight Academy",
     subtitle:
@@ -28,7 +28,7 @@ const swiperData = [
     btnLink: "/discovery-flight",
   },
   {
-    imagePath: "/src/assets/helicopter-controls.avif",
+    imagePath: "/src/assets/helicopter-controls.webp",
     imageAlt: "Helicopter AC Controls",
     title: "First Training Helicopter Cabri G2 with AC to Hit US Soil!",
     subtitle:
@@ -43,10 +43,10 @@ const swiperData = [
     subtitle:
       "From precision lifting to utility support, TruFlight Academy provides safe, reliable, and FAA-certified helicopter external load services for commercial clients across Texas.",
     btnText: "Commercial Operations",
-    btnLink: "/about/commercial-external-load-operations",
+    btnLink: "/commercial-external-load-operations",
   },
   {
-    imagePath: "/src/assets/sling-load-training-at-truflight-academy.avif",
+    imagePath: "/src/assets/sling-load-training-at-truflight-academy.webp",
     imageAlt: "Sling Load Training at TruFlight Academy",
     title: "External Load Training for Pilots",
     subtitle:

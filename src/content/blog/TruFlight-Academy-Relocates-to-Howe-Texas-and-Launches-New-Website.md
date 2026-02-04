@@ -2,7 +2,7 @@
 title: "TruFlight Academy Relocates to Howe Texas and Launches New Website"
 description: "TruFlight Academy announces its relocation to Finney Field Airport in Howe, TX, along with the launch of a new website built to better serve aspiring helicopter pilots."
 pubDate: "Sep 9 2025"
-heroImage: "/src/assets/truflight-academy-present-at-heliexpo.avif"
+heroImage: "/src/assets/truflight-academy-present-at-heliexpo.webp"
 ---
 
 ## TruFlight Academy Relocates to Finney Field, Howe, TX
