@@ -2,7 +2,7 @@
 title: "How Much Does Helicopter Training Cost in Texas?"
 description: "Understand the cost of helicopter pilot training in Texas, what affects pricing, and how TruFlight Academy helps students plan their training with clarity and safety in mind."
 pubDate: "Feb 28, 2026"
-heroImage: "/src/assets/truflight-academy-present-at-heliexpo.webp"
+heroImage: "/src/assets/truflight-academy-team-present-at-heliexpo-texas-flight-school.webp"
 metaDescription: "Helicopter pilot training Texas costs explained. Learn pricing factors and plan your training with TruFlight Academy’s safety-focused approach."
 ---
 
@@ -42,7 +42,7 @@ Students who fly consistently retain skills better. Flying multiple times per we
 
 At TruFlight Academy, instructors help students build realistic training schedules that balance cost, progress, and safety.
 
-![Instructor and student reviewing training plan at Finney Field Airport, North Texas](/blog/certified-flight-instructor-add-on-at-truflight-academy.jpg)
+![Instructor and student reviewing training plan at Finney Field Airport, North Texas](/blog/helicopter-drifting-truflight-dallas-fort-worth-certified-flight-instructor-add-on.jpg)
 
 ---
 
@@ -155,7 +155,7 @@ Many students leave their Discovery Flight excited and confident about beginning
 
 You can book your own [Discovery Flight](/discovery-flight/) and get real answers before making decisions.
 
-![Student taking controls during Discovery Flight in North Texas](/blog/discovery-flight-fun-at-truflight-academy.jpg)
+![Student taking controls during Discovery Flight in North Texas](/blog/excited-customer-discovery-flight-truflight-highland-park.jpg)
 
 ---
 

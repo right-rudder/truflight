@@ -2,7 +2,7 @@
 title: "External Load Training: How TruFlight Academy Prepares Pilots for Real-World Missions"
 description: "Learn how TruFlight Academy’s external load (sling load) helicopter training in Texas sets pilots apart with specialized skills for utility, firefighting, and rescue operations."
 pubDate: "Nov 19 2025"
-heroImage: "/src/assets/external-load-operations-truflight-dallas.jpg"
+heroImage: "/src/assets/external-load-operations-dallas-truflight-dallas-fort-worth-helicopter-training.jpg"
 ---
 
 ## What Is External Load Training?

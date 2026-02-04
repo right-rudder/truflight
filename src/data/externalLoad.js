@@ -22,10 +22,10 @@ const externalLoad = {
       "Our External Load Training is a rigorous Part 133 program designed to get you flying the way you’ll actually operate in the real world. Using helicopters that handle like the ones you’ll see on the job, you’ll build the precision, awareness, and confidence needed to safely move loads where they need to go. At TruFlight Academy, safety is always priority number one, with innovation flying right beside it. By the end of training, you won’t just know how to handle the load, you’ll know how to handle it like a pro.",
       "Of course, we believe training should be more than serious checklists and procedures, it should be fun too. Our instructors bring the expertise and energy to make external load flying both challenging and exciting. You’ll master sling techniques while keeping a smile on your face (because let’s be honest, carrying a deer or a satellite dish under a helicopter is just plain cool). And if you’re looking for real-world support, TruFlight can also help with light commercial sling operations, from antenna repair to hauling your next big game trophy.",
     ],
-    primaryImage: "/src/assets/external-load-training-in-dallas-texas.jpg",
+    primaryImage: "/src/assets/low-angle-view-helicopter-flying-truflight-highland-park-aviation-qualification.jpg",
     primaryAlt: "External load training at TruFlight Academy in Dallas, Texas",
     secondaryImage:
-      "/src/assets/external-load-training-at-truflight-academy.jpg",
+      "/src/assets/helicopter-ground-truflight-southlake-extenral-load-training.jpg",
     secondaryAlt:
       "Helicopter external load training at TruFlight Academy in Dallas, Texas",
     prerequisites: [

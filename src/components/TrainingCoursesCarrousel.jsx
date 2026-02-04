@@ -4,10 +4,10 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import TrainingCourseCard from "./TrainingCourseCard";
-import privatePilotImage from "/src/assets/private-pilot-at-truflight-academy-dallas.webp";
-import instrumentRatingImage from "/src/assets/instrument-rating-truflight-academy.webp";
-import commercialPilotImage from "/src/assets/commercial-pilot-at-truflight-academy-dallas.webp";
-import slingLoadImage from "/src/assets/sling-load-training-truflight-academy-dallas.webp";
+import privatePilotImage from "/src/assets/man-inside-cockpit-truflight-highland-park-certified-flight-instructor-helicopter.webp";
+import instrumentRatingImage from "/src/assets/helicopter-instruments-truflight-dallas-instrument-rating-helicopter.webp";
+import commercialPilotImage from "/src/assets/two-pilots-helicopter-front-truflight-mckinney-external-load-training.webp";
+import slingLoadImage from "/src/assets/sling-load-training-truflight-academy-mckinney.webp";
 
 const TrainingCoursesCarrousel = () => {
   const courses = [

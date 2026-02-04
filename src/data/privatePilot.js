@@ -13,10 +13,10 @@ const privatePilot = {
       "Earn your Private Pilot License (PPL) with TruFlight Academy near Dallas, Texas. Train in modern Cabri G2 helicopters with expert CFIs. Start your aviation journey with hands-on flight training, ground school, and solo flying experience. Enroll today!",
     siteKeywords:
       "private pilot license Texas, PPL training Dallas, student pilot course Dallas, beginner flight training Texas, recreational pilot license, private pilot certification Texas, learn to fly private pilot, flight training for beginners Texas, private pilot ground school, Texas private pilot course, flight training Dallas, pilot school Salt Lake City, aviation training Northern Texas, discovery flight Texas",
-    primaryImage: "/src/assets/private-pilot-training-at-truflight.jpg",
+    primaryImage: "/src/assets/helicopter-landing-side-view-truflight-texas-external-load-training.jpg",
     primaryAlt:
       "Student of the Private Pilot Flight Training Program at TruFlight Academy",
-    secondaryImage: "/src/assets/trulflight-helicopter-in-dallas-airport.jpg",
+    secondaryImage: "/src/assets/helicopter-taking-off-airport-truflight-dfw-commercial-pilot-helicopter.jpg",
     secondaryAlt: "TruFlight Academy Helicopter at Dallas Airport",
     intro:
       "The Private Pilot License (PPL) is your first step toward professional training and qualifies you to fly for personal or recreational purposes. At TruFlight Academy, our Private Pilot course integrates flight training and ground instruction through a structured syllabus, accelerating your learning and laying the foundation for future advanced ratings and certifications.",

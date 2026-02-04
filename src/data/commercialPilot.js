@@ -23,10 +23,10 @@ const commercialPilot = {
       "Through advanced ground and flight training in our Cabri G2 helicopters, you’ll refine your maneuvers, master complex procedures, and gain the confidence to operate at a higher standard. From precision hovering to smooth-as-butter landings, we’ll help you polish every detail. By the time you finish, you won’t just be flying, you’ll be flying like someone who actually gets paid to do it (because you will).",
     ],
     primaryImage:
-      "/src/assets/truflight-at-dallas-airport-commercial-pilot.jpg",
+      "/src/assets/helicopter-taking-off-side-view-truflight-mckinney-aviation-qualification.jpg",
     primaryAlt: "Commercial pilot student flying a Cabri G2 helicopter",
     secondaryImage:
-      "/src/assets/commercial-pilot-student-at-truflight-academy.jpg",
+      "/src/assets/guimbal-helicopter-flying-trees-truflight-mckinney-commercial-pilot-helicopter.jpg",
     secondaryAlt:
       "Commercial pilot student at TruFlight Academy in Dallas, Texas",
     prerequisites: [

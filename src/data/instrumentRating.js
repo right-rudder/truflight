@@ -17,9 +17,9 @@ const instrumentRating = {
       "Flying in clear blue skies is fun, but real pilots know the weather doesn’t always cooperate. That’s where your Instrument Rating comes in. With this certification, you’ll learn how to fly confidently using only the helicopter’s instruments, giving you the skills to handle low visibility, clouds, and those less-than-perfect days. At TruFlight Academy, we make sure you’re not just checking a box, you’re becoming a sharper, more capable aviator.",
       "Our Instrument program combines in-depth ground instruction with practical training in our modern Cabri G2 helicopters, equipped with advanced avionics. You’ll gain the ability to navigate safely without visual references, fine-tune your precision flying, and prepare to pass the FAA knowledge and checkride exams. Plus, you’ll earn serious bragging rights, after all, anyone can fly on a sunny day, but it takes a true pro to dance through the clouds.",
     ],
-    primaryImage: "/src/assets/truflight-helicopter-interior.webp",
+    primaryImage: "/src/assets/helicopter-interior-truflight-dfw-rotorcraft-training.webp",
     primaryAlt: "Instrument panel of a Cabri G2 helicopter",
-    secondaryImage: "/src/assets/trulflight-cabri-helicopter-in-the-sunset.jpg",
+    secondaryImage: "/src/assets/cabri-helicopter-in-the-sunset-truflight-dallas-helicopter-training.jpg",
     secondaryAlt: "TruFlight Academy Cabri G2 Helicopter in the Sunset",
     prerequisites: [
       "Hold a current private pilot certificate",

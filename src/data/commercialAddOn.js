@@ -24,10 +24,10 @@ const commercialPilot = {
       "With ground and in-flight instruction tailored to your experience, you’ll master everything from helicopter aerodynamics to advanced maneuvers in our modern Cabri G2 aircraft. As long as you hold a valid commercial pilot certificate and a current FAA medical (third-class or higher), you’re ready to start. Think of it as adding a whole new dimension to your aviation skills, because flying sideways and backwards isn’t just cool, it’s commercial.",
     ],
     primaryImage:
-      "/src/assets/commercial-helicopter-flight-training-truflight.jpg",
+      "/src/assets/two-pilots-guimbal-cabri-truflight-highland-park-helicopter-training.jpg",
     primaryAlt:
       "Commercial Helicopter Flight Training at TruFlight Academy in Dallas, Texas",
-    secondaryImage: "/src/assets/commercial-flight-truflight-academy.jpg",
+    secondaryImage: "/src/assets/guimbal-helicopter-flying-truflight-texas-external-load-training.jpg",
     secondaryAlt:
       "Commercial Flight Training at TruFlight Academy in Dallas, Texas",
     prerequisites: [
