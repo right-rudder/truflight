@@ -14,10 +14,10 @@ const cfi = {
     siteKeywords:
       "cfi training Texas, certified flight instructor Dallas, helicopter instructor license, flight instructor certificate Texas, become a CFI Dallas, teach helicopter training Texas, flight instructor school North Texas, rotorcraft CFI training",
     primaryImage:
-      "/src/assets/certified-flight-instructor-truflight-academy.jpg",
+      "/src/assets/guimbal-helicopter-trees-truflight-highland-park-instrument-rating-helicopter.jpg",
     primaryAlt:
       "Certified Flight Instructor (CFI) Training at TruFlight Academy in Dallas, Texas",
-    secondaryImage: "/src/assets/helicopter-flight-instructor-truflight.jpg",
+    secondaryImage: "/src/assets/helicopter-flying-close-front-view-truflight-howe-private-pilot-helicopter.jpg",
     secondaryAlt:
       "TruFlight Academy Helicopter Flight Instructor in Dallas, Texas",
     intro:

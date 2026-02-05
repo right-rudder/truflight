@@ -4,7 +4,7 @@ import { IoIosArrowForward } from "react-icons/io";
 import { FaPhone } from "react-icons/fa";
 import { FaHelicopter } from "react-icons/fa";
 import { FACEBOOK_URL, INSTAGRAM_URL, PHONE_NUMBER } from "../consts.ts";
-import logo from "../assets/truflight-logo.avif";
+import logo from "/src/assets/truflight-logo.webp";
 
 const Navbar = ({ pathname }) => {
   const [openMobile, setOpenMobile] = useState(false);

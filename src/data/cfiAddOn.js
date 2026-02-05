@@ -10,10 +10,10 @@ const cfiHelicopterAddOn = {
     siteKeywords:
       "helicopter school, rotory wing add on, cfi helicopter add-on Texas, helicopter instructor training Dallas, add helicopter to flight instructor certificate, rotorcraft cfi add-on, helicopter cfi course Texas, become helicopter instructor Dallas",
     primaryImage:
-      "/src/assets/certified-flight-instructor-add-on-at-truflight-academy.jpg",
+      "/src/assets/helicopter-flying-field-truflight-southlake-certified-flight-instructor-helicopter.jpg",
     primaryAlt:
       "Certified Flight Instructor (CFI) Add-On Training at TruFlight Academy in Dallas, Texas",
-    secondaryImage: "/src/assets/helicopter-taking-off-at-truflight.jpg",
+    secondaryImage: "/src/assets/helicopter-taking-off-grass-trees-truflight-mckinney-private-pilot-helicopter.jpg",
     secondaryAlt: "Helicopter Taking Off at TruFlight Academy in Dallas, Texas",
     intro:
       "Already a Certified Flight Instructor? Take your teaching career to the next level with our CFI Helicopter Add-On program. This course equips you to instruct in helicopters, expanding your opportunities and helping you build valuable flight time.",

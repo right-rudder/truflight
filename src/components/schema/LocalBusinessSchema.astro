@@ -18,18 +18,9 @@ interface Props {
   image?: ImageMetadata;
 }
 
-const {
-  additionalTypes = [],
-  services = [],
-  reviews = [],
-  image,
-} = Astro.props;
+const { additionalTypes = [], services = [], reviews = [], image } = Astro.props;
 
-const baseTypes = [
-  "LocalBusiness",
-  "EducationalOrganization",
-  "FlightTrainingSchool",
-];
+const baseTypes = ["EducationalOrganization", "Organization", "LocalBusiness"];
 const allTypes = [...baseTypes, ...additionalTypes];
 
 const schema: any = {
@@ -48,9 +39,7 @@ const schema: any = {
   description:
     "TruFlight Academy is a women-owned, veteran-owned helicopter flight school based at Finney Field near Howe and Sherman, Texas. We provide safe and professional rotorcraft training with modern Cabri G2 helicopters, including discovery flights, Private Pilot, Commercial Pilot, Instrument Rating, and rotorcraft add-on training.",
   slogan: "Where Dreams Take Flight",
-  image: image
-    ? `https://www.truflightacademy.com${image.src}`
-    : "https://www.truflightacademy.com/Truflight-OG.png",
+  image: image ? `https://www.truflightacademy.com${image.src}` : "https://www.truflightacademy.com/Truflight-OG.png",
   telephone: "+1-833-722-4359",
   email: "ifly@truflightacademy.com",
   address: {
@@ -62,15 +51,7 @@ const schema: any = {
     addressCountry: "US",
   },
   currenciesAccepted: "USD",
-  paymentAccepted: [
-    "Cash",
-    "Credit Card",
-    "Visa",
-    "Mastercard",
-    "American Express",
-    "Discover",
-    "Check",
-  ],
+  paymentAccepted: ["Cash", "Credit Card", "Visa", "Mastercard", "American Express", "Discover", "Check"],
   geo: {
     "@type": "GeoCoordinates",
     latitude: 33.53421771794466,
@@ -84,10 +65,7 @@ const schema: any = {
       closes: "21:00",
     },
   ],
-  sameAs: [
-    "https://www.instagram.com/truflight.academy/",
-    "https://www.facebook.com/truflightacademy",
-  ],
+  sameAs: ["https://www.instagram.com/truflight.academy/", "https://www.facebook.com/truflightacademy"],
   areaServed: [
     {
       "@type": "Place",
@@ -120,8 +98,7 @@ const schema: any = {
       "@type": "Person",
       name: "Todd Guison",
       jobTitle: "Chief Pilot & Co-Founder",
-      description:
-        "Veteran helicopter pilot with extensive military and civilian experience",
+      description: "Veteran helicopter pilot with extensive military and civilian experience",
     },
     {
       "@type": "Person",
@@ -135,16 +112,14 @@ const schema: any = {
       "@type": "Person",
       name: "Todd Guison",
       jobTitle: "Chief Pilot & Flight Instructor",
-      description:
-        "Certified Flight Instructor with military helicopter experience",
+      description: "Certified Flight Instructor with military helicopter experience",
     },
   ],
   owns: [
     {
       "@type": "Product",
       name: "Guimbal Cabri G2 Helicopter Fleet",
-      description:
-        "Modern training helicopters used for all flight instruction",
+      description: "Modern training helicopters used for all flight instruction",
     },
   ],
   hasCredential: [
@@ -227,8 +202,7 @@ if (reviews.length > 0) {
   }));
 
   // Calculate aggregate rating
-  const avgRating =
-    reviews.reduce((sum, review) => sum + review.rating, 0) / reviews.length;
+  const avgRating = reviews.reduce((sum, review) => sum + review.rating, 0) / reviews.length;
   schema.aggregateRating = {
     "@type": "AggregateRating",
     ratingValue: avgRating.toFixed(1),

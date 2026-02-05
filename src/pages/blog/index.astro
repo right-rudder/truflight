@@ -8,6 +8,7 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "../../consts";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import Header from "../../components/Header.astro";
 import BlogPostCard from "../../components/BlogPostCard.astro";
+import IndexBlogSchema from "../../components/schema/IndexBlogSchema.astro";
 
 const posts = (await getCollection("blog")).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
@@ -15,10 +16,12 @@ const posts = (await getCollection("blog")).sort(
 
 const headerData = {
   title: "Our Blog",
-  primaryImage: "/src/assets/truflight-helicopter-in-the-sunset.jpg",
+  primaryImage: "/src/assets/helicopter-in-the-sunset-truflight-southlake-rotorcraft-training.jpg",
   primaryAlt: "TruFlight Helicopter in the sunset",
 };
 ---
+
+<IndexBlogSchema posts={posts} />
 
 <BaseLayout
   siteTitle="TruFlight Academy Aviation Blog | Helicopter Training Tips & Insights"

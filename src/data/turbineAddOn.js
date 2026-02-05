@@ -15,11 +15,11 @@ const turbineTransition = {
     siteKeywords:
       "turbine transition training Texas, turbine add on training, turbine aircraft training Texas, PT6 training Texas, jet transition training Texas, advanced pilot training Texas, turbine systems training, turbine engine management, high performance aircraft training, flight training Texas",
     primaryImage:
-      "/src/assets/truflight-bell-206-jetranger-helicopter-flight-school-dallas-texas.jpg",
+      "/src/assets/bell-206-jetranger-helicopter-front-view-truflight-dfw-rotorcraft-training.jpg",
     primaryAlt:
       "Pilot receiving turbine transition instruction at TruFlight Academy",
     secondaryImage:
-      "/src/assets/truflight-bell-206-jetranger-helicopter-training-mckinney-texas.jpg",
+      "/src/assets/bell-206-jetranger-helicopter-mountains-truflight-southlake-aviation-qualification.jpg",
     secondaryAlt:
       "Training aircraft on the ramp at TruFlight Academy in Texas",
     intro:

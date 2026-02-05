@@ -1,6 +1,6 @@
 const swiperData = [
   {
-    imagePath: "/src/assets/discovery-flight-at-truflight-academy-dallas.jpg",
+    imagePath: "/src/assets/low-angle-view-runway-helicopter-flying-truflight-dallas-flight-school.jpg",
     imageAlt: "Helicopter flying over Dallas skyline",
     title: "Take Off with the Best Helicopter Flight School in Dallas",
     subtitle:
@@ -9,7 +9,7 @@ const swiperData = [
     btnLink: "/pilot-training/private-pilot",
   },
   {
-    imagePath: "/src/assets/truflight-academy-chief-pilot.avif",
+    imagePath: "/src/assets/chief-pilot-checking-helicopter-truflight-academy-mckinney-flight-school.webp",
     imageAlt: "Chief Pilot Todd Guison",
     title: "Our Chief Pilot at TruFlight Academy",
     subtitle:
@@ -19,7 +19,7 @@ const swiperData = [
   },
   {
     imagePath:
-      "/src/assets/customer-taking-a-discovery-flight-at-truflight-academy.jpg",
+      "/src/assets/customer-taking-a-discovery-flight-truflight-dfw-helicopter-flight-training.jpg",
     imageAlt: "Helicopter at TruFlight Academy",
     title: "Book a Discovery Flight at TruFlight Academy",
     subtitle:
@@ -28,7 +28,7 @@ const swiperData = [
     btnLink: "/discovery-flight",
   },
   {
-    imagePath: "/src/assets/helicopter-controls.avif",
+    imagePath: "/src/assets/helicopter-controls-truflight-dallas-fort-worth-commercial-pilot-helicopter.webp",
     imageAlt: "Helicopter AC Controls",
     title: "First Training Helicopter Cabri G2 with AC to Hit US Soil!",
     subtitle:
@@ -37,16 +37,16 @@ const swiperData = [
     btnLink: "/about/our-fleet",
   },
   {
-    imagePath: "/src/assets/external-load-operations-truflight-dallas.jpg",
+    imagePath: "/src/assets/external-load-operations-dallas-truflight-dallas-fort-worth-helicopter-training.jpg",
     imageAlt: "Helicopter Commercial External Load Operations",
     title: "Professional Commercial External Load Operations",
     subtitle:
       "From precision lifting to utility support, TruFlight Academy provides safe, reliable, and FAA-certified helicopter external load services for commercial clients across Texas.",
     btnText: "Commercial Operations",
-    btnLink: "/about/commercial-external-load-operations",
+    btnLink: "/commercial-external-load-operations",
   },
   {
-    imagePath: "/src/assets/sling-load-training-at-truflight-academy.avif",
+    imagePath: "/src/assets/sling-load-training-at-academy-truflight-dallas-flight-school.webp",
     imageAlt: "Sling Load Training at TruFlight Academy",
     title: "External Load Training for Pilots",
     subtitle:

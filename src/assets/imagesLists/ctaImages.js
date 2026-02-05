@@ -1,59 +1,59 @@
 export const ctaImages = [
   {
-    src: "/src/assets/truflight-at-dallas-airport-commercial-pilot.jpg",
+    src: "/src/assets/helicopter-taking-off-side-view-truflight-mckinney-aviation-qualification.jpg",
     alt: "TruFlight at Dallas airport commercial pilot",
   },
   {
-    src: "/src/assets/truflight-helicopter-dawn-takeoff.jpg",
+    src: "/src/assets/helicopter-dawn-takeoff-truflight-dallas-instrument-rating-helicopter.jpg",
     alt: "TruFlight helicopter dawn takeoff",
   },
   {
-    src: "/src/assets/truflight-helicopter-flying-over-dallas-texas.jpg",
+    src: "/src/assets/helicopter-flying-over-texas-truflight-dfw-flight-training.jpg",
     alt: "TruFlight helicopter flying over Dallas, Texas",
   },
   {
-    src: "/src/assets/trulflight-helicopter-in-dallas-airport.jpg",
+    src: "/src/assets/helicopter-taking-off-airport-truflight-dfw-commercial-pilot-helicopter.jpg",
     alt: "TruFlight helicopter in Dallas airport",
   },
   {
-    src: "/src/assets/truflight-student-finishing-helicopter-program.jpg",
+    src: "/src/assets/student-finishing-helicopter-program-truflight-howe-commercial-pilot-helicopter.jpg",
     alt: "TruFlight student finishing helicopter program",
   },
   {
-    src: "/src/assets/student-pilot-at-truflight-academy-dallas.jpg",
+    src: "/src/assets/helicopter-taking-off-truflight-mckinney-external-load-training.jpg",
     alt: "Student pilot at TruFlight Academy in Dallas",
   },
   {
-    src: "/src/assets/private-pilot-training-at-truflight.jpg",
+    src: "/src/assets/helicopter-landing-side-view-truflight-texas-external-load-training.jpg",
     alt: "Private pilot training at TruFlight",
   },
   {
-    src: "/src/assets/guimbal-cabri-g2-truflight-academy-spec1.jpg",
+    src: "/src/assets/guimbal-cabri-g2-helicopter-tail-rotor-truflight-dfw-flight-school.jpg",
     alt: "Guimbal Cabri G2 specifications at TruFlight Academy",
   },
 
   {
-    src: "/src/assets/customer-taking-a-discovery-flight-at-truflight-academy.jpg",
+    src: "/src/assets/customer-taking-a-discovery-flight-truflight-dfw-helicopter-flight-training.jpg",
     alt: "Customer taking a discovery flight at TruFlight Academy",
   },
   {
-    src: "/src/assets/commercial-pilot-student-at-truflight-academy.jpg",
+    src: "/src/assets/guimbal-helicopter-flying-trees-truflight-mckinney-commercial-pilot-helicopter.jpg",
     alt: "Commercial pilot student at TruFlight Academy",
   },
   {
-    src: "/src/assets/external-load-operations-truflight-dallas.jpg",
+    src: "/src/assets/external-load-operations-dallas-truflight-dallas-fort-worth-helicopter-training.jpg",
     alt: "External load operations at TruFlight in Dallas",
   },
   {
-    src: "/src/assets/external-load-student-truflight-academy.jpg",
+    src: "/src/assets/external-load-truflight-texas-helicopter-flight-school.jpg",
     alt: "External load student at TruFlight Academy",
   },
   {
-    src: "/src/assets/external-load-training-at-truflight-academy.jpg",
+    src: "/src/assets/helicopter-ground-truflight-southlake-extenral-load-training.jpg",
     alt: "External load training at TruFlight Academy",
   },
   {
-    src: "/src/assets/guison-family-inside-helicopter.jpg",
+    src: "/src/assets/guison-family-inside-helicopter-truflight-dallas-fort-worth-pilot-school.jpg",
     alt: "Guison family inside helicopter",
   },
 ];

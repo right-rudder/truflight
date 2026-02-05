@@ -19,9 +19,9 @@ const instrumentRating = {
       "Already instrument-rated in fixed-wing but want to bring that precision into the rotorcraft world? Our Instrument Helicopter Add-On program is designed to give you the specialized knowledge and skills you need to safely and confidently fly helicopters in instrument conditions. All you need is your instrument certificate, a current FAA medical (third-class or higher), and the drive to take your helicopter flying to the next level.",
       "In this course, you’ll dive into helicopter-specific instrument procedures, regulations, and airspace requirements, while sharpening your navigation skills with GPS, VOR, and ILS systems. You’ll also learn advanced weather strategies and decision-making tailored for helicopter operations. By the time you finish, you’ll be equipped to handle the clouds, the gauges, and everything in between, because in a helicopter, precision isn’t just important, it’s essential.",
     ],
-    primaryImage: "/src/assets/truflight-helicopter-dawn-takeoff.jpg",
+    primaryImage: "/src/assets/helicopter-dawn-takeoff-truflight-dallas-instrument-rating-helicopter.jpg",
     primaryAlt: "TruFlight Academy Helicopter Dawn Takeoff at Dallas Airport",
-    secondaryImage: "/src/assets/cabri-panel-truflight.jpg",
+    secondaryImage: "/src/assets/cabri-helicopter-panel-truflight-highland-park-external-load-training.jpg",
     secondaryAlt: "Cabri G2 helicopter instrument panel at TruFlight Academy",
     prerequisites: [
       "NO FAA WRITTEN exam required",

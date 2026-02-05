@@ -1,0 +1,87 @@
+---
+const { posts } = Astro.props;
+
+const publisher = {
+  "@type": "Organization",
+  "@id": `https://www.truflightacademy.com`,
+  name: "TruFlight Academy",
+  url: "https://www.truflightacademy.com",
+  logo: {
+    "@type": "ImageObject",
+    url: "https://www.truflightacademy.com/truflight-logo.png",
+  },
+};
+
+function getTimeRequired(text: string) {
+  const wordCount = text.split(/\s+/).length;
+  return Math.ceil(wordCount / 200);
+}
+
+function getArticleBodySnippet(text: string) {
+  const snippet = text.substring(0, 300).replace(/<[^>]*>/g, "");
+  return snippet + (text.length > 300 ? "..." : "");
+}
+
+const schema: any = {
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "@id": `https://www.truflightacademy.com/blog/`,
+  name: "TruFlight Aviation Blog",
+  url: `https://www.truflightacademy.com/blog/`,
+  description: `Aviation blog with flight training tips, pilot education resources, and industry news from TruFlight Aviation. Expert insights for aspiring and experienced pilots.`,
+  publisher: publisher,
+  inLanguage: "en-US",
+  copyrightHolder: {
+    "@type": "Organization",
+    name: "TruFlight Academy",
+  },
+  blogPost: posts.slice(0, 10).map((blog: any) => ({
+    "@type": "BlogPosting",
+    headline: blog.data.title,
+    description: blog.data.description,
+    url: `https://www.truflightacademy.com/blog/${blog.id}`,
+    datePublished: blog.data.pubDate.toISOString(),
+    keywords: ["helicopter training", "flight school", "aviation", "Dallas Texas", "pilot training"],
+    timeRequired: `PT${getTimeRequired(blog.rendered.html)}M`,
+    articleBody: getArticleBodySnippet(blog.rendered.html),
+    author: {
+      "@type": "Person",
+      name: "TruFlight Academy",
+      url: "https://www.truflightacademy.com/about/our-story",
+    },
+    publisher: publisher,
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `https://www.truflightacademy.com/blog/${blog.id}`,
+    },
+    articleSection: "Aviation Training",
+    about: [
+      {
+        "@type": "Thing",
+        name: "Helicopter Training",
+      },
+      {
+        "@type": "Thing",
+        name: "Flight School",
+      },
+      {
+        "@type": "Thing",
+        name: "Aviation Education",
+      },
+    ],
+    inLanguage: "en-US",
+    copyrightHolder: {
+      "@type": "Organization",
+      name: publisher.name,
+    },
+    copyrightYear: blog.data.pubDate.getFullYear(),
+    isPartOf: {
+      "@type": "Blog",
+      name: "TruFlight Academy Blog",
+      url: "https://www.truflightacademy.com/blog",
+    },
+  })),
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(schema, null, 2)} />

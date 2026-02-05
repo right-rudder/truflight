@@ -2,7 +2,7 @@
 title: "Aviation Safety Standards for Helicopter Training: What Pilots Should Know in 2026"
 description: "Learn how aviation safety standards shape helicopter pilot training in Texas. This guide explains FAA requirements, modern safety practices, and how TruFlight Academy keeps students safe from day one."
 pubDate: "Jan 29, 2026"
-heroImage: "/src/assets/cabri-panel-truflight.jpg"
+heroImage: "/src/assets/cabri-helicopter-panel-truflight-highland-park-external-load-training.jpg"
 ---
 
 ## Aviation Safety Standards in Helicopter Training

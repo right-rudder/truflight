@@ -2,7 +2,7 @@
 title: "Fixed-Wing to Helicopter Add-On Rating: What You Need to Know"
 description: "Learn how fixed-wing pilots can easily earn a helicopter add-on rating at TruFlight Academy in Texas without taking the FAA written exam, saving time and training hours."
 pubDate: "Sep 18 2025"
-heroImage: "/src/assets/guimbal-cabri-g2-truflight-academy.jpg"
+heroImage: "/src/assets/guimbal-cabri-g2-helicopter-open-doors-truflight-dfw-flight-school.jpg"
 ---
 
 ## Transitioning from Fixed-Wing to Helicopter

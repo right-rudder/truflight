@@ -2,7 +2,7 @@
 title: "What to Expect on Your First Helicopter Flight"
 description: "Learn what happens during your first helicopter flight lesson in Texas, from preflight checks to hands-on flying with an instructor at TruFlight Academy."
 pubDate: "Feb 18, 2026"
-heroImage: "/src/assets/truflight-student-finishing-helicopter-program.jpg"
+heroImage: "/src/assets/student-finishing-helicopter-program-truflight-howe-commercial-pilot-helicopter.jpg"
 metaDescription: "Start helicopter pilot training Texas with a Discovery Flight at TruFlight Academy in North Texas. Learn what your first helicopter lesson includes."
 ---
 
@@ -60,7 +60,7 @@ You may practice:
 
 Instructors guide every movement, and they can take control instantly if needed. Safety always remains the top priority.
 
-![Student greeting cfi at TruFlight Academy in north texas](/blog/truflight-student-finishing-helicopter-program.jpg)
+![Student greeting cfi at TruFlight Academy in north texas](/blog/student-finishing-helicopter-program-truflight-highland-park-aviation-qualification.jpg)
 
 This first experience gives you a realistic preview of North Texas helicopter training without pressure or expectations.
 
@@ -152,7 +152,7 @@ To make your first flight comfortable, students should:
 
 Most importantly, arrive ready to learn and enjoy the experience.
 
-![Student having Fun at Truflight Academy, North Texas](/blog/discovery-flight-fun-at-truflight-academy.jpg)
+![Student having Fun at Truflight Academy, North Texas](/blog/excited-customer-discovery-flight-truflight-highland-park.jpg)
 
 ---
 

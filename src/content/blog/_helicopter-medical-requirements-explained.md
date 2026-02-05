@@ -2,7 +2,7 @@
 title: "Helicopter Medical Requirements Explained"
 description: "Understand FAA medical requirements for helicopter pilots, what exams involve, and how medical certification fits into flight training at TruFlight Academy."
 pubDate: "Mar 19, 2026"
-heroImage: "/src/assets/discovery-flight-at-truflight-academy-dallas.jpg"
+heroImage: "/src/assets/low-angle-view-runway-helicopter-flying-truflight-dallas-flight-school.jpg"
 ---
 
 ## Medical Requirements for Helicopter Pilots
@@ -73,7 +73,7 @@ It typically includes:
 
 The goal is to confirm safe flying ability, not to disqualify healthy applicants.
 
-![Helicopter Guimbal Cabri with USA Flag at Finney Field Airport in North Texas](/blog/guimbal-cabri-g2-truflight-academy.jpg)
+![Helicopter Guimbal Cabri with USA Flag at Finney Field Airport in North Texas](/blog/guimbal-cabri-g2-academy-truflight-mckinney-pilot-school.jpg)
 
 Students training in Cabri G2 helicopter training programs often schedule exams early so they can progress without interruption.
 
@@ -188,7 +188,7 @@ Many students leave their Discovery Flight excited and confident about next step
 You can schedule your experience here:  
 [book a helicopter Discovery Flight in North Texas](/discovery-flight/)
 
-![Family inside helicopter at Finney Field Airport in North Texas](/blog/guison-family-inside-helicopter.jpg)
+![Family inside helicopter at Finney Field Airport in North Texas](/blog/guison-family-inside-helicopter-truflight-mckinney-pilot-school.jpg)
 
 ---
 
