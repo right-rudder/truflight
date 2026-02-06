@@ -16,7 +16,7 @@ const cfi = {
     primaryImage:
       "/src/assets/guimbal-helicopter-trees-truflight-highland-park-instrument-rating-helicopter.jpg",
     primaryAlt:
-      "Certified Flight Instructor (CFI) Training at TruFlight Academy in Dallas, Texas",
+      "Helicopter flying with trees in the background",
     secondaryImage: "/src/assets/helicopter-flying-close-front-view-truflight-howe-private-pilot-helicopter.jpg",
     secondaryAlt:
       "TruFlight Academy Helicopter Flight Instructor in Dallas, Texas",

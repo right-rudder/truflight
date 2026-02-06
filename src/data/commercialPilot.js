@@ -28,7 +28,7 @@ const commercialPilot = {
     secondaryImage:
       "/src/assets/guimbal-helicopter-flying-trees-truflight-mckinney-commercial-pilot-helicopter.jpg",
     secondaryAlt:
-      "Commercial pilot student at TruFlight Academy in Dallas, Texas",
+      "Helicopter taking off with one of the pilot giving a thumbs up and trees in the background",
     prerequisites: [
       "Hold a current private pilot certificate",
       "Be able to read, speak, write, and understand the English language.",

@@ -17,7 +17,7 @@ const turbineTransition = {
     primaryImage:
       "/src/assets/bell-206-jetranger-helicopter-front-view-truflight-dfw-rotorcraft-training.jpg",
     primaryAlt:
-      "Pilot receiving turbine transition instruction at TruFlight Academy",
+      "Bell 206b JetRanger N4237M helicopter front view",
     secondaryImage:
       "/src/assets/bell-206-jetranger-helicopter-mountains-truflight-southlake-aviation-qualification.jpg",
     secondaryAlt:

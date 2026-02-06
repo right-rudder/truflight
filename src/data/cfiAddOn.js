@@ -12,7 +12,7 @@ const cfiHelicopterAddOn = {
     primaryImage:
       "/src/assets/helicopter-flying-field-truflight-southlake-certified-flight-instructor-helicopter.jpg",
     primaryAlt:
-      "Certified Flight Instructor (CFI) Add-On Training at TruFlight Academy in Dallas, Texas",
+      "Front view from the ground of helicopter flying over a field",
     secondaryImage: "/src/assets/helicopter-taking-off-grass-trees-truflight-mckinney-private-pilot-helicopter.jpg",
     secondaryAlt: "Helicopter Taking Off at TruFlight Academy in Dallas, Texas",
     intro:
