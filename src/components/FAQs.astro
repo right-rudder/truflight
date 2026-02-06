@@ -1,0 +1,96 @@
+---
+const { faqs, showLinkToFAQsPage = true } = Astro.props;
+---
+
+<section class="bg-primary-100/10">
+  <div class="mx-auto max-w-xl space-y-4 px-4 py-24 lg:max-w-7xl lg:gap-10 lg:px-12">
+    <p class="mx-auto max-w-2xl text-center text-primary-500 text-lg font-bold mb-2">
+      Clear any doubts you might have
+    </p>
+  
+    <h2 class="font-display mx-auto mb-12 max-w-2xl text-center text-4xl leading-tight font-bold lg:text-5xl">
+      Frequently Asked Questions
+    </h2>
+
+    {
+      faqs.map((faq: any, index: number) => (
+        <div class="faq-container group rounded-lg border border-gray-200 bg-white">
+          <div class="faq-question flex cursor-pointer items-start justify-between p-4 transition-colors">
+            <div class="flex flex-1 flex-wrap items-center gap-4 pr-4">
+              <h3 class="group-hover:text-primary-500 mb-1 text-lg font-bold transition duration-500">
+                {faq.question}
+              </h3>
+            </div>
+            <svg
+              class="group-hover:text-primary-500 size-5 shrink-0 transition-all duration-500 group-open:rotate-180"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </div>
+          <div class="faq-answer relative max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+            <div class="absolute inset-x-0 top-0 h-px bg-gray-200" />
+            <div class="text-accent-400 m-4 max-w-none text-lg leading-relaxed">
+              {faq.answer}
+            </div>
+          </div>
+        </div>
+      ))
+    }
+
+    {
+      faqs.length > 0 && (
+        <div class="mt-12 flex flex-col items-center">
+          <p class="mb-4 text-center text-2xl">Got Any More Questions?</p>
+          <div class="flex flex-wrap items-center justify-center gap-4">
+            <a href="/contact-us" class="btn-primary">
+              Contact Us
+            </a>
+            {/* TODO : Finish {showLinkToFAQsPage && (
+              <a href="/faqs" class="btn-secondary">
+                More FAQs
+              </a>
+            )} */}
+          </div>
+        </div>
+      )
+    }
+
+    {
+      faqs.length === 0 && (
+        <div class="rounded-lg border border-gray-200 bg-white py-12 text-center">
+          <svg class="text-primary-500 mx-auto mb-8 size-24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+            />
+          </svg>
+          <h3 class="mb-4 text-center text-5xl font-bold">No FAQs found</h3>
+        </div>
+      )
+    }
+  </div>
+</section>
+
+<script type="text/javascript">
+  document.querySelectorAll(".faq-container").forEach((container) => {
+    const question = container.querySelector(".faq-question");
+    const answer = container.querySelector(".faq-answer");
+
+    question.addEventListener("click", (event) => {
+      event.preventDefault();
+
+      if (answer.style.maxHeight) {
+        answer.style.maxHeight = null;
+        container.removeAttribute("open");
+      } else {
+        container.setAttribute("open", true);
+        answer.style.maxHeight = `${answer.scrollHeight}px`;
+      }
+    });
+  });
+</script>
