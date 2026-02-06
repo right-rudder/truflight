@@ -11,14 +11,14 @@ import ElfSightInstagram from "../../components/widgets/ElfSightInstagram.astro"
 import FAQs from "../../components/FAQs.astro";
 
 export async function getStaticPaths() {
-  const location = await getCollection("flight-training");
+  const location = await getCollection("helicopter-training");
   return location.map((location) => ({
     params: { slug: location.id },
     props: location,
   }));
 }
 
-type Props = CollectionEntry<"flight-training">;
+type Props = CollectionEntry<"helicopter-training">;
 
 const location = Astro.props;
 ---

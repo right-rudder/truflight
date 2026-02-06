@@ -15,9 +15,9 @@ const blog = defineCollection({
 });
 
 const locationsCollection = defineCollection({
-  // Load Markdown and MDX files in the `src/content/flight-training/` directory.
+  // Load Markdown and MDX files in the `src/content/helicopter-training/` directory.
   loader: glob({
-    base: "./src/content/flight-training",
+    base: "./src/content/helicopter-training",
     pattern: "**/!(_)*.{md,mdx}",
   }),
   // Type-check frontmatter using a schema
@@ -113,4 +113,4 @@ const locationsCollection = defineCollection({
     }),
 });
 
-export const collections = { blog: blog, "flight-training": locationsCollection };
+export const collections = { blog: blog, "helicopter-training": locationsCollection };

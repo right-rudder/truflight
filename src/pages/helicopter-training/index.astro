@@ -6,9 +6,9 @@ import LocationFinalCTA from "../../components/locations/LocationFinalCTA.astro"
 import LocationCard from "../../components/locations/LocationCard.astro";
 import type { CollectionEntry } from "astro:content";
 
-type Location = CollectionEntry<"flight-training">;
+type Location = CollectionEntry<"helicopter-training">;
 
-const locations = (await getCollection("flight-training")).sort(
+const locations = (await getCollection("helicopter-training")).sort(
   (a: Location, b: Location) => a.data.order - b.data.order,
 );
 

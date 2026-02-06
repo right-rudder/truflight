@@ -3,7 +3,7 @@ import type { CollectionEntry } from "astro:content";
 import { FaLocationDot } from "react-icons/fa6";
 import { FaLongArrowAltRight } from "react-icons/fa";
 
-type Location = CollectionEntry<"flight-training">;
+type Location = CollectionEntry<"helicopter-training">;
 
 interface Props {
   location: Location;
@@ -12,7 +12,7 @@ interface Props {
 const { location } = Astro.props;
 ---
 
-<a href=`/flight-training/${location.id}` class="group flex gap-4 flex-col justify-between cursor-pointer p-6 bg-white rounded-md shadow-lg transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl">
+<a href=`/helicopter-training/${location.id}` class="group flex gap-4 flex-col justify-between cursor-pointer p-6 bg-white rounded-md shadow-lg transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl">
   <div>
     <h3 class="font-display mb-5 leading-tight font-bold transition-colors duration-300 ease-in-out text-2xl flex gap-2 items-center group-hover:text-primary-500">
       <FaLocationDot className="size-5 shrink-0" />
