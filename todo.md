@@ -318,7 +318,7 @@ Phase 3: Authority & Outrank Competition (Weeks 7–12)
   - [ ] Keywords
   - [ ] Schemas
   - [ ] Titles
-  - [ ] Locations pages
+  - [X] Locations pages
   - [ ] FAQs (already has schema)
   - [ ] Low amount of content
   - [ ] Robots and sitemap
