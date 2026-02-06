@@ -2,6 +2,7 @@
 city: "Little Elm"
 stateShort: "TX"
 stateLong: "Texas"
+order: 6
 
 meta:
   description: "Helicopter flight training, discovery flights, and helicopter tours serving Little Elm, Texas. TruFlight Academy offers professional instruction and helicopter experiences for North Dallas lake communities."

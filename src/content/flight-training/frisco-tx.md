@@ -2,6 +2,7 @@
 city: "Frisco"
 stateShort: "TX"
 stateLong: "Texas"
+order: 3
 
 meta:
   description: "Helicopter flight training for Frisco and North Dallas students. TruFlight Academy provides structured helicopter instruction with flexible scheduling and real world focus."

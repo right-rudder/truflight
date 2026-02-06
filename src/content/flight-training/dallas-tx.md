@@ -2,6 +2,7 @@
 city: "Dallas"
 stateShort: "TX"
 stateLong: "Texas"
+order: 1
 
 meta:
   description: "Helicopter flight training near Dallas, Texas. TruFlight Academy offers professional helicopter training and real world operational courses just north of the DFW metroplex."

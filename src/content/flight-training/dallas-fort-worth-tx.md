@@ -2,6 +2,7 @@
 city: "Dallas Fort Worth"
 stateShort: "TX"
 stateLong: "Texas"
+order: 0
 
 meta:
   description: "Helicopter flight training, discovery flights, and helicopter tours serving the Dallas Fort Worth region. TruFlight Academy offers professional instruction and helicopter experiences across North Texas."

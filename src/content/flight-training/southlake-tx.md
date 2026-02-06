@@ -2,6 +2,7 @@
 city: "Southlake"
 stateShort: "TX"
 stateLong: "Texas"
+order: 8
 
 meta:
   description: "Helicopter flight training, discovery flights, and helicopter tours for Southlake, Texas. TruFlight Academy offers professional helicopter instruction and memorable helicopter experiences for North Texas families."

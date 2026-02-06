@@ -26,11 +26,12 @@ const locationsCollection = defineCollection({
       city: z.string(),
       stateShort: z.string(),
       stateLong: z.string(),
+      order: z.number().default(0),
 
       meta: z.object({
         description: z.string(),
         keywords: z.string(),
-      }).optional(),
+      }),
 
       header: z.object({
         title: z.string(),
@@ -43,7 +44,7 @@ const locationsCollection = defineCollection({
           href: z.string(),
           text: z.string(),
         })
-      }).optional(),
+      }),
 
       whyUs: z.object({
         title: z.string(),
@@ -53,7 +54,7 @@ const locationsCollection = defineCollection({
           description: z.string(),
           link: z.string().optional(),
         })),
-      }).optional(),
+      }),
 
       aboutUs: z.object({
         upperHeader: z.string(),
@@ -69,7 +70,7 @@ const locationsCollection = defineCollection({
           src: z.string(),
           alt: z.string(),
         }),
-      }).optional(),
+      }),
 
       weComeToYou: z.object({
         upperHeader: z.string(),
@@ -83,19 +84,19 @@ const locationsCollection = defineCollection({
           src: z.string(),
           alt: z.string(),
         }),
-      }).optional(),
+      }),
 
       googleMaps: z.object({
         upperHeader: z.string(),
         title: z.string(),
         description: z.string(),
         mapsLink: z.string(),
-      }).optional(),
+      }),
 
       faqs: z.array(z.object({
         question: z.string(),
         answer: z.string(),
-      })).optional(),
+      })),
 
       finalCTA: z.object({
         title: z.string(),
@@ -108,7 +109,7 @@ const locationsCollection = defineCollection({
           src: z.string(),
           alt: z.string(),
         }),
-      }).optional(),
+      }),
     }),
 });
 

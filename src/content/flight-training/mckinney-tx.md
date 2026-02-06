@@ -2,6 +2,7 @@
 city: "McKinney"
 stateShort: "TX"
 stateLong: "Texas"
+order: 4
 
 meta:
   description: "Helicopter flight training for McKinney and Collin County students. TruFlight Academy offers professional helicopter instruction with a focus on skill development and steady progression."

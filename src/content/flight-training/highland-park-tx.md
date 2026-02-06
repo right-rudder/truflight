@@ -2,6 +2,7 @@
 city: "Highland Park"
 stateShort: "TX"
 stateLong: "Texas"
+order: 7
 
 meta:
   description: "Helicopter flight training, discovery flights, and helicopter tours for Highland Park, Texas. TruFlight Academy offers personalized helicopter experiences and professional instruction for North Dallas."

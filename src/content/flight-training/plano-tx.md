@@ -2,6 +2,7 @@
 city: "Plano"
 stateShort: "TX"
 stateLong: "Texas"
+order: 2
 
 meta:
   description: "Helicopter flight training for Plano, Texas and central North Dallas students. TruFlight Academy offers professional helicopter instruction with structured programs and flexible scheduling."

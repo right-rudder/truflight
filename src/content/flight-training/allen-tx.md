@@ -2,6 +2,7 @@
 city: "Allen"
 stateShort: "TX"
 stateLong: "Texas"
+order: 5
 
 meta:
   description: "Helicopter flight training, discovery flights, and helicopter tours for Allen, Texas. TruFlight Academy offers hands on helicopter experiences and professional pilot training for North Dallas."
