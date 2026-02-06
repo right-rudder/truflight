@@ -1,0 +1,33 @@
+---
+import ImageComp from "../ImageComp.astro";
+
+const { data } = Astro.props;
+---
+
+<section
+  class="relative mx-4 mt-20 flex min-h-[30rem] flex-col items-center justify-center overflow-hidden rounded-md p-4 text-white sm:p-6 md:mx-8 lg:mx-12"
+>
+  <div class=`absolute inset-0 -z-10`>
+    <ImageComp src={data.image.src} alt={data.image.alt} classes="object-cover size-full" />
+    <div class="from-accent-900/60 to-accent-900/90 absolute inset-0 bg-radial"></div>
+  </div>
+
+  <h2 class="text-primary-300 text-sm font-bold uppercase mb-6 text-center sm:text-lg lg:text-xl">
+    {data.title}
+  </h2>
+
+  <p
+    class="font-display max-w-4xl text-center text-xl text-pretty mb-12 sm:text-2xl lg:text-4xl"
+    set:html={data.description}
+  />
+
+  <div class="flex flex-wrap items-center justify-center gap-4">
+    {
+      data.ctas.map((cta: any, index: number) => (
+        <a href={cta.url} class={`${index > 0 ? "btn-secondary-white md:text-base!" : "btn-primary shadow-none! text-sm! md:text-base!"}`}>
+          {cta.text}
+        </a>
+      ))
+    }
+  </div>
+</section>
