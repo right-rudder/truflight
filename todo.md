@@ -5,12 +5,15 @@
 - SEO revisions
   - [X] Broken links
   - [X] H1
+  - [] Images
+    - [X] Switch .avif to .webp
+    - [X] Rename (add keywords)
+    - [] Alt text
   - [] Keywords
   - [] Schemas
   - [] Titles
   - [] Locations pages
   - [] FAQs (already has schema)
-  - [] Alt text
   - [] Low amount of content
   - [] Robots and sitemap
   - Resubmit to Search Console after building new pages
@@ -30,13 +33,32 @@
 - Today
   - GMB updates
   - [X] Rename photos (added keywords)
-  - updated keyword heavy description
-  - add more categories and services
-  - update product descriptions with keyword heavy text
-  - Update all image names
+  - [X] Updated keyword heavy description
+  - [X] Add more categories 
+  - [X] services
+  - Update product descriptions with keyword heavy text
 - Wednesday - add location pages, additional blog posts (the four recommended by AI)
 - Thursday - update meta descriptions, titles, headlines, schema
 - Friday - check bright local.. seems that there's inconsistent NAP pulling up. Reaudit to make sure we're hitting all the marks
+
+# Search console keywords
+- helicopter certified flight instructor training
+- trueflight
+- helicopter pilot school
+- external load helicopter training
+
+- helicopter pilot flight training classes texas
+- helicopter flight schools in texas
+- helicopter pilot training texas
+
+- dallas pilot instrument training
+- dallas flight instructor training
+- dallas instrument rating training
+- dallas private pilot training
+- dallas flight school
+- private pilot license dallas
+- helicopter training dallas
+- pilot training dallas
 
 ## Notes
 Number of "unique" pages: 22
@@ -44,9 +66,76 @@ Number of good pages for keywords: 15
 Number of "unique" pages with keywords: 8
 Add keywords to the 7 goog pages with missing keywords
 
-# DONE
+# Locations
 
+## Add? Low rating based on Search Atlas
+- New Hope
+- Princeton
+- Lowry Crossing
+- Fairview
+- Little Elm
+- Savannah
+- Verona
+- Melissa
+- Roland
+- Prosper
+- Aubrey
+- Krugerville
+- Highland Park
 
+## Add? High population
+Irving
+Grand Prairie
+Mesquite
+Denton
+Carrollton
+Richardson
+Lewisville
+Flower Mound
+Rowlett
+Euless
+Grapevine
+Bedford
+Rockwall
+Haltom City
+Keller
+The Colony
+Coppell
+
+## Current service area
+
+Melissa, TX, USA
+Prosper, TX, USA
+Princeton, TX, USA
+Anna, TX 75409, USA
+Van Alstyne, TX, USA
+Fairview, TX 75069, USA
+Texas, USA
+Howe, TX, USA
+Allen, TX, USA
+Plano, TX, USA
+Wylie, TX, USA
+Dallas, TX, USA
+Frisco, TX, USA
+Garland, TX, USA
+Sherman, TX, USA
+McKinney, TX, USA
+Fort Worth, TX, USA
+Southlake, TX 76092, USA
+North Richland Hills, TX, USA
+
+# Location pages
+
+## Structure
+
+- Header
+- Why Us
+- Instagram feed
+- About Us
+- We come to you
+- Google Maps
+- FAQ
+- Final CTA
 
 # AI Summary
 
@@ -210,3 +299,26 @@ Phase 3: Authority & Outrank Competition (Weeks 7–12)
 2. Start with GBP + citations + local landing pages (fastest ROI)
 3. Set monthly check-ins to track rankings, traffic, leads, reviews
 4. Double down on the Cabri G2 USP in every local & organic asset
+
+
+
+
+### PR
+
+- [ ] Add Search Console keywords to the copy/keywords of the landing page
+- [ ] Create a component in the landing for their helicopter tours (focus the keywords on Dallas and the metropolitan area)
+- [ ] Create a blog post focusing on helicopter tours
+- [ ] SEO revisions
+  - [X] Broken links
+  - [X] H1
+  - [ ] Images
+    - [X] Switch .avif to .webp
+    - [X] Rename (add keywords)
+    - [ ] Alt text
+  - [ ] Keywords
+  - [ ] Schemas
+  - [ ] Titles
+  - [ ] Locations pages
+  - [ ] FAQs (already has schema)
+  - [ ] Low amount of content
+  - [ ] Robots and sitemap
