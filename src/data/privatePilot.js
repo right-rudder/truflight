@@ -15,9 +15,9 @@ const privatePilot = {
       "private pilot license Texas, PPL training Dallas, student pilot course Dallas, beginner flight training Texas, recreational pilot license, private pilot certification Texas, learn to fly private pilot, flight training for beginners Texas, private pilot ground school, Texas private pilot course, flight training Dallas, pilot school Salt Lake City, aviation training Northern Texas, discovery flight Texas",
     primaryImage: "/src/assets/helicopter-landing-side-view-truflight-texas-external-load-training.jpg",
     primaryAlt:
-      "Student of the Private Pilot Flight Training Program at TruFlight Academy",
+      "Helicopter landing seen from the right",
     secondaryImage: "/src/assets/helicopter-taking-off-airport-truflight-dfw-commercial-pilot-helicopter.jpg",
-    secondaryAlt: "TruFlight Academy Helicopter at Dallas Airport",
+    secondaryAlt: "Front view of helicopter taking off over runway",
     intro:
       "The Private Pilot License (PPL) is your first step toward professional training and qualifies you to fly for personal or recreational purposes. At TruFlight Academy, our Private Pilot course integrates flight training and ground instruction through a structured syllabus, accelerating your learning and laying the foundation for future advanced ratings and certifications.",
     description: [

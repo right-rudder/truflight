@@ -1,0 +1,40 @@
+---
+import ImageComp from "../ImageComp.astro";
+import { FaArrowRight } from "react-icons/fa6";
+
+const { data } = Astro.props;
+---
+
+<section id="weComeToYou" class="scroll-mt-20">
+  <div class="mx-auto overflow-hidden max-w-2xl px-4 py-24 lg:max-w-7xl lg:px-12">
+    <div class="overflow-hidden flex flex-col-reverse shadow-lg rounded-lg lg:flex-row">
+      <div class="bg-gray-900 flex-1 text-white">
+        <div class="flex flex-col justify-between p-6 lg:min-h-[456px] lg:p-12">
+          <div>
+            <strong class="text-medium-blue text-primary-500 text-lg font-bold">{data.upperHeader}</strong>
+            
+            <h2 class="text-dark-blue font-display mb-6 text-3xl leading-tight font-bold lg:text-4xl">
+              {data.title}
+            </h2>
+  
+            <p class="text-accent-50 text-sm font-medium tracking-wider mb-6 lg:text-base/6" set:html={data.description} />
+          </div>
+  
+          <div class="flex flex-col gap-5 sm:flex-row">
+            <a href={data.cta.url} class="btn-secondary hover:border-primary-500! border-white! text-white!">
+              {data.cta.text}
+              <FaArrowRight />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="flex-1">
+        <ImageComp
+          src={data.image.src}
+          alt={data.image.alt}
+          classes="object-cover size-full"
+        />
+      </div>
+    </div>
+  </div>
+</section>

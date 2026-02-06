@@ -29,7 +29,7 @@ const commercialPilot = {
       "Commercial Helicopter Flight Training at TruFlight Academy in Dallas, Texas",
     secondaryImage: "/src/assets/guimbal-helicopter-flying-truflight-texas-external-load-training.jpg",
     secondaryAlt:
-      "Commercial Flight Training at TruFlight Academy in Dallas, Texas",
+      "Helicopter flying over a grass field seen from the back",
     prerequisites: [
       "NO FAA WRITTEN exam required",
       "Already hold a Commercial (or higher) Pilot Certificate",

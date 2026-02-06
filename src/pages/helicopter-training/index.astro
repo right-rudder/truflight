@@ -1,0 +1,88 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/Header.astro";
+import LocationFinalCTA from "../../components/locations/LocationFinalCTA.astro";
+import LocationCard from "../../components/locations/LocationCard.astro";
+import type { CollectionEntry } from "astro:content";
+
+type Location = CollectionEntry<"helicopter-training">;
+
+const locations = (await getCollection("helicopter-training")).sort(
+  (a: Location, b: Location) => a.data.order - b.data.order,
+);
+
+let gridClasses = "grid-cols-1";
+if (locations.length % 2 === 0) {
+  gridClasses += " md:grid-cols-2";
+} else if (locations.length % 3 === 0) {
+  gridClasses += " lg:grid-cols-3";
+} else if (locations.length % 4 === 0) {
+  gridClasses += " xl:grid-cols-4";
+}
+
+const data = {
+  metaProps: {
+    siteTitle: `Flight Training Locations | TruFlight Academy`,
+    siteDescription: `Explore the professional helicopter pilot training locations served by TruFlight Academy. Between helicopter flight training programs, discovery flights, and helicopter tours, we help through each point of your pilot journey.`,
+  },
+  header: {
+    title: "Helicopter Flight Training across North Texas",
+    subtitle:
+      "From helicopter flight training programs, discovery flights, and helicopter tours, TruFlight Academy offers what you need to make your dream of becoming a pilot come true.",
+    primaryImage: "/src/assets/helicopter-in-the-sunset-truflight-southlake-rotorcraft-training.jpg",
+    primaryAlt: "TruFlight helicopter in the sunset",
+  },
+  locations: {
+    upperHeader: "Where We Serve",
+    title: "Find Your Location",
+    description:
+      "Choose your city to learn more about helicopter flight training, discovery flights, and tours available to your area. If you do not see your city listed, contact our team and we will help you find the best option.",
+    locations: locations,
+  },
+  finalCTA: {
+    title: "Ready to Experience Helicopter Flight?",
+    description: `Whether you want to experience helicopter flying for the first time or learn more about training options, TruFlight Academy makes it easy to get started. Book a discovery flight or contact our team to find the right next step.`,
+    ctas: [
+      {
+        url: "/discovery-flight",
+        text: "Book a Discovery Flight",
+      },
+      {
+        url: "/contact-us",
+        text: "Start Training Today",
+      },
+    ],
+    image: {
+      src: "/src/assets/stock/dallas-texas-margaret-hunt-hill-bridge-truflight-academy-helicopter-flight-school.webp",
+      alt: "Margaret Hunt Hill bridge in Dallas, Texas",
+    },
+  },
+};
+---
+
+<BaseLayout {...data.metaProps}>
+  <Header slot="hero" data={data.header} />
+
+  <section class="bg-primary-100/10">
+    <div class="mx-auto max-w-2xl px-4 py-24 lg:max-w-7xl lg:gap-10 lg:px-12">
+      <h2 class="mx-auto mb-6 max-w-2xl text-center">
+        <strong class="text-primary-500 text-lg font-bold">{data.locations.upperHeader}</strong>
+        <br />
+        <span class="font-display text-4xl leading-tight font-bold lg:text-5xl">
+          {data.locations.title}
+        </span>
+      </h2>
+
+      <p class="text-accent-500 mx-auto mb-16 max-w-3xl text-center text-xl tracking-wider">
+        {data.locations.description}
+      </p>
+
+      <div class=`grid gap-6 ${gridClasses}`>
+        {data.locations.locations.map((location: any) => <LocationCard location={location} />)}
+      </div>
+    </div>
+  </section>
+
+  <LocationFinalCTA data={data.finalCTA} />
+</BaseLayout>

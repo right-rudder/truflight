@@ -13,7 +13,7 @@ export const ctaImages = [
   },
   {
     src: "/src/assets/helicopter-taking-off-airport-truflight-dfw-commercial-pilot-helicopter.jpg",
-    alt: "TruFlight helicopter in Dallas airport",
+    alt: "Front view of helicopter taking off over runway",
   },
   {
     src: "/src/assets/student-finishing-helicopter-program-truflight-howe-commercial-pilot-helicopter.jpg",
@@ -25,7 +25,7 @@ export const ctaImages = [
   },
   {
     src: "/src/assets/helicopter-landing-side-view-truflight-texas-external-load-training.jpg",
-    alt: "Private pilot training at TruFlight",
+    alt: "Helicopter landing seen from the right",
   },
   {
     src: "/src/assets/guimbal-cabri-g2-helicopter-tail-rotor-truflight-dfw-flight-school.jpg",
@@ -38,7 +38,7 @@ export const ctaImages = [
   },
   {
     src: "/src/assets/guimbal-helicopter-flying-trees-truflight-mckinney-commercial-pilot-helicopter.jpg",
-    alt: "Commercial pilot student at TruFlight Academy",
+    alt: "Helicopter taking off with one of the pilot giving a thumbs up and trees in the background",
   },
   {
     src: "/src/assets/external-load-operations-dallas-truflight-dallas-fort-worth-helicopter-training.jpg",

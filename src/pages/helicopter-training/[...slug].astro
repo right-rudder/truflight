@@ -1,0 +1,46 @@
+---
+import { type CollectionEntry, getCollection } from "astro:content";
+import Header from "../../components/Header.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import GoogleMaps from "../../components/widgets/GoogleMaps.astro";
+import LocationWhyUs from "../../components/locations/LocationWhyUs.astro";
+import LocationAboutUs from "../../components/locations/LocationAboutUs.astro";
+import LocationWeComeToYou from "../../components/locations/LocationWeComeToYou.astro"
+import LocationFinalCTA from "../../components/locations/LocationFinalCTA.astro";
+import ElfSightInstagram from "../../components/widgets/ElfSightInstagram.astro";
+import FAQs from "../../components/FAQs.astro";
+
+export async function getStaticPaths() {
+  const location = await getCollection("helicopter-training");
+  return location.map((location) => ({
+    params: { slug: location.id },
+    props: location,
+  }));
+}
+
+type Props = CollectionEntry<"helicopter-training">;
+
+const location = Astro.props;
+---
+
+<BaseLayout
+  siteTitle={`Helicopter Flight Training ${location.data.city}, ${location.data.stateLong} | TruFlight Academy`}
+  siteDescription={location.data.meta?.description}
+  siteKeywords={location.data.meta?.keywords}
+>
+  <Header slot="hero" data={location.data.header} />
+
+  <LocationWhyUs data={location.data.whyUs} />
+
+  <ElfSightInstagram />
+
+  <LocationAboutUs data={location.data.aboutUs} />
+
+  <LocationWeComeToYou data={location.data.weComeToYou} />
+
+  {location.data.googleMaps && <GoogleMaps data={location.data.googleMaps} />}
+
+  <FAQs faqs={location.data.faqs} />
+
+  <LocationFinalCTA data={location.data.finalCTA} />
+</BaseLayout>

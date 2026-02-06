@@ -1,0 +1,4 @@
+# Netlify redirects for TruFlight Academy
+# https://docs.netlify.com/routing/redirects/
+
+/flight-training/ /helicopter-training/ 301

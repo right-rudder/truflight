@@ -1,0 +1,28 @@
+---
+import FeatureCard from "../FeatureCard.astro";
+
+const { data } = Astro.props;
+
+let gridClasses = "grid-cols-1";
+if (data.features.length % 2 === 0) {
+  gridClasses += " sm:grid-cols-2";
+} else if (data.features.length % 3 === 0) {
+  gridClasses += " md:grid-cols-3";
+}
+---
+
+<section class="bg-primary-100/10">
+  <div class="mx-auto flex max-w-2xl flex-col items-center gap-10 px-4 py-24 lg:max-w-7xl lg:gap-10 lg:px-12">
+    <h2 class="mx-auto text-center max-w-2xl">
+      <strong class="text-primary-500 text-lg font-bold">Why Us</strong>
+      <br />
+      <span class="font-display mb-5 text-4xl leading-tight font-bold lg:text-5xl">
+        {data.title}
+      </span>
+    </h2>
+
+    <div class=`grid gap-6 ${gridClasses}`>
+      {data.features.map((feature: any) => <FeatureCard {...feature} />)}
+    </div>
+  </div>
+</section>

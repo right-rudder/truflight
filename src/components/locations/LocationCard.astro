@@ -1,0 +1,28 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { FaLocationDot } from "react-icons/fa6";
+import { FaLongArrowAltRight } from "react-icons/fa";
+
+type Location = CollectionEntry<"helicopter-training">;
+
+interface Props {
+  location: Location;
+}
+
+const { location } = Astro.props;
+---
+
+<a href=`/helicopter-training/${location.id}` class="group flex gap-4 flex-col justify-between cursor-pointer p-6 bg-white rounded-md shadow-lg transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl">
+  <div>
+    <h3 class="font-display mb-5 leading-tight font-bold transition-colors duration-300 ease-in-out text-2xl flex gap-2 items-center group-hover:text-primary-500">
+      <FaLocationDot className="size-5 shrink-0" />
+      {location.data.city}
+    </h3>
+    <p class="text-accent-500 tracking-wider lg:text-base/6">
+      {location.data.header?.subtitle}
+    </p>
+  </div>
+  <span class="flex gap-2 items-center text-black font-semibold transition-colors duration-300 ease-in-out group-hover:text-primary-500">Learn More
+    <FaLongArrowAltRight className="size-3.5+ shrink-0" />
+  </span>
+</a>

@@ -5,7 +5,7 @@ const imagesMarqueeRight = [
   },
   {
     src: "/src/assets/scarlett-and-todd-guison-truflight-mckinney-instrument-rating-helicopter.webp",
-    alt: "Scarlett and Todd Guison",
+    alt: "Scarlett and Todd Guison in front of a helicopter",
   },
   {
     src: "/src/assets/guison-family-kids-truflight-dfw-flight-school.webp",

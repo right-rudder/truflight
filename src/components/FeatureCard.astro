@@ -6,16 +6,14 @@ const { icon, title, description, link } = Astro.props as {
   description: string;
   link: string;
 };
-import {
-  FiAward,
-  FiMonitor,
-  FiClock,
-  FiMap,
-  FiLoader,
-  FiAirplay,
-} from "react-icons/fi";
+import { FiAward, FiMonitor, FiClock, FiMap, FiLoader, FiAirplay } from "react-icons/fi";
 import { LiaHelicopterSolid, LiaWeightHangingSolid } from "react-icons/lia";
 import { GiHelicopterTail } from "react-icons/gi";
+import { AiOutlineSafety } from "react-icons/ai";
+import { FaPeopleGroup } from "react-icons/fa6";
+import { FaChalkboardTeacher } from "react-icons/fa";
+import { PiTreeStructure } from "react-icons/pi";
+import { HiArrowRightStartOnRectangle } from "react-icons/hi2";
 
 const icons = {
   FiAward: FiAward,
@@ -27,6 +25,11 @@ const icons = {
   LiaHelicopterSolid: LiaHelicopterSolid,
   LiaWeightHangingSolid: LiaWeightHangingSolid,
   GiHelicopterTail: GiHelicopterTail,
+  AiOutlineSafety,
+  FaPeopleGroup,
+  FaChalkboardTeacher,
+  PiTreeStructure,
+  HiArrowRightStartOnRectangle,
 };
 
 const Icon = icons[icon] as IconType;

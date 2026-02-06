@@ -25,11 +25,11 @@ export const imagesList = [
   },
   {
     src: "/src/assets/helicopter-flying-field-truflight-southlake-certified-flight-instructor-helicopter.jpg",
-    alt: "Certified Flight Instructor add-on at TruFlight Academy",
+    alt: "Front view from the ground of helicopter flying over a field",
   },
   {
     src: "/src/assets/guimbal-helicopter-trees-truflight-highland-park-instrument-rating-helicopter.jpg",
-    alt: "Certified Flight Instructor at TruFlight Academy",
+    alt: "Helicopter flying with trees in the background",
   },
   {
     src: "/src/assets/pilot-in-aircraft-truflight-dallas-fort-worth-aviation-qualification.webp",
@@ -44,12 +44,12 @@ export const imagesList = [
     alt: "Chief Pilot Todd Guison checking helicopter",
   },
   {
-    src: "/src/assets/man-on-top-of-helicopter-truflight-howe-rotorcraft-training.jpg",
-    alt: "Chief Pilot Todd Guison",
+    src: "/src/assets/man-inside-helicopter-truflight-howe-rotorcraft-training.jpg",
+    alt: "Todd Guison, chief pilot of TruFlight Academy inside helicopter",
   },
   {
     src: "/src/assets/guimbal-helicopter-flying-truflight-texas-external-load-training.jpg",
-    alt: "Commercial flight training at TruFlight Academy",
+    alt: "Helicopter flying over a grass field seen from the back",
   },
   {
     src: "/src/assets/two-pilots-guimbal-cabri-truflight-highland-park-helicopter-training.jpg",
@@ -61,7 +61,7 @@ export const imagesList = [
   },
   {
     src: "/src/assets/guimbal-helicopter-flying-trees-truflight-mckinney-commercial-pilot-helicopter.jpg",
-    alt: "Commercial pilot student at TruFlight Academy",
+    alt: "Helicopter taking off with one of the pilot giving a thumbs up and trees in the background",
   },
   {
     src: "/src/assets/customer-taking-a-discovery-flight-truflight-dfw-helicopter-flight-training.jpg",
@@ -69,7 +69,7 @@ export const imagesList = [
   },
   {
     src: "/src/assets/low-angle-view-runway-helicopter-flying-truflight-dallas-flight-school.webp",
-    alt: "Discovery flight at TruFlight Academy in Dallas",
+    alt: "Front low angle view of an helicopter taking off in a runway",
   },
   {
     src: "/src/assets/low-angle-view-runway-helicopter-flying-truflight-dallas-flight-school.jpg",
@@ -77,11 +77,11 @@ export const imagesList = [
   },
   {
     src: "/src/assets/excited-customer-helicopter-discovery-flight-truflight-dallas-flight-school.jpg",
-    alt: "Discovery flight fun at TruFlight Academy",
+    alt: "Excited pilot in helicopter seen from the left",
   },
   {
     src: "/src/assets/trees-foreground-helicopter-background-truflight-dallas-fort-worth-flight-school.jpg",
-    alt: "Discovery flight helicopter at TruFlight Academy",
+    alt: "Helicopter taking off with two trees in the foreground",
   },
   {
     src: "/src/assets/discovery-flight.svg",
@@ -113,7 +113,7 @@ export const imagesList = [
   },
   {
     src: "/src/assets/guimbal-cabri-g2-flying-motion-blur-truflight-dallas-helicopter-training.jpg",
-    alt: "Guimbal Cabri G2 in Dallas, Texas",
+    alt: "Helicopter flying with motion blur around it",
   },
   {
     src: "/src/assets/guimbal-cabri-g2-helicopter-tail-rotor-truflight-dfw-flight-school.jpg",
@@ -257,11 +257,11 @@ export const imagesList = [
   },
   {
     src: "/src/assets/helicopter-landing-side-view-truflight-texas-external-load-training.jpg",
-    alt: "Private pilot training at TruFlight",
+    alt: "Helicopter landing seen from the right",
   },
   {
     src: "/src/assets/scarlett-and-todd-guison-truflight-mckinney-instrument-rating-helicopter.webp",
-    alt: "Scarlett and Todd Guison",
+    alt: "Scarlett and Todd Guison in front of a helicopter",
   },
   {
     src: "/src/assets/sling-load-training-at-academy-truflight-dallas-flight-school.webp",
@@ -281,7 +281,7 @@ export const imagesList = [
   },
   {
     src: "/src/assets/the-guison-family-truflight-texas-private-pilot-helicopter.webp",
-    alt: "The Guison family",
+    alt: "The Guison family inside a helicopter",
   },
   {
     src: "/src/assets/todd-and-scarlett-guison-at-heliexpo-truflight-mckinney-instrument-rating-helicopter.webp",
@@ -369,6 +369,6 @@ export const imagesList = [
   },
   {
     src: "/src/assets/helicopter-taking-off-airport-truflight-dfw-commercial-pilot-helicopter.jpg",
-    alt: "TruFlight helicopter in Dallas airport",
+    alt: "Front view of helicopter taking off over runway",
   },
 ];

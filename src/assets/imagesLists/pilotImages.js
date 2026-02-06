@@ -1,7 +1,7 @@
 export const pilotImages = [
   {
     src: "/src/assets/guimbal-helicopter-flying-trees-truflight-mckinney-commercial-pilot-helicopter.jpg",
-    alt: "Commercial pilot student at TruFlight Academy",
+    alt: "Helicopter taking off with one of the pilot giving a thumbs up and trees in the background",
   },
   {
     src: "/src/assets/external-load-operations-dallas-truflight-dallas-fort-worth-helicopter-training.jpg",

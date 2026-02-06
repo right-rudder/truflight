@@ -1,0 +1,56 @@
+---
+import ImageComp from "../ImageComp.astro";
+import { FaCheck } from "react-icons/fa6";
+
+const { data } = Astro.props;
+---
+
+<section class="px-4">
+  <div
+    class="mx-auto flex flex-col-reverse items-center gap-10 px-4 py-24 max-w-2xl lg:max-w-7xl lg:flex-row lg:gap-10 lg:px-12"
+  >
+    <div class="flex-1">
+      <ImageComp src={data.image.src} alt={data.image.alt} classes="aspect-square rounded-md object-cover" />
+    </div>
+    <div class="flex flex-1 flex-col">
+      <strong class="text-medium-blue text-primary-500 text-lg font-bold">{data.upperHeader}</strong>
+
+      <h2 class="font-display mb-6 text-5xl leading-tight font-bold">
+        {data.title}
+      </h2>
+
+      {
+        data.description && (
+          <p
+            class="tracking-wider mb-4 text-accent-500 lg:text-base/6"
+            set:html={data.description}
+          />
+        )
+      }
+
+      {
+        data.bulletPoints && (
+          <ul class="flex flex-col gap-2 mb-4 text-accent-500">
+            {data.bulletPoints.map((point: string) => (
+              <li class="flex items-center gap-3">
+                <FaCheck className="text-primary-500 size-4 shrink-0" />
+                <p set:html={point}></p>
+              </li>
+            ))}
+          </ul>
+        )
+      }
+
+      {
+        data.secondDescription && (
+          <p
+            class="tracking-wider mb-6 text-accent-500 lg:text-base/6"
+            set:html={data.secondDescription}
+          />
+        )
+      }
+
+      <a href={data.cta.url} class="btn-secondary mx-auto lg:mx-0">{data.cta.text}</a>
+    </div>
+  </div>
+</section>
